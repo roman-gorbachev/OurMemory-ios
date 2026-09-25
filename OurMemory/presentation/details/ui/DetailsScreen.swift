@@ -4,6 +4,7 @@ struct DetailsScreen: View {
     private static let coordinateSpace = "details"
     private static let sectionSpacing: CGFloat = 28
     private static let heroAspectRatio: CGFloat = 0.9
+    private static let barAnimationSeconds = 0.2
 
     let data: DetailsUiData
     let playbackState: AudioPlaybackState
@@ -67,7 +68,7 @@ struct DetailsScreen: View {
                     .symbolEffect(.bounce, value: isFavorite)
                 }
             }
-            .animation(.easeInOut(duration: 0.2), value: isCollapsed)
+            .animation(.easeInOut(duration: Self.barAnimationSeconds), value: isCollapsed)
         }
     }
 }

@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ToursSheet: View {
+    private static let descriptionLines = 2
+
     let tours: [TourSummaryUi]
     let onTourOpen: (String) -> Void
 
@@ -22,7 +24,7 @@ struct ToursSheet: View {
                                 Text(verbatim: tour.description)
                                     .appStyle(.subheadline)
                                     .foregroundStyle(Palette.onSurfaceVariant)
-                                    .lineLimit(2)
+                                    .lineLimit(Self.descriptionLines)
                             }
                             Text(verbatim: tour.visitedCount > 0
                                 ? L10n.format("visited_of_total", tour.visitedCount, tour.stopsCount)

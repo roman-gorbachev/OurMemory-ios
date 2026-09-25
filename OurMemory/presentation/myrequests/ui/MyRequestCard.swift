@@ -2,6 +2,7 @@ import SwiftUI
 
 struct MyRequestCard: View {
     private static let textLines = 4
+    private static let statusBackgroundOpacity = 0.15
 
     let item: MyRequestItemUi
 
@@ -28,7 +29,7 @@ struct MyRequestCard: View {
                 .foregroundStyle(statusColor)
                 .padding(.horizontal, Spacing.m)
                 .padding(.vertical, Spacing.xs)
-                .background(Capsule().fill(statusColor.opacity(0.15)))
+                .background(Capsule().fill(statusColor.opacity(Self.statusBackgroundOpacity)))
             if !item.reply.isBlank {
                 Text(verbatim: L10n.format("reply_from_cemetery", item.reply))
                     .appStyle(.callout)
