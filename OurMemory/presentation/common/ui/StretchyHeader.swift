@@ -7,17 +7,23 @@ struct StretchyHeader<Background: View, Overlay: View>: View {
 
     var body: some View {
         return GeometryReader { proxy in
-            let offset = proxy.frame(in: .global).minY
-            let stretch = max(offset, 0)
-            ZStack(alignment: .bottomLeading) {
-                Palette.containerHighest
-                background()
-                HeroScrim()
-                overlay()
-            }
-            .frame(width: proxy.size.width, height: height + stretch)
-            .clipped()
-            .offset(y: -stretch)
+            let stretch = max(proxy.frame(in: .global).minY, 0)
+            let width = proxy.size.width
+            Color.clear
+                .frame(width: width, height: height + stretch)
+                .overlay {
+                    background()
+                        .frame(width: width, height: height + stretch)
+                        .clipped()
+                }
+                .overlay { HeroScrim() }
+                .overlay(alignment: .bottomLeading) {
+                    overlay()
+                        .frame(width: width, alignment: .leading)
+                }
+                .background(Palette.containerHighest)
+                .clipped()
+                .offset(y: -stretch)
         }
         .frame(height: height)
     }

@@ -22,7 +22,7 @@ struct BurialChoiceSheet: View {
                     }
                 }
             }
-            .searchable(text: $query)
+            .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("add_stop")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

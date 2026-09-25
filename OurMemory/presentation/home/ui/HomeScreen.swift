@@ -28,6 +28,7 @@ struct HomeScreen: View {
         .listStyle(.insetGrouped)
         .searchable(
             text: Binding(get: { return data.search }, set: { onAction(.searchChanged($0)) }),
+            placement: .navigationBarDrawer(displayMode: .always),
             prompt: Text("search_by_name")
         )
         .overlay {

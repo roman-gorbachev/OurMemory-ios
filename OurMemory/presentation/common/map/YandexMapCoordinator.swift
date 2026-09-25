@@ -63,14 +63,16 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
     }
 
     func applyLogoInsets(_ insets: EdgeInsets) {
-        guard insets != appliedLogoInsets, let map = mapView?.mapWindow.map else {
+        guard insets != appliedLogoInsets, let mapView else {
             return
         }
         appliedLogoInsets = insets
+        let map = mapView.mapWindow.map
+        let scale = max(mapView.traitCollection.displayScale, 1)
         map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: .left, verticalAlignment: .bottom))
         map.logo.setPaddingWith(YMKLogoPadding(
-            horizontalPadding: UInt(max(insets.leading, 0) + Self.logoMargin),
-            verticalPadding: UInt(max(insets.bottom, 0) + Self.logoMargin)
+            horizontalPadding: UInt((max(insets.leading, 0) + Self.logoMargin) * scale),
+            verticalPadding: UInt((max(insets.bottom, 0) + Self.logoMargin) * scale)
         ))
     }
 

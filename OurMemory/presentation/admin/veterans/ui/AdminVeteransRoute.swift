@@ -14,7 +14,7 @@ struct AdminVeteransRoute: View {
     var body: some View {
         return content
             .navigationTitle("veterans")
-            .searchable(text: $viewModel.search, prompt: Text("search_by_name"))
+            .searchable(text: $viewModel.search, placement: .navigationBarDrawer(displayMode: .always), prompt: Text("search_by_name"))
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button {
