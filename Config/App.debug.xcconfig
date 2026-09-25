@@ -1,0 +1,2 @@
+#include? "../Pods/Target Support Files/Pods-OurMemory/Pods-OurMemory.debug.xcconfig"
+#include "Base.xcconfig"

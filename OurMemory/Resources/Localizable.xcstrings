@@ -1,0 +1,4325 @@
+{
+  "sourceLanguage": "ru",
+  "strings": {
+    "about_cemetery": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пра могілкі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "О кладбище"
+          }
+        }
+      }
+    },
+    "add_audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць аўдыя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить аудио"
+          }
+        }
+      }
+    },
+    "add_burial_place": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць месца"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить место"
+          }
+        }
+      }
+    },
+    "add_burials_first_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пачніце з месцаў пахавання: ветэраны і экскурсіі спасылаюцца на іх"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начните с мест захоронения: ветераны и экскурсии ссылаются на них"
+          }
+        }
+      }
+    },
+    "add_paragraph": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць абзац"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить абзац"
+          }
+        }
+      }
+    },
+    "add_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць фота"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить фото"
+          }
+        }
+      }
+    },
+    "add_photos": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць фота"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить фото"
+          }
+        }
+      }
+    },
+    "add_stop": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць прыпынак"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить остановку"
+          }
+        }
+      }
+    },
+    "add_to_card": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць у картку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить в карточку"
+          }
+        }
+      }
+    },
+    "add_to_favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць у абранае"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить в избранное"
+          }
+        }
+      }
+    },
+    "add_to_history": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дапоўніць гісторыю"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дополнить историю"
+          }
+        }
+      }
+    },
+    "add_tour": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць экскурсію"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить экскурсию"
+          }
+        }
+      }
+    },
+    "add_veteran": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць ветэрана"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить ветерана"
+          }
+        }
+      }
+    },
+    "added_to_card": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дададзена ў картку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавлено в карточку"
+          }
+        }
+      }
+    },
+    "address": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "вул. Казлова, 11, Мiнск"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ул. Козлова, 11, Минск"
+          }
+        }
+      }
+    },
+    "admin": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмін"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Админ"
+          }
+        }
+      }
+    },
+    "administration": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адміністраванне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Администрирование"
+          }
+        }
+      }
+    },
+    "allow_location_access_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дазвольце доступ да геалакацыі, каб убачыць сябе на карце"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разрешите доступ к геолокации, чтобы увидеть себя на карте"
+          }
+        }
+      }
+    },
+    "app_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Наша памяць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Наша память"
+          }
+        }
+      }
+    },
+    "appearance": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Афармленне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оформление"
+          }
+        }
+      }
+    },
+    "approve": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ухваліць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Одобрить"
+          }
+        }
+      }
+    },
+    "approved": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ухвалена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Одобрено"
+          }
+        }
+      }
+    },
+    "art": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Творчасць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Деятели искусств"
+          }
+        }
+      }
+    },
+    "as_in_system": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як у сістэме"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как в системе"
+          }
+        }
+      }
+    },
+    "audio_attached": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аўдыя прымацавана"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аудио прикреплено"
+          }
+        }
+      }
+    },
+    "awaiting_review": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "На праверцы"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "На проверке"
+          }
+        }
+      }
+    },
+    "awards": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Узнагароды"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Награды"
+          }
+        }
+      }
+    },
+    "back": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назад"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назад"
+          }
+        }
+      }
+    },
+    "bel": {
+      "extractionState": "manual",
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "БЕЛ"
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
+    "belarusian": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Беларуская"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Беларуская"
+          }
+        }
+      }
+    },
+    "biography": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бiяграфiя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Биография"
+          }
+        }
+      }
+    },
+    "biography_and_media": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Біяграфія і медыя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Биография и медиа"
+          }
+        }
+      }
+    },
+    "birthday_in_year": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзень нараджэння · %1$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "День рождения · %1$lld"
+          }
+        }
+      }
+    },
+    "burial_place": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Месца пахавання"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Место захоронения"
+          }
+        }
+      }
+    },
+    "burial_place_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмін → Месцы пахавання → «Дадаць месца».\nВыберыце тып: магіла, брацкая магіла або помнік.\nУпішыце ўчастак, рад і месца з таблічкі могілак. Гэта дакладней за GPS, і наведвальнікі шукаюць менавіта па гэтых нумарах.\nСтаньце каля магілы і націсніце «Маё месцазнаходжанне». Калі метка лягла недакладна, націсніце на карту ў патрэбнай кропцы.\nДадайце фота і кароткае апісанне, калі ёсць, і націсніце «Захаваць»."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Админ → Места захоронения → «Добавить место».\nВыберите тип: могила, братская могила или памятник.\nВпишите участок, ряд и место с таблички кладбища. Это точнее GPS, и посетители ищут именно по этим номерам.\nВстаньте у могилы и нажмите «Моё местоположение». Если метка легла неточно, нажмите на карту в нужной точке.\nДобавьте фото и короткое описание, если есть, и нажмите «Сохранить»."
+          }
+        }
+      }
+    },
+    "burial_places": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Месцы пахавання"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Места захоронения"
+          }
+        }
+      }
+    },
+    "burial_places_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld месцы"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld месцаў"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld месца"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld месца"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld места"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld мест"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld место"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld места"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "cancel": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отмена"
+          }
+        }
+      }
+    },
+    "candle_is_lit": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свечка запалена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свеча зажжена"
+          }
+        }
+      }
+    },
+    "candles_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Запалена %lld свечкі"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Запалена %lld свечак"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Запалена %lld свечка"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Запалена %lld свечкі"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Зажжено %lld свечи"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Зажжено %lld свечей"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Зажжена %lld свеча"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "Зажжено %lld свечи"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "caption": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подпіс"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подпись"
+          }
+        }
+      }
+    },
+    "cemetery_map": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Карта могілак"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Карта кладбища"
+          }
+        }
+      }
+    },
+    "cemetery_opening_hours": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        }
+      }
+    },
+    "cemetery_phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
+    "check_new_marker_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Праверце вынік на ўкладцы «Карта»: новая метка павінна стаяць на сваім месцы."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проверьте результат на вкладке «Карта»: новая метка должна стоять на своём месте."
+          }
+        }
+      }
+    },
+    "check_stresses_before_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перад агучкай праверце тэкст: націскі ў прозвішчах, гады словамі, скарачэнні раскрыты цалкам."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перед озвучкой проверьте текст: ударения в фамилиях, годы прописью, сокращения раскрыты полностью."
+          }
+        }
+      }
+    },
+    "checking_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Правяраем фота"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проверяем фото"
+          }
+        }
+      }
+    },
+    "chooseCategory": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выберыце катэгорыю"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выберите категорию"
+          }
+        }
+      }
+    },
+    "choose_portrait": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбраць партрэт"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбрать портрет"
+          }
+        }
+      }
+    },
+    "clear": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ачысціць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Очистить"
+          }
+        }
+      }
+    },
+    "comment_for_author": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Каментар для аўтара (неабавязкова)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Комментарий для автора (необязательно)"
+          }
+        }
+      }
+    },
+    "consent_to_contact_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Я згодны(ная), каб мае кантактныя даныя выкарыстоўваліся толькі для сувязі па гэтым матэрыяле"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Я согласен(на), чтобы мои контактные данные использовались только для связи по этому материалу"
+          }
+        }
+      }
+    },
+    "contact_for_reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як з вамі звязацца (неабавязкова)"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как с вами связаться (необязательно)"
+          }
+        }
+      }
+    },
+    "content": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кантэнт"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Контент"
+          }
+        }
+      }
+    },
+    "could_not_open_photo_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася адкрыць фота. Выберыце іншае"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось открыть фото. Выберите другое"
+          }
+        }
+      }
+    },
+    "could_not_sign_in_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася ўвайсці. Праверце інтэрнэт і паспрабуйце яшчэ раз"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось войти. Проверьте интернет и попробуйте ещё раз"
+          }
+        }
+      }
+    },
+    "dark": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Цёмная"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тёмная"
+          }
+        }
+      }
+    },
+    "data_error": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памылка ў даных"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ошибка в данных"
+          }
+        }
+      }
+    },
+    "date_of_birth": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата нараджэння"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата рождения"
+          }
+        }
+      }
+    },
+    "date_of_death": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата смерці"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дата смерти"
+          }
+        }
+      }
+    },
+    "day_of_memory_in_year": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзень памяці · %1$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "День памяти · %1$lld"
+          }
+        }
+      }
+    },
+    "delete": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаліць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить"
+          }
+        }
+      }
+    },
+    "delete_tour_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаліць экскурсію? Яна знікне з праграмы"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить экскурсию? Она исчезнет из приложения"
+          }
+        }
+      }
+    },
+    "delete_veteran_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаліць ветэрана? Картка знікне з праграмы"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить ветерана? Карточка исчезнет из приложения"
+          }
+        }
+      }
+    },
+    "deleted_items_cannot_be_restored_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаленае можна вярнуць толькі ўручную, таму перад выдаленнем пераканайцеся, што адкрыта патрэбная картка."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалённое можно вернуть только вручную, поэтому перед удалением убедитесь, что открыта нужная карточка."
+          }
+        }
+      }
+    },
+    "description": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Апісанне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Описание"
+          }
+        }
+      }
+    },
+    "docs": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дакументы i фатаздымкi"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Документы и фотографии"
+          }
+        }
+      }
+    },
+    "done": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гатова"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Готово"
+          }
+        }
+      }
+    },
+    "editor_guide": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памятка рэдактара"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памятка редактора"
+          }
+        }
+      }
+    },
+    "email": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail"
+          }
+        }
+      }
+    },
+    "everything_is_reviewed_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Усё прагледжана"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Всё просмотрено"
+          }
+        }
+      }
+    },
+    "expand": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разгарнуць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Развернуть"
+          }
+        }
+      }
+    },
+    "extra_large": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вельмі буйны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Очень крупный"
+          }
+        }
+      }
+    },
+    "failed_to_load_data_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася загрузіць даныя. Праверце падключэнне да інтэрнэту"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось загрузить данные. Проверьте подключение к интернету"
+          }
+        }
+      }
+    },
+    "failed_to_open_scanner_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося адкрыць сканер. Паспрабуйце навесці звычайную камеру на QR-код"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось открыть сканер. Попробуйте навести обычную камеру на QR-код"
+          }
+        }
+      }
+    },
+    "failed_to_save_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося захаваць. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось сохранить. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        }
+      }
+    },
+    "failed_to_send_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не атрымалася адправіць. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось отправить. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        }
+      }
+    },
+    "failed_to_sign_in_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося ўвайсці. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось войти. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        }
+      }
+    },
+    "favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абранае"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Избранное"
+          }
+        }
+      }
+    },
+    "favorites_and_requests_are_saved_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абранае і звароты захоўваюцца ў акаўнце"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Избранное и обращения сохраняются в аккаунте"
+          }
+        }
+      }
+    },
+    "feedback": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зваротная сувязь"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обратная связь"
+          }
+        }
+      }
+    },
+    "for_cemetery_editors_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для рэдактараў мемарыяла: ветэраны, месцы пахавання, экскурсіі і заяўкі наведвальнікаў"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Для редакторов мемориала: ветераны, места захоронения, экскурсии и заявки посетителей"
+          }
+        }
+      }
+    },
+    "from_family_archive": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "З сямейнага архіва"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Из семейного архива"
+          }
+        }
+      }
+    },
+    "full_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ПІБ"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ФИО"
+          }
+        }
+      }
+    },
+    "galleryHeader": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Галерэя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Галерея"
+          }
+        }
+      }
+    },
+    "geroj_sssr": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Герой Савецкага Саюза"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Герой Советского Союза"
+          }
+        }
+      }
+    },
+    "get_directions": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пракласці маршрут"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проложить маршрут"
+          }
+        }
+      }
+    },
+    "grave": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Магіла"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Могила"
+          }
+        }
+      }
+    },
+    "heroUSSR": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Героі Савецкага Саюза"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Герои Советского Союза"
+          }
+        }
+      }
+    },
+    "historyInfoHeader": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гістарычная даведка"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Историческая справка"
+          }
+        }
+      }
+    },
+    "how_to_add_a_burial_place": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як дадаць месца пахавання?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как добавить место захоронения?"
+          }
+        }
+      }
+    },
+    "how_to_add_a_veteran": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як дадаць ветэрана?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как добавить ветерана?"
+          }
+        }
+      }
+    },
+    "how_to_add_and_edit_content_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як дадаваць ветэранаў, месцы і экскурсіі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как добавлять ветеранов, места и экскурсии"
+          }
+        }
+      }
+    },
+    "how_to_build_a_tour": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Як сабраць экскурсію?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Как собрать экскурсию?"
+          }
+        }
+      }
+    },
+    "idea": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пазнавайце біяграфіі, слухайце аудиоэкскурсии, вывучайце творчасць вялікіх людзей!"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Узнавайте биографии, слушайте аудиоэкскурсии, изучайте творчество великих людей!"
+          }
+        }
+      }
+    },
+    "if_something_is_wrong": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Калі нешта не так"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Если что-то не так"
+          }
+        }
+      }
+    },
+    "in_the_morning_of_may_9_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Раніцай 9 мая нагадаем ушанаваць памяць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Утром 9 мая напомним почтить память"
+          }
+        }
+      }
+    },
+    "information": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\tМінскія вайсковыя могілкі, размешчаныя на вуліцы Казлова, з'яўляецца адным з найстарэйшых і найбольш значных мемарыяльных месцаў у сталіцы Беларусі. Яно было заснавана ў канцы XIX стагоддзя, арыентыровачна ў 1870-1880-х гадах, і першапачаткова прызначалася для пахавання вайскоўцаў, якія загінулі пры выкананні службовых абавязкаў, а таксама ветэранаў розных войнаў.\n\n На гэтых могілках знайшлі спакой удзельнікі руска-турэцкай вайны 1877-1878 гадоў, першай сусветнай вайны, грамадзянскай вайны і Вялікай Айчыннай вайны. Тут жа пахаваныя партызаны, афіцэры, Героі Савецкага Саюза, а таксама вядомыя дзеячы савецкай эпохі. Мінскія вайсковыя могілкі сталі своеасаблівым летапісам ваеннай гісторыі Беларусі, якая адлюстроўвае лёсы і подзвігі людзей, якія абаранялі Радзіму ў розныя гістарычныя перыяд\n \\ n Асаблівую ўвагу прыцягвае брацкая магіла савецкіх салдат, якія загінулі ў гады Вялікай Айчыннай вайны. Мемарыяльныя помнікі, абеліскі і акуратныя надмагіллі з ваеннай сімволікай надаюць могілак строгасць і ўрачыстасць. Месца часта становіцца цэнтрам правядзення памятных мерапрыемстваў, асабліва ў Дзень Перамогі і ў іншыя дні вайсковай славы.\n\n Архітэктурна могілках ўяўляе сабой дагледжаную тэрыторыю з алеямі, іглічнымі дрэвамі і старадаўнімі надмагіллямі, многія з якіх датуюцца яшчэ дарэвалюцыйным час. Некаторыя пліты захавалі надпісы ў дарэформеннай рускай арфаграфіі, што надае гэтаму месцу асаблівую гістарычную атмасферу.\n\n Нягледзячы на блізкасць да цэнтра горада і ажыўленым вуліцах, тут пануе цішыня і паважлівае спакой. Мінскае ваеннае могілкі на Казлова - гэта не проста месца пахавання, а важны культурна-гістарычны помнік, які нагадвае пра цану міру і мужнасці тых, хто яго абараняў."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\tМинское военное кладбище, расположенное на улице Козлова, является одним из старейших и наиболее значимых мемориальных мест в столице Беларуси. Оно было основано в конце XIX века, ориентировочно в 1870–1880-х годах, и изначально предназначалось для захоронения военнослужащих, погибших при исполнении служебных обязанностей, а также ветеранов различных войн.\n\n На этом кладбище нашли покой участники Русско-турецкой войны 1877–1878 годов, Первой мировой войны, Гражданской войны и Великой Отечественной войны. Здесь же захоронены партизаны, офицеры, Герои Советского Союза, а также известные деятели советской эпохи. Минское военное кладбище стало своеобразной летописью военной истории Беларуси, отражающей судьбы и подвиги людей, защищавших Родину в разные исторические период\n\n Особое внимание привлекает братская могила советских солдат, павших в годы Великой Отечественной войны. Мемориальные памятники, обелиски и аккуратные надгробия с военной символикой придают кладбищу строгость и торжественность. Место часто становится центром проведения памятных мероприятий, особенно в День Победы и в другие дни воинской славы.\n\n Архитектурно кладбище представляет собой ухоженную территорию с аллеями, хвойными деревьями и старинными надгробиями, многие из которых датируются еще дореволюционным временем. Некоторые плиты сохранили надписи в дореформенной русской орфографии, что придает этому месту особую историческую атмосферу.\n\n Несмотря на близость к центру города и оживлённым улицам, здесь царит тишина и уважительное спокойствие. Минское военное кладбище на Козлова — это не просто место захоронения, а важный культурно-исторический памятник, напоминающий о цене мира и мужестве тех, кто его защищал."
+          }
+        }
+      }
+    },
+    "keep_your_memory_safe": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Захавайце сваю памяць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохраните свою память"
+          }
+        }
+      }
+    },
+    "language": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мова"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Язык"
+          }
+        }
+      }
+    },
+    "large": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Буйны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Крупный"
+          }
+        }
+      }
+    },
+    "latitude": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Шырата"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Широта"
+          }
+        }
+      }
+    },
+    "lenin": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Леніна"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Ленина"
+          }
+        }
+      }
+    },
+    "light": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Светлая"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Светлая"
+          }
+        }
+      }
+    },
+    "light_a_candle": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запаліць свечку памяці"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зажечь свечу памяти"
+          }
+        }
+      }
+    },
+    "listen_to_biography": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паслухаць біяграфію"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Послушать биографию"
+          }
+        }
+      }
+    },
+    "locationHeader": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Размяшчэнне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расположение"
+          }
+        }
+      }
+    },
+    "longitude": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Даўгата"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Долгота"
+          }
+        }
+      }
+    },
+    "main_text": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Асноўны тэкст"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Основной текст"
+          }
+        }
+      }
+    },
+    "map": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Карта"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Карта"
+          }
+        }
+      }
+    },
+    "mark_as_reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адзначыць разгледжаным"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отметить рассмотренным"
+          }
+        }
+      }
+    },
+    "mass_grave": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Брацкая магіла"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Братская могила"
+          }
+        }
+      }
+    },
+    "materials_for_card": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Матэрыялы для карткі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Материалы для карточки"
+          }
+        }
+      }
+    },
+    "memorable_dates_of_favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памятныя даты абраных"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памятные даты избранных"
+          }
+        }
+      }
+    },
+    "memories": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Успаміны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Воспоминания"
+          }
+        }
+      }
+    },
+    "message": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паведамленне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сообщение"
+          }
+        }
+      }
+    },
+    "mine": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маё"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Моё"
+          }
+        }
+      }
+    },
+    "moderation": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мадэрацыя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Модерация"
+          }
+        }
+      }
+    },
+    "monument": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Помнік"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памятник"
+          }
+        }
+      }
+    },
+    "more": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Яшчэ"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ещё"
+          }
+        }
+      }
+    },
+    "move_down": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перамясціць ніжэй"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переместить ниже"
+          }
+        }
+      }
+    },
+    "move_up": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перамясціць вышэй"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Переместить выше"
+          }
+        }
+      }
+    },
+    "my_location": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маё месцазнаходжанне"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Моё местоположение"
+          }
+        }
+      }
+    },
+    "my_requests": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мае звароты"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мои обращения"
+          }
+        }
+      }
+    },
+    "narodny_artist": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Народны артыст СССР"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Народный артист СССР"
+          }
+        }
+      }
+    },
+    "never_forgotten_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ніхто не забыты, нішто не забыта"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Никто не забыт, ничто не забыто"
+          }
+        }
+      }
+    },
+    "new_burial_place": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новае месца"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новое место"
+          }
+        }
+      }
+    },
+    "new_requests": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новыя звароты"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новые обращения"
+          }
+        }
+      }
+    },
+    "new_tour": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новая экскурсія"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новая экскурсия"
+          }
+        }
+      }
+    },
+    "new_veteran": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новы ветэран"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новый ветеран"
+          }
+        }
+      }
+    },
+    "news": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Навінавая зводка"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Новостная сводка"
+          }
+        }
+      }
+    },
+    "no_admin_rights_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У гэтага акаўнта няма правоў адміністратара"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У этого аккаунта нет прав администратора"
+          }
+        }
+      }
+    },
+    "no_audio": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аўдыя няма"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аудио нет"
+          }
+        }
+      }
+    },
+    "no_favorites_yet_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Націсніце на сэрца на картцы ветэрана, каб дадаць яго сюды"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нажмите на сердечко на карточке ветерана, чтобы добавить его сюда"
+          }
+        }
+      }
+    },
+    "no_requests_yet_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тут з'явяцца вашы паведамленні і матэрыялы, калі вы іх адправіце"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Здесь появятся ваши сообщения и материалы, когда вы их отправите"
+          }
+        }
+      }
+    },
+    "normal": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Звычайны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обычный"
+          }
+        }
+      }
+    },
+    "not_our_qr_code_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гэта не QR-код нашых могілак"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Это не QR-код нашего кладбища"
+          }
+        }
+      }
+    },
+    "not_specified": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не пазначана"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не указано"
+          }
+        }
+      }
+    },
+    "nothing_here_yet": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тут пакуль нічога няма"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Здесь пока ничего нет"
+          }
+        }
+      }
+    },
+    "on_birthdays_and_memorial_days_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У дні нараджэння і памяці ветэранаў з абранага"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В дни рождения и памяти ветеранов из избранного"
+          }
+        }
+      }
+    },
+    "on_this_day": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У гэты дзень"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В этот день"
+          }
+        }
+      }
+    },
+    "opening_hours": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гадзіны працы"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Часы работы"
+          }
+        }
+      }
+    },
+    "orden_znak_pocheta": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн «Знак Пашаны»"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден «Знак Почёта»"
+          }
+        }
+      }
+    },
+    "otech_war": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Айчыннай вайны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Отечественной войны"
+          }
+        }
+      }
+    },
+    "other": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Іншае"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Другое"
+          }
+        }
+      }
+    },
+    "paragraph": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абзац"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Абзац"
+          }
+        }
+      }
+    },
+    "partizan": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «Партызану Айчыннай вайны» II ступені"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «Партизану Отечественной войны» II степени"
+          }
+        }
+      }
+    },
+    "password": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пароль"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пароль"
+          }
+        }
+      }
+    },
+    "pause": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паўза"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пауза"
+          }
+        }
+      }
+    },
+    "pending_submissions": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заяўкі на мадэрацыі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заявки на модерации"
+          }
+        }
+      }
+    },
+    "phone": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тэлефон"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Телефон"
+          }
+        }
+      }
+    },
+    "photo_did_not_pass_check_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фота не прайшло аўтаматычную праверку і не будзе адпраўлена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фото не прошло автоматическую проверку и не будет отправлено"
+          }
+        }
+      }
+    },
+    "photos_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фота"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фота"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фота"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фота"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фото"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фото"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фото"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld фото"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "photos_count_of_max": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фота %1$lld з %2$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фото %1$lld из %2$lld"
+          }
+        }
+      }
+    },
+    "place": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Месца"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Место"
+          }
+        }
+      }
+    },
+    "play": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прайграць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Воспроизвести"
+          }
+        }
+      }
+    },
+    "red_star": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Чырвонай Зоркі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Красной Звезды"
+          }
+        }
+      }
+    },
+    "red_znamya": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Чырвонага Сцяга"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Красного Знамени"
+          }
+        }
+      }
+    },
+    "reject": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адхіліць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отклонить"
+          }
+        }
+      }
+    },
+    "rejected": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адхілена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отклонено"
+          }
+        }
+      }
+    },
+    "remember_heroes_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Успомніце герояў — запаліце свечку памяці ў праграме «Наша памяць»"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вспомните героев — зажгите свечу памяти в приложении «Наша память»"
+          }
+        }
+      }
+    },
+    "reminders": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напаміны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напоминания"
+          }
+        }
+      }
+    },
+    "remove_from_favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прыбраць з абранага"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Убрать из избранного"
+          }
+        }
+      }
+    },
+    "remove_offensive_words_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прыбярыце непрыстойныя выразы — такое паведамленне не будзе адпраўлена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Уберите нецензурные выражения — такое сообщение не будет отправлено"
+          }
+        }
+      }
+    },
+    "remove_photo": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдаліць фота"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалить фото"
+          }
+        }
+      }
+    },
+    "reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адказ"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ответ"
+          }
+        }
+      }
+    },
+    "reply_from_cemetery": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адказ: %1$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ответ: %1$@"
+          }
+        }
+      }
+    },
+    "reply_shown_to_author_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш адказ аўтар убачыць у раздзеле «Яшчэ → Мае звароты»."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш ответ автор увидит в разделе «Ещё → Мои обращения»."
+          }
+        }
+      }
+    },
+    "report_an_error": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паведаміць пра памылку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сообщить об ошибке"
+          }
+        }
+      }
+    },
+    "requests_and_messages": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заяўкі і звароты"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Заявки и обращения"
+          }
+        }
+      }
+    },
+    "requests_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Мадэрацыя» — матэрыялы сваякоў. Папраўце тэкст, прыбярыце лішнія фота і націсніце «Ухваліць»: усё адразу трапіць у картку з подпісам «З сямейнага архіва».\n«Зваротная сувязь» — паведамленні і справаздачы пра памылкі ад наведвальнікаў. Адзначце зварот прагледжаным і пры жаданні напішыце адказ.\nНецэнзурныя тэксты і непрыстойныя фота праграма адсякае сама яшчэ да адпраўкі, але гэтую праверку можна абысці, таму праглядайце ўсё перад ухваленнем."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "«Модерация» — материалы родственников. Поправьте текст, уберите лишние фото и нажмите «Одобрить»: всё сразу попадёт в карточку с подписью «Из семейного архива».\n«Обратная связь» — сообщения и отчёты об ошибках посетителей. Отметьте обращение просмотренным и при желании напишите ответ.\nНецензурные тексты и непристойные фото приложение отсекает само ещё до отправки, но эту проверку можно обойти, поэтому просматривайте всё перед одобрением."
+          }
+        }
+      }
+    },
+    "requires_attention": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Патрабуе ўвагі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Требует внимания"
+          }
+        }
+      }
+    },
+    "reviewed": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разгледжана"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рассмотрено"
+          }
+        }
+      }
+    },
+    "rollup": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Згарнуць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свернуть"
+          }
+        }
+      }
+    },
+    "routes_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршруты"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрутаў"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрут"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршруту"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрута"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрутов"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрут"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld маршрута"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "row": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рад"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ряд"
+          }
+        }
+      }
+    },
+    "rus": {
+      "extractionState": "manual",
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "РУС"
+          }
+        }
+      },
+      "shouldTranslate": false
+    },
+    "russian": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Русский"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Русский"
+          }
+        }
+      }
+    },
+    "satellite": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спадарожнік"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спутник"
+          }
+        }
+      }
+    },
+    "save": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Захаваць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сохранить"
+          }
+        }
+      }
+    },
+    "save_button_disabled_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Калі кнопка «Захаваць» неактыўная, значыць ПІБ пустое або дата ўведзена няправільна: такое поле падсвечана чырвоным."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Если кнопка «Сохранить» неактивна, значит ФИО пустое или дата введена неверно: такое поле подсвечено красным."
+          }
+        }
+      }
+    },
+    "scan_qr_code": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сканаваць QR-код"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Сканировать QR-код"
+          }
+        }
+      }
+    },
+    "scheme": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схема"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Схема"
+          }
+        }
+      }
+    },
+    "search": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пошук"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поиск"
+          }
+        }
+      }
+    },
+    "search_by_name": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пошук па імені"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поиск по имени"
+          }
+        }
+      }
+    },
+    "section": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Участак"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Участок"
+          }
+        }
+      }
+    },
+    "section_row_place_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Участак %1$@ · рад %2$@ · месца %3$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Участок %1$@ · ряд %2$@ · место %3$@"
+          }
+        }
+      }
+    },
+    "send": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адправіць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отправить"
+          }
+        }
+      }
+    },
+    "send_reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адправіць адказ"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отправить ответ"
+          }
+        }
+      }
+    },
+    "share_materials_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Калі ў вас ёсць фотаздымкі, дакументы або ўспаміны пра гэтага чалавека, дашліце іх. Пасля праверкі мы дададзім матэрыялы ў картку ветэрана."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Если у вас есть фотографии, документы или воспоминания об этом человеке, пришлите их. После проверки мы добавим материалы в карточку ветерана."
+          }
+        }
+      }
+    },
+    "short_info": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Кароткая інфармацыя"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Краткая информация"
+          }
+        }
+      }
+    },
+    "show_on_map": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Паказаць на карце"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показать на карте"
+          }
+        }
+      }
+    },
+    "sign_in": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Увайсці"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Войти"
+          }
+        }
+      }
+    },
+    "sign_in_as_admin": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Уваход для адміністратара"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вход для администратора"
+          }
+        }
+      }
+    },
+    "sign_in_to_keep_favorites_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Увайдзіце праз Google, і абранае са зваротамі захаваюцца нават пасля пераўсталёўкі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Войдите через Google, и избранное с обращениями сохранятся даже после переустановки"
+          }
+        }
+      }
+    },
+    "sign_in_with_google": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Увайсці праз Google"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Войти через Google"
+          }
+        }
+      }
+    },
+    "sign_out": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйсці"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выйти"
+          }
+        }
+      }
+    },
+    "signed_in_as": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вы ўвайшлі як\n%1$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вы вошли как\n%1$@"
+          }
+        }
+      }
+    },
+    "slogan": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "У памяць аб тых, хто падарыў нам мірнае неба і праславіў беларускую творчасць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "В память о тех, кто подарил нам мирное небо и прославил белорусское творчество"
+          }
+        }
+      }
+    },
+    "start": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пачаць"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начать"
+          }
+        }
+      }
+    },
+    "start_over": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пачаць нанова"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Начать заново"
+          }
+        }
+      }
+    },
+    "stop_order_sets_route_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нумары на карце і лінія маршруту бяруцца з парадку прыпынкаў, прэв’ю відаць проста ў рэдактары."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Номера на карте и линия маршрута берутся из порядка остановок, превью видно прямо в редакторе."
+          }
+        }
+      }
+    },
+    "stop_text": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тэкст прыпынку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Текст остановки"
+          }
+        }
+      }
+    },
+    "stops": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прыпынкі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Остановки"
+          }
+        }
+      }
+    },
+    "stops_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld прыпынкі"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld прыпынкаў"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld прыпынак"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld прыпынку"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld остановки"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld остановок"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld остановка"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld остановки"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "suggestion": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прапанова"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Предложение"
+          }
+        }
+      }
+    },
+    "suvorov_1": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Суворава I ступені"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Суворова I степени"
+          }
+        }
+      }
+    },
+    "suvorov_2": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ордэн Суворава II ступені"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Орден Суворова II степени"
+          }
+        }
+      }
+    },
+    "tap_map_to_move_marker_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Націсніце на карту, каб перастаўляць метку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нажмите на карту, чтобы переставить метку"
+          }
+        }
+      }
+    },
+    "text_size": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Памер тэксту"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Размер текста"
+          }
+        }
+      }
+    },
+    "thank_you_for_keeping_memory_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзякуй, што захоўваеце памяць разам з намі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спасибо, что храните память вместе с нами"
+          }
+        }
+      }
+    },
+    "thank_you_material_sent_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзякуй! Матэрыял адпраўлены на праверку"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спасибо! Материал отправлен на проверку"
+          }
+        }
+      }
+    },
+    "thank_you_message_sent_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзякуй! Паведамленне адпраўлена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Спасибо! Сообщение отправлено"
+          }
+        }
+      }
+    },
+    "theme": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тэма"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Тема"
+          }
+        }
+      }
+    },
+    "times_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "×%1$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "×%1$lld"
+          }
+        }
+      }
+    },
+    "title": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Назва"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Название"
+          }
+        }
+      }
+    },
+    "tour": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экскурсія"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экскурсия"
+          }
+        }
+      }
+    },
+    "tour_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмін → Экскурсіі → «Дадаць экскурсію».\nДайце назву і кароткае апісанне, напрыклад «Героі Савецкага Саюза, 40 хвілін».\nНацісніце «Дадаць прыпынак» і знайдзіце месца па прозвішчы, нумары ўчастка або тыпе.\nДля кожнага прыпынку напішыце тэкст, які наведвальнік чытае каля магілы, і прымацуйце аўдыягід.\nВыстаўце парадак прыпынкаў стрэлкамі."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Админ → Экскурсии → «Добавить экскурсию».\nДайте название и короткое описание, например «Герои Советского Союза, 40 минут».\nНажмите «Добавить остановку» и найдите место по фамилии, номеру участка или типу.\nДля каждой остановки напишите текст, который посетитель читает у могилы, и прикрепите аудиогид.\nВыставьте порядок остановок стрелками."
+          }
+        }
+      }
+    },
+    "tours": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экскурсіі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экскурсии"
+          }
+        }
+      }
+    },
+    "troubleshooting_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фота або аўдыя не загружаецца — праверце інтэрнэт і памер файла. Калі памылка паўтараецца, папрасіце распрацоўшчыка дадаць ваш UID у правілы Storage.\n«Няма правоў адміністратара» пры ўваходзе — у базе няма запісу з вашым UID у OurMemory/Admins.\nНаведвальнік не бачыць змены — праграма загружае даныя адзін раз за запуск, новае з’явіцца пасля перазапуску.\nУваход адміністратара на тэлефоне наведвальніка скідвае яго ўваход праз Google. Працуйце са свайго тэлефона."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Фото или аудио не загружается — проверьте интернет и размер файла. Если ошибка повторяется, попросите разработчика добавить ваш UID в правила Storage.\n«Нет прав администратора» при входе — в базе нет записи с вашим UID в OurMemory/Admins.\nПосетитель не видит изменения — приложение загружает данные один раз за запуск, новое появится после перезапуска.\nВход администратора на телефоне посетителя сбрасывает его вход через Google. Работайте со своего телефона."
+          }
+        }
+      }
+    },
+    "uploading_file": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загружаем файл…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Загружаем файл…"
+          }
+        }
+      }
+    },
+    "veteran": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ветэран"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ветеран"
+          }
+        }
+      }
+    },
+    "veteran_cards_count": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карткі"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld картак"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld картка"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карткі"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карточки"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карточек"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карточка"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld карточки"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "veteran_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмін → Ветэраны → «Дадаць ветэрана». Нумар карткі праграма прысвоіць сама.\nПІБ цалкам і гады жыцця як на таблічцы, напрыклад «1905–1966».\nКатэгорыя вызначае фільтр у спісе і на карце: «Героі Савецкага Саюза» або «Дзеячы мастацтваў».\nДаты нараджэння і смерці выберыце ў календары: па іх працуюць блок «У гэты дзень» і напаміны абранага.\nВыберыце месца пахавання са спіса месцаў, створаных загадзя.\nДадайце партрэт: твар па цэнтры, праграма сама сцісне фота.\nУзнагароды ставяцца плюсам і мінусам: два ордэны Чырвонай Зоркі — «2» насупраць ордэна.\nБіяграфію збярыце з абзацаў і фота з подпісамі. Стрэлкі мяняюць парадак, крыжык выдаляе блок."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Админ → Ветераны → «Добавить ветерана». Номер карточки приложение присвоит само.\nФИО полностью и годы жизни как на табличке, например «1905–1966».\nКатегория определяет фильтр в списке и на карте: «Герои Советского Союза» или «Деятели искусств».\nДаты рождения и смерти выберите в календаре: по ним работают блок «В этот день» и напоминания избранного.\nВыберите место захоронения из списка мест, созданных заранее.\nДобавьте портрет: лицо по центру, приложение само сожмёт фото.\nНаграды ставятся плюсом и минусом: два ордена Красной Звезды — «2» напротив ордена.\nБиографию соберите из абзацев и фото с подписями. Стрелки меняют порядок, крестик удаляет блок."
+          }
+        }
+      }
+    },
+    "veterans": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ветэраны"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ветераны"
+          }
+        }
+      }
+    },
+    "victory_day": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дзень Перамогі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "День Победы"
+          }
+        }
+      }
+    },
+    "visited": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пройдзена"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пройдено"
+          }
+        }
+      }
+    },
+    "visited_of_total": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пройдзена %1$lld з %2$lld"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пройдено %1$lld из %2$lld"
+          }
+        }
+      }
+    },
+    "voice_over": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Агучка"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Озвучка"
+          }
+        }
+      }
+    },
+    "voice_over_steps": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Біяграфія доўжыцца 1–3 хвіліны, прыпынак экскурсіі — 30–90 секунд.\nФармат mp3 або m4a, памер файла да 50 МБ.\nДля сінтэзу маўлення падыдуць ElevenLabs або Yandex SpeechKit. Жывы голас на дыктафон у ціхім пакоі часта гучыць лепш.\nПерашліце файл сабе на тэлефон і загрузіце кнопкай «Дадаць аўдыя» ў картцы ветэрана або ў прыпынку."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Биография длится 1–3 минуты, остановка экскурсии — 30–90 секунд.\nФормат mp3 или m4a, размер файла до 50 МБ.\nДля синтеза речи подойдут ElevenLabs или Yandex SpeechKit. Живой голос на диктофон в тихой комнате часто звучит лучше.\nПерешлите файл себе на телефон и загрузите кнопкой «Добавить аудио» в карточке ветерана или в остановке."
+          }
+        }
+      }
+    },
+    "warHeader": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вайсковыя могілкі"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Военное кладбище"
+          }
+        }
+      }
+    },
+    "write_to_us": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Напісаць нам"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Написать нам"
+          }
+        }
+      }
+    },
+    "wrong_email_or_password_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Няправільны e-mail або пароль"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Неверный e-mail или пароль"
+          }
+        }
+      }
+    },
+    "years_of_life": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гады жыцця"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Годы жизни"
+          }
+        }
+      }
+    },
+    "your_name_and_contact": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваша імя і тэлефон або e-mail"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваше имя и телефон или e-mail"
+          }
+        }
+      }
+    },
+    "your_reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш адказ: %1$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш ответ: %1$@"
+          }
+        }
+      }
+    },
+    "za_otvagu": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «За адвагу»"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «За отвагу»"
+          }
+        }
+      }
+    },
+    "za_pobedu_germany": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «За перамогу над Германіяй у Вялікай Айчыннай вайне 1941–1945 гг.»"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Медаль «За победу над Германией в Великой Отечественной войне 1941–1945 гг.»"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

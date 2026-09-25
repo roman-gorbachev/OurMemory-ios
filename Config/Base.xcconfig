@@ -1,0 +1,5 @@
+MAPKIT_API_KEY =
+GOOGLE_REVERSED_CLIENT_ID = com.googleusercontent.apps.placeholder
+DEVELOPMENT_TEAM =
+
+#include? "Secrets.xcconfig"
