@@ -52,8 +52,8 @@ final class FeedbackViewModel {
         guard data.canSend else {
             return
         }
-        let hasTextProfanity = contentCheckRepository.containsProfanity(data.text)
-        let hasContactProfanity = contentCheckRepository.containsProfanity(data.contact)
+        let hasTextProfanity = contentCheckRepository.containsOffensiveText(data.text)
+        let hasContactProfanity = contentCheckRepository.containsOffensiveText(data.contact)
         guard !hasTextProfanity && !hasContactProfanity else {
             feedbackUiData.hasTextProfanity = hasTextProfanity
             feedbackUiData.hasContactProfanity = hasContactProfanity

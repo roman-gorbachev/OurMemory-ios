@@ -6,6 +6,7 @@ enum GuideSection: CaseIterable, Hashable {
     case tour
     case voiceOver
     case requests
+    case administrators
     case troubleshooting
 
     var titleKey: LocalizedStringKey {
@@ -20,6 +21,8 @@ enum GuideSection: CaseIterable, Hashable {
             return "voice_over"
         case .requests:
             return "requests_and_messages"
+        case .administrators:
+            return "administrators"
         case .troubleshooting:
             return "if_something_is_wrong"
         }
@@ -37,6 +40,8 @@ enum GuideSection: CaseIterable, Hashable {
             return "mic"
         case .requests:
             return "envelope"
+        case .administrators:
+            return "person.badge.shield.checkmark"
         case .troubleshooting:
             return "questionmark.circle"
         }
@@ -54,6 +59,8 @@ enum GuideSection: CaseIterable, Hashable {
             return "voice_over_steps"
         case .requests:
             return "requests_steps"
+        case .administrators:
+            return "add_administrator_steps"
         case .troubleshooting:
             return "troubleshooting_steps"
         }
@@ -71,6 +78,8 @@ enum GuideSection: CaseIterable, Hashable {
             return "check_stresses_before_msg"
         case .requests:
             return "reply_shown_to_author_msg"
+        case .administrators:
+            return "do_not_publish_whole_rules_file_msg"
         case .troubleshooting:
             return "deleted_items_cannot_be_restored_msg"
         }

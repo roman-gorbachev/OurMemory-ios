@@ -38,8 +38,8 @@ struct SubmissionReviewScreen: View {
             Section {
                 TextField("comment_for_author", text: Binding(get: { return data.reply }, set: { onAction(.replyChanged($0)) }), axis: .vertical)
             } footer: {
-                if data.hasFailed {
-                    Text("failed_to_save_msg").foregroundStyle(Palette.error)
+                if let failure = data.failure {
+                    Text(failure.messageKey).foregroundStyle(Palette.error)
                 }
             }
             Section {

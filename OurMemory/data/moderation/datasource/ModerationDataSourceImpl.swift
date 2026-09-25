@@ -6,6 +6,8 @@ import Foundation
 
 final class ModerationDataSourceImpl: ModerationDataSource {
     private static let veteransInfoField = "veteransInfo"
+    private static let firebaseErrorDomain = "com.firebase"
+    private static let permissionDeniedCode = 1
 
     private let auth: Auth
     private let storage: Storage
@@ -41,15 +43,23 @@ final class ModerationDataSourceImpl: ModerationDataSource {
             reviewer: auth.currentUser?.email ?? "",
             reviewedAt: ServerValue.timestamp()
         )
-        try await root.updateChildValues(updates)
+        try await updateOrThrow(root, updates)
     }
 
     func reject(submissionId: String, reply: String) async throws {
-        try await submissionsReference.child(submissionId).updateChildValues([
+        try await updateOrThrow(submissionsReference.child(submissionId), [
             "status": SubmissionStatusValues.rejected,
             "reviewedBy": auth.currentUser?.email ?? "",
             "reviewedAt": ServerValue.timestamp(),
             "reply": reply.trimmingCharacters(in: .whitespacesAndNewlines)
         ])
+    }
+
+    private func updateOrThrow(_ reference: DatabaseReference, _ updates: [String: Any]) async throws {
+        do {
+            try await reference.updateChildValues(updates)
+        } catch let error as NSError where error.domain == Self.firebaseErrorDomain && error.code == Self.permissionDeniedCode {
+            throw ModerationError.permissionDenied
+        }
     }
 }

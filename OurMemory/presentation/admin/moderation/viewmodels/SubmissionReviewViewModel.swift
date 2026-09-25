@@ -14,7 +14,7 @@ final class SubmissionReviewViewModel {
     @ObservationIgnored private var reply: String?
     @ObservationIgnored private var deselectedUrls = Set<String>()
     @ObservationIgnored private var isProcessing = false
-    @ObservationIgnored private var hasFailed = false
+    @ObservationIgnored private var failure: ReviewFailure?
     @ObservationIgnored private var isFinished = false
 
     init(submissionId: String, moderationRepository: ModerationRepository, veteransRepository: VeteransRepository) {
@@ -93,14 +93,16 @@ final class SubmissionReviewViewModel {
             return
         }
         isProcessing = true
-        hasFailed = false
+        failure = nil
         rebuild()
         Task {
             do {
                 try await decision()
                 isFinished = true
+            } catch ModerationError.permissionDenied {
+                failure = .noPermission
             } catch {
-                hasFailed = true
+                failure = .network
             }
             isProcessing = false
             rebuild()
@@ -120,7 +122,7 @@ final class SubmissionReviewViewModel {
             photos: photoUrls.map { return ReviewPhotoUi(url: $0, isSelected: !deselectedUrls.contains($0)) },
             status: submission.status,
             isProcessing: isProcessing,
-            hasFailed: hasFailed,
+            failure: failure,
             isFinished: isFinished
         ))
     }

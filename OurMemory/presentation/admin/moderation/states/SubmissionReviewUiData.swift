@@ -9,7 +9,7 @@ struct SubmissionReviewUiData: Hashable {
     let photos: [ReviewPhotoUi]
     let status: ModerationStatus
     let isProcessing: Bool
-    let hasFailed: Bool
+    let failure: ReviewFailure?
     let isFinished: Bool
 
     var isEditable: Bool {

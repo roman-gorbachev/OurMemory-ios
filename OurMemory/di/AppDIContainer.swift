@@ -74,6 +74,8 @@ final class AppDIContainer {
     @ObservationIgnored lazy var mediaRepository: MediaRepository = MediaUploader(storage: storage)
     @ObservationIgnored lazy var contentCheckRepository: ContentCheckRepository = ContentCheckRepositoryImpl(
         profanityDetector: ProfanityDetector(),
+        latinProfanityDetector: LatinProfanityDetector(),
+        extremismDetector: ExtremismDetector(),
         imageClassifier: NsfwImageClassifier()
     )
     @ObservationIgnored lazy var reminderScheduler: ReminderScheduler = ReminderSchedulerImpl(center: notificationCenter)

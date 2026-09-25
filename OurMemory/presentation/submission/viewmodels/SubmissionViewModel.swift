@@ -69,8 +69,8 @@ final class SubmissionViewModel {
         guard data.canSend else {
             return
         }
-        let hasTextProfanity = contentCheckRepository.containsProfanity(data.text)
-        let hasContactProfanity = contentCheckRepository.containsProfanity(data.contact)
+        let hasTextProfanity = contentCheckRepository.containsOffensiveText(data.text)
+        let hasContactProfanity = contentCheckRepository.containsOffensiveText(data.contact)
         guard !hasTextProfanity && !hasContactProfanity else {
             submissionUiData.hasTextProfanity = hasTextProfanity
             submissionUiData.hasContactProfanity = hasContactProfanity
