@@ -1,3 +1,4 @@
+import SwiftUI
 import UIKit
 import YandexMapsMobile
 
@@ -15,6 +16,7 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
     private static let accuracyFillAlpha = 0.15
     private static let accuracyStrokeAlpha = 0.4
     private static let noRotation: Float = 0
+    private static let logoMargin: CGFloat = 8
 
     var onMarkerTap: ((String) -> Void)?
     var onStopTap: ((Int) -> Void)?
@@ -30,6 +32,7 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
     private var appliedCamera: MapCamera?
     private var appliedLocationRequest = 0
     private var hasFittedRoute = false
+    private var appliedLogoInsets: EdgeInsets?
 
     func attach(to mapView: YMKMapView) {
         self.mapView = mapView
@@ -57,6 +60,18 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
             appliedLocationRequest = locationRequest
             showUserLocation()
         }
+    }
+
+    func applyLogoInsets(_ insets: EdgeInsets) {
+        guard insets != appliedLogoInsets, let map = mapView?.mapWindow.map else {
+            return
+        }
+        appliedLogoInsets = insets
+        map.logo.setAlignmentWith(YMKLogoAlignment(horizontalAlignment: .left, verticalAlignment: .bottom))
+        map.logo.setPaddingWith(YMKLogoPadding(
+            horizontalPadding: UInt(max(insets.leading, 0) + Self.logoMargin),
+            verticalPadding: UInt(max(insets.bottom, 0) + Self.logoMargin)
+        ))
     }
 
     func showUserLocationLayerIfAllowed(_ isAllowed: Bool) {

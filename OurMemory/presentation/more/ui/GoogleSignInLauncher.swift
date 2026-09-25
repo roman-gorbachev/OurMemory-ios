@@ -3,8 +3,14 @@ import GoogleSignIn
 import UIKit
 
 enum GoogleSignInLauncher {
+    private static let urlTypesKey = "CFBundleURLTypes"
+    private static let urlSchemesKey = "CFBundleURLSchemes"
+    private static let clientIdSeparator: Character = "."
+
     static func signIn() async -> MoreUserAction {
-        guard let clientId = FirebaseApp.app()?.options.clientID, let presenter = topViewController() else {
+        guard let clientId = FirebaseApp.app()?.options.clientID,
+              isUrlSchemeRegistered(forClientId: clientId),
+              let presenter = topViewController() else {
             return .googleSignInFailed(.failed)
         }
         GIDSignIn.sharedInstance.configuration = GIDConfiguration(clientID: clientId)
@@ -19,6 +25,14 @@ enum GoogleSignInLauncher {
         } catch {
             return .googleSignInFailed(.failed)
         }
+    }
+
+    private static func isUrlSchemeRegistered(forClientId clientId: String) -> Bool {
+        let scheme = clientId.split(separator: clientIdSeparator).reversed().joined(separator: String(clientIdSeparator))
+        let urlTypes = Bundle.main.object(forInfoDictionaryKey: urlTypesKey) as? [[String: Any]] ?? []
+        return urlTypes
+            .flatMap { return $0[urlSchemesKey] as? [String] ?? [] }
+            .contains(scheme)
     }
 
     private static func topViewController() -> UIViewController? {

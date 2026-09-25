@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-OurMemory — the SwiftUI iOS port of the Android app in `~/Personal/OurMemory-80` (its `CLAUDE.md` describes the product and the Firebase data model in detail). It digitizes a historical military cemetery in Minsk: a list of veterans, a detail page per veteran (bio, rewards, photos, audio biography, candle, favorites), a Yandex MapKit map with burials and audio tours, visitor submissions and feedback, and an admin area (content editors, moderation, feedback). Single app target `OurMemory`, bundle id `com.gorman.ourmemoryapp`, iOS deployment target 17.0.
+OurMemory — the SwiftUI iOS port of the Android app in `~/Personal/OurMemory-80` (its `CLAUDE.md` describes the product and the Firebase data model in detail). It digitizes a historical military cemetery in Minsk: a list of veterans, a detail page per veteran (bio, rewards, photos, audio biography, candle, favorites), a Yandex MapKit map with burials and audio tours, visitor submissions and feedback, and an admin area (content editors, moderation, feedback). Single app target `OurMemory`, bundle id `com.gorman.ourmemory`, iOS deployment target 17.0.
 
 Both apps share one Firebase Realtime Database (`chatroom-85fb8`, everything under the `OurMemory` node), so node names, field names, status strings and write shapes must stay byte-for-byte identical to Android.
 
@@ -64,9 +64,10 @@ The NSFW model is rebuilt with `uv run --python 3.11 --with-requirements tools/n
 
 ## Configuration & secrets
 
-- `Config/Secrets.xcconfig` (git-ignored, template `Config/Secrets.example.xcconfig`) defines `MAPKIT_API_KEY`, `GOOGLE_REVERSED_CLIENT_ID`, `DEVELOPMENT_TEAM`. `Config/Base.xcconfig` includes it; the per-target `App.*.xcconfig` / `Tests.*.xcconfig` include the Pods config first. Values reach runtime through `OurMemory/App/Info.plist` (`$(KEY)`) and `enum AppConfig` via `Bundle.main.object(forInfoDictionaryKey:)`. Adding a value takes three edits: the xcconfig, `Info.plist`, and an `AppConfig` accessor.
-- `OurMemory/Resources/GoogleService-Info.plist` (git-ignored) is the Firebase config of the iOS app `com.gorman.ourmemoryapp`. Without it `FirebaseApp` is not configured and `RootView` shows the configuration error.
-- Universal links (`applinks:chatroom-85fb8.web.app`, path `/veteran/*`) need `apple-app-site-association`, served from the Android repo's `firebase/public/.well-known/`.
+- `Config/Secrets.xcconfig` (git-ignored, template `Config/Secrets.example.xcconfig`) defines `MAPKIT_API_KEY` and `DEVELOPMENT_TEAM`. `Config/Base.xcconfig` includes it; the per-target `App.*.xcconfig` / `Tests.*.xcconfig` include the Pods config first. Values reach runtime through `OurMemory/App/Info.plist` (`$(KEY)`) and `enum AppConfig` via `Bundle.main.object(forInfoDictionaryKey:)`. Adding a value takes three edits: the xcconfig, `Info.plist`, and an `AppConfig` accessor.
+- `OurMemory/Resources/GoogleService-Info.plist` is committed: it is the Firebase config of the iOS app `com.gorman.ourmemory` in `chatroom-85fb8`. The bundle id in `project.yml` must match it, or Google Sign-In fails.
+- The Google Sign-In URL scheme is not written by hand: the post-build script "Register Google Sign-In URL scheme" in `project.yml` copies `REVERSED_CLIENT_ID` from the plist into the built `Info.plist`. `GoogleSignInLauncher` refuses to call the SDK when the scheme is missing, because GoogleSignIn throws an exception in that case.
+- Universal links (`applinks:chatroom-85fb8.web.app`, path `/veteran/*`) need `apple-app-site-association` with `<TEAMID>.com.gorman.ourmemory`, served from the Android repo's `firebase/public/.well-known/`.
 
 ## Architecture
 

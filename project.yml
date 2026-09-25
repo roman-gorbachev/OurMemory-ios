@@ -40,12 +40,25 @@ targets:
           - "**/.DS_Store"
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: com.gorman.ourmemoryapp
+        PRODUCT_BUNDLE_IDENTIFIER: com.gorman.ourmemory
         TARGETED_DEVICE_FAMILY: "1"
         INFOPLIST_FILE: OurMemory/App/Info.plist
         CODE_SIGN_ENTITLEMENTS: OurMemory/App/OurMemory.entitlements
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         ENABLE_USER_SCRIPT_SANDBOXING: NO
+    postBuildScripts:
+      - name: Register Google Sign-In URL scheme
+        basedOnDependencyAnalysis: false
+        script: |
+          PLIST="${TARGET_BUILD_DIR}/${INFOPLIST_PATH}"
+          CONFIG="${SRCROOT}/OurMemory/Resources/GoogleService-Info.plist"
+          [ -f "$CONFIG" ] || exit 0
+          SCHEME=$(/usr/libexec/PlistBuddy -c "Print :REVERSED_CLIENT_ID" "$CONFIG")
+          /usr/libexec/PlistBuddy -c "Delete :CFBundleURLTypes" "$PLIST" 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Add :CFBundleURLTypes array" "$PLIST"
+          /usr/libexec/PlistBuddy -c "Add :CFBundleURLTypes:0 dict" "$PLIST"
+          /usr/libexec/PlistBuddy -c "Add :CFBundleURLTypes:0:CFBundleURLSchemes array" "$PLIST"
+          /usr/libexec/PlistBuddy -c "Add :CFBundleURLTypes:0:CFBundleURLSchemes:0 string $SCHEME" "$PLIST"
     dependencies:
       - package: Firebase
         product: FirebaseAuth

@@ -16,7 +16,11 @@ struct FeedbackScreen: View {
             }
             Section {
                 Picker("feedback", selection: Binding(get: { return data.type }, set: { onAction(.typeChanged($0)) })) {
-                    ForEach(FeedbackType.allCases, id: \.self) { Text($0.titleKey).tag($0) }
+                    ForEach(FeedbackType.allCases, id: \.self) {
+                        Text($0.titleKey)
+                            .padding()
+                            .tag($0)
+                    }
                 }
                 .pickerStyle(.segmented)
                 .listRowBackground(Color.clear)

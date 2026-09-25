@@ -236,3 +236,6 @@ TabView(selection: $router.selectedTab) {
     }
 }
 ```
+
+## Уточнение: bundle id и конфиг Firebase
+iOS-приложение в Firebase зарегистрировано как `com.gorman.ourmemory`, поэтому bundle id таргета — `com.gorman.ourmemory`, `GoogleService-Info.plist` хранится в репозитории, а URL-схема Google Sign-In подставляется из него скриптом после сборки. Для AASA: `<TEAMID>.com.gorman.ourmemory`.

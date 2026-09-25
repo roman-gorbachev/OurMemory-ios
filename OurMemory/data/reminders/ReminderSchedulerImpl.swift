@@ -14,7 +14,7 @@ final class ReminderSchedulerImpl: ReminderScheduler {
 
     func setVictoryDayReminder(isEnabled: Bool) async {
         center.removePendingNotificationRequests(withIdentifiers: [ReminderNotifications.victoryDayId])
-        guard isEnabled else {
+        guard isEnabled, await ReminderNotifications.isAuthorized(center) else {
             return
         }
         let content = UNMutableNotificationContent()

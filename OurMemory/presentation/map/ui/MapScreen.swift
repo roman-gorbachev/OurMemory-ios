@@ -14,14 +14,17 @@ struct MapScreen: View {
     @State private var locationPermission = LocationPermission()
 
     var body: some View {
-        return YandexMapView(
-            content: MapContent(markers: data.markers, clustersMarkers: true, isSatellite: isSatellite),
-            camera: initialCamera,
-            locationRequest: locationRequest,
-            showsUserLocation: showsUserLocation,
-            onMarkerTap: { onAction(.markerTapped($0)) }
-        )
-        .ignoresSafeArea(edges: [.top, .horizontal])
+        return GeometryReader { proxy in
+            YandexMapView(
+                content: MapContent(markers: data.markers, clustersMarkers: true, isSatellite: isSatellite),
+                camera: initialCamera,
+                locationRequest: locationRequest,
+                showsUserLocation: showsUserLocation,
+                logoInsets: proxy.safeAreaInsets,
+                onMarkerTap: { onAction(.markerTapped($0)) }
+            )
+            .ignoresSafeArea()
+        }
         .overlay(alignment: .topTrailing) {
             MapControls(
                 checkedWar: data.checkedWar,

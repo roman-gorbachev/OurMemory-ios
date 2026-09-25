@@ -6,6 +6,5 @@ build/
 *.xcworkspace
 Pods/
 Config/Secrets.xcconfig
-OurMemory/Resources/GoogleService-Info.plist
 .venv/
 *.pyc

@@ -41,7 +41,7 @@ final class FavoriteAnniversaryScheduler {
                 return
             }
             await removeScheduled()
-            guard isEnabled, !favorites.isEmpty, let veterans = try? await veteransRepository.allVeterans() else {
+            guard isEnabled, !favorites.isEmpty, await ReminderNotifications.isAuthorized(center), let veterans = try? await veteransRepository.allVeterans() else {
                 return
             }
             let requests = veterans

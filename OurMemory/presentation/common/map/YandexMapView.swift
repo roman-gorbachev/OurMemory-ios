@@ -6,6 +6,7 @@ struct YandexMapView: UIViewRepresentable {
     var camera: MapCamera?
     var locationRequest = 0
     var showsUserLocation = false
+    var logoInsets = EdgeInsets()
     var onMarkerTap: ((String) -> Void)?
     var onStopTap: ((Int) -> Void)?
     var onMapTap: ((Double, Double) -> Void)?
@@ -32,6 +33,7 @@ struct YandexMapView: UIViewRepresentable {
         coordinator.onMapTap = onMapTap
         coordinator.apply(content: content, camera: camera, isNightMode: colorScheme == .dark, locationRequest: locationRequest)
         coordinator.showUserLocationLayerIfAllowed(showsUserLocation)
+        coordinator.applyLogoInsets(logoInsets)
     }
 
     func makeCoordinator() -> YandexMapCoordinator {
