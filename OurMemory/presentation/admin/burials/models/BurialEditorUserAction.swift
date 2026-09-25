@@ -1,6 +1,7 @@
 import Foundation
 
 enum BurialEditorUserAction {
+    case languageChanged(AppLanguage)
     case typeChanged(BurialType)
     case sectionChanged(String)
     case rowChanged(String)

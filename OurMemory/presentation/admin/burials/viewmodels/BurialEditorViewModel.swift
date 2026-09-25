@@ -55,6 +55,8 @@ final class BurialEditorViewModel {
 
     func onAction(_ action: BurialEditorUserAction) {
         switch action {
+        case .languageChanged(let value):
+            update { $0.language = value }
         case .typeChanged(let value):
             update { $0.type = value }
         case .sectionChanged(let value):
@@ -64,7 +66,7 @@ final class BurialEditorViewModel {
         case .placeChanged(let value):
             update { $0.place = value }
         case .descriptionChanged(let value):
-            update { $0.description = value }
+            update { $0.descriptionText = value }
         case .latitudeChanged(let value):
             update { $0.latitude = value }
         case .longitudeChanged(let value):

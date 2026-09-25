@@ -10,6 +10,21 @@ struct BurialForm: Hashable {
     var photo = ""
     var latitude = ""
     var longitude = ""
+    var translatedDescriptions: [AppLanguage: String] = [:]
+    var language = AppLanguage.russian
+
+    var descriptionText: String {
+        get {
+            return language == .russian ? description : translatedDescriptions[language] ?? ""
+        }
+        set {
+            if language == .russian {
+                description = newValue
+            } else {
+                translatedDescriptions[language] = newValue
+            }
+        }
+    }
 
     var latitudeValue: Double? {
         return Coordinates.latitude(from: latitude)
@@ -39,6 +54,7 @@ struct BurialForm: Hashable {
         photo = burial.photo
         latitude = Coordinates.text(burial.latitude)
         longitude = Coordinates.text(burial.longitude)
+        translatedDescriptions = AppLanguage.translated(burial.translations).mapValues { return $0.description }
     }
 
     func toBurial() -> Burial {
@@ -51,7 +67,9 @@ struct BurialForm: Hashable {
             place: place.trimmed,
             type: type.rawValue,
             photo: photo,
-            description: description.trimmed
+            description: description.trimmed,
+            translations: AppLanguage.stored(translatedDescriptions.filter { return !$0.value.isBlank })
+                .mapValues { return BurialTranslation(description: $0.trimmed) }
         )
     }
 }

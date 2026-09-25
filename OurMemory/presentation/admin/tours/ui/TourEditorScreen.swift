@@ -12,11 +12,17 @@ struct TourEditorScreen: View {
     var body: some View {
         let form = data.form
         return Form {
+            ContentLanguageSection(language: form.language) { onAction(.languageChanged($0)) }
             Section {
-                TextField("title", text: Binding(get: { return form.title }, set: { onAction(.titleChanged($0)) }))
+                TextField(
+                    "title",
+                    text: Binding(get: { return form.text.title }, set: { onAction(.titleChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.title, language: form.language)
+                )
                 TextField(
                     "description",
-                    text: Binding(get: { return form.description }, set: { onAction(.descriptionChanged($0)) }),
+                    text: Binding(get: { return form.text.description }, set: { onAction(.descriptionChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.description, language: form.language),
                     axis: .vertical
                 )
                 .lineLimit(Self.descriptionLines...)
@@ -60,18 +66,21 @@ struct TourEditorScreen: View {
     }
 
     private func stopRow(_ stop: TourStopForm, number: Int) -> some View {
+        let language = data.form.language
+        let content = stop.content(in: language)
         return VStack(alignment: .leading, spacing: Spacing.m) {
             Text(verbatim: "\(number). \(data.title(forBurialId: stop.burialId))")
                 .font(.headline)
                 .foregroundStyle(Palette.primary)
             TextField(
                 "stop_text",
-                text: Binding(get: { return stop.text }, set: { onAction(.stopTextChanged(stop.id, $0)) }),
+                text: Binding(get: { return content.text }, set: { onAction(.stopTextChanged(stop.id, $0)) }),
+                prompt: OriginalTextPrompt.prompt(stop.text, language: language),
                 axis: .vertical
             )
             .lineLimit(Self.stopTextLines...)
             AudioAttachmentRow(
-                audioUrl: stop.audioUrl,
+                audioUrl: content.audioUrl,
                 onPicked: { onAction(.stopAudioPicked(stop.id, $0)) },
                 onRemove: { onAction(.stopAudioRemoved(stop.id)) }
             )

@@ -62,16 +62,18 @@ final class VeteranEditorViewModel {
 
     func onAction(_ action: VeteranEditorUserAction) {
         switch action {
+        case .languageChanged(let value):
+            update { $0.language = value }
         case .nameChanged(let value):
-            update { $0.name = value }
+            update { $0.text.name = value }
         case .yearsChanged(let value):
             update { $0.years = value }
         case .categoryChanged(let value):
             update { $0.category = value }
         case .baseInfoChanged(let value):
-            update { $0.baseInfo = value }
+            update { $0.text.baseInfo = value }
         case .allInfoChanged(let value):
-            update { $0.allInfo = value }
+            update { $0.text.allInfo = value }
         case .rewardCountChanged(let reward, let delta):
             update { form in
                 let count = max((form.rewards[reward] ?? 0) + delta, 0)
@@ -90,25 +92,32 @@ final class VeteranEditorViewModel {
         case .audioRemoved:
             update { $0.audioUrl = "" }
         case .paragraphAdded:
-            update { $0.entries.append(InfoEntry(id: UUID(), kind: .paragraph(text: ""))) }
+            update { $0.text.entries.append(InfoEntry(id: UUID(), kind: .paragraph(text: ""))) }
+        case .paragraphsCopiedFromOriginal:
+            update { form in
+                form.text.entries = form.entries.map { return InfoEntry(id: UUID(), kind: $0.kind) }
+            }
         case .mediaPicked(let data):
+            let language = form?.language ?? .russian
             upload({ try await $0.uploadPhoto(data, folder: $1) }) { form, url in
-                form.entries.append(InfoEntry(id: UUID(), kind: .media(url: url, caption: "")))
+                var text = form.text(in: language)
+                text.entries.append(InfoEntry(id: UUID(), kind: .media(url: url, caption: "")))
+                form.setText(text, in: language)
             }
         case .entryChanged(let entry):
             update { form in
-                if let index = form.entries.firstIndex(where: { return $0.id == entry.id }) {
-                    form.entries[index] = entry
+                if let index = form.text.entries.firstIndex(where: { return $0.id == entry.id }) {
+                    form.text.entries[index] = entry
                 }
             }
         case .entryMoved(let id, let offset):
             update { form in
-                if let index = form.entries.firstIndex(where: { return $0.id == id }) {
-                    form.entries = form.entries.moved(index: index, offset: offset)
+                if let index = form.text.entries.firstIndex(where: { return $0.id == id }) {
+                    form.text.entries = form.text.entries.moved(index: index, offset: offset)
                 }
             }
         case .entryRemoved(let id):
-            update { $0.entries.removeAll { return $0.id == id } }
+            update { $0.text.entries.removeAll { return $0.id == id } }
         case .failureDismissed:
             status.failure = nil
             rebuild()

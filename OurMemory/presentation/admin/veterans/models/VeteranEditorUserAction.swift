@@ -1,6 +1,7 @@
 import Foundation
 
 enum VeteranEditorUserAction {
+    case languageChanged(AppLanguage)
     case nameChanged(String)
     case yearsChanged(String)
     case categoryChanged(VeteranCategory)
@@ -14,6 +15,7 @@ enum VeteranEditorUserAction {
     case audioPicked(URL)
     case audioRemoved
     case paragraphAdded
+    case paragraphsCopiedFromOriginal
     case mediaPicked(Data)
     case entryChanged(InfoEntry)
     case entryMoved(UUID, offset: Int)

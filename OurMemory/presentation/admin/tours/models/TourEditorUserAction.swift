@@ -1,6 +1,7 @@
 import Foundation
 
 enum TourEditorUserAction {
+    case languageChanged(AppLanguage)
     case titleChanged(String)
     case descriptionChanged(String)
     case stopAdded(burialId: String)

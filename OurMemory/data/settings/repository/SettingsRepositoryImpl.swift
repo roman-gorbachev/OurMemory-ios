@@ -6,7 +6,7 @@ final class SettingsRepositoryImpl: SettingsRepository {
     private static let introSeenKey = "intro_seen"
     private static let themeModeKey = "theme_mode"
     private static let textScaleKey = "text_scale"
-    private static let languageKey = "app_language"
+    nonisolated private static let languageKey = "app_language"
     private static let victoryDayReminderKey = "victory_day_reminder"
     private static let favoriteRemindersKey = "favorite_reminders"
 

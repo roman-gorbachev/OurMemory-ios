@@ -14,6 +14,36 @@ struct VeteranForm: Hashable {
     var audioUrl = ""
     var burialId = ""
     var entries: [InfoEntry] = []
+    var translations: [AppLanguage: VeteranTextForm] = [:]
+    var language = AppLanguage.russian
+
+    var original: VeteranTextForm {
+        return VeteranTextForm(name: name, baseInfo: baseInfo, allInfo: allInfo, entries: entries)
+    }
+
+    var text: VeteranTextForm {
+        get {
+            return text(in: language)
+        }
+        set {
+            setText(newValue, in: language)
+        }
+    }
+
+    func text(in language: AppLanguage) -> VeteranTextForm {
+        return language == .russian ? original : translations[language] ?? VeteranTextForm()
+    }
+
+    mutating func setText(_ text: VeteranTextForm, in language: AppLanguage) {
+        guard language != .russian else {
+            name = text.name
+            baseInfo = text.baseInfo
+            allInfo = text.allInfo
+            entries = text.entries
+            return
+        }
+        translations[language] = text
+    }
 
     var isNameValid: Bool {
         return !name.isBlank
@@ -49,6 +79,7 @@ struct VeteranForm: Hashable {
         audioUrl = veteran.audioUrl
         burialId = veteran.burialId
         entries = InfoEntries.entries(from: veteran.veteransInfo)
+        translations = AppLanguage.translated(veteran.translations).mapValues { return VeteranTextForm(translation: $0) }
     }
 
     func toVeteran() -> Veteran {
@@ -65,7 +96,8 @@ struct VeteranForm: Hashable {
             burialId: burialId,
             audioUrl: audioUrl,
             birthDate: birthDate,
-            deathDate: deathDate
+            deathDate: deathDate,
+            translations: AppLanguage.stored(translations.filter { return !$0.value.isEmpty }).mapValues { return $0.toTranslation() }
         )
     }
 

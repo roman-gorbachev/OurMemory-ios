@@ -51,6 +51,7 @@ struct BurialEditorRoute: View {
         let form = data.form
         let onAction = viewModel.onAction
         return Form {
+            ContentLanguageSection(language: form.language) { onAction(.languageChanged($0)) }
             Section {
                 Picker("burial_place", selection: Binding(get: { return form.type }, set: { onAction(.typeChanged($0)) })) {
                     ForEach(BurialType.allCases, id: \.self) { Text($0.titleKey).tag($0) }
@@ -77,7 +78,12 @@ struct BurialEditorRoute: View {
                 }
             }
             Section("description") {
-                TextField("description", text: Binding(get: { return form.description }, set: { onAction(.descriptionChanged($0)) }), axis: .vertical)
+                TextField(
+                    "description",
+                    text: Binding(get: { return form.descriptionText }, set: { onAction(.descriptionChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.description, language: form.language),
+                    axis: .vertical
+                )
                     .lineLimit(Self.descriptionLines...)
             }
             Section {

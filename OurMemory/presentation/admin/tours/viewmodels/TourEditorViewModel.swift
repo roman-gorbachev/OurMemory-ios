@@ -70,18 +70,20 @@ final class TourEditorViewModel {
 
     func onAction(_ action: TourEditorUserAction) {
         switch action {
+        case .languageChanged(let value):
+            update { $0.language = value }
         case .titleChanged(let value):
-            update { $0.title = value }
+            update { $0.text.title = value }
         case .descriptionChanged(let value):
-            update { $0.description = value }
+            update { $0.text.description = value }
         case .stopAdded(let burialId):
             update { $0.stops.append(TourStopForm(burialId: burialId)) }
         case .stopTextChanged(let id, let text):
-            updateStop(id) { $0.text = text }
+            updateStopContent(id) { $0.text = text }
         case .stopAudioPicked(let id, let url):
             uploadAudio(for: id, fileURL: url)
         case .stopAudioRemoved(let id):
-            updateStop(id) { $0.audioUrl = "" }
+            updateStopContent(id) { $0.audioUrl = "" }
         case .stopsMoved(let offsets, let destination):
             update { $0.stops.move(fromOffsets: offsets, toOffset: destination) }
         case .stopsRemoved(let offsets):
@@ -119,10 +121,20 @@ final class TourEditorViewModel {
         }
     }
 
+    private func updateStopContent(_ id: UUID, in language: AppLanguage? = nil, _ transform: (inout TourStopTranslation) -> Void) {
+        let language = language ?? form?.language ?? .russian
+        updateStop(id) { stop in
+            var content = stop.content(in: language)
+            transform(&content)
+            stop.setContent(content, in: language)
+        }
+    }
+
     private func uploadAudio(for stopId: UUID, fileURL: URL) {
         guard let form else {
             return
         }
+        let language = form.language
         status.uploads += 1
         status.failure = nil
         rebuild()
@@ -130,7 +142,7 @@ final class TourEditorViewModel {
         Task {
             do {
                 let url = try await mediaRepository.uploadAudio(fileURL: fileURL, folder: folder)
-                updateStop(stopId) { $0.audioUrl = url }
+                updateStopContent(stopId, in: language) { $0.audioUrl = url }
             } catch {
                 status.failure = EditorFailure(uploadError: error)
             }

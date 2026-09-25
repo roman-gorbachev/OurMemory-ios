@@ -12,7 +12,9 @@ struct VeteranEditorForm: View {
 
     var body: some View {
         let form = data.form
+        let text = form.text
         return Form {
+            ContentLanguageSection(language: form.language) { onAction(.languageChanged($0)) }
             Section {
                 HStack(spacing: Spacing.xl) {
                     PortraitImage(url: form.portrait)
@@ -22,8 +24,12 @@ struct VeteranEditorForm: View {
                         onAction(.portraitPicked($0))
                     }
                 }
-                TextField("full_name", text: Binding(get: { return form.name }, set: { onAction(.nameChanged($0)) }))
-                    .foregroundStyle(form.isNameValid ? Palette.onSurface : Palette.error)
+                TextField(
+                    "full_name",
+                    text: Binding(get: { return text.name }, set: { onAction(.nameChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.name, language: form.language)
+                )
+                .foregroundStyle(form.isNameValid ? Palette.onSurface : Palette.error)
                 TextField("years_of_life", text: Binding(get: { return form.years }, set: { onAction(.yearsChanged($0)) }))
                 Picker("veteran", selection: Binding(get: { return form.category }, set: { onAction(.categoryChanged($0)) })) {
                     ForEach(VeteranCategory.allCases, id: \.self) { Text($0.titleKey).tag($0) }
@@ -31,11 +37,21 @@ struct VeteranEditorForm: View {
                 .pickerStyle(.segmented)
             }
             Section("short_info") {
-                TextField("short_info", text: Binding(get: { return form.baseInfo }, set: { onAction(.baseInfoChanged($0)) }), axis: .vertical)
+                TextField(
+                    "short_info",
+                    text: Binding(get: { return text.baseInfo }, set: { onAction(.baseInfoChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.baseInfo, language: form.language),
+                    axis: .vertical
+                )
                     .lineLimit(Self.shortTextLines...)
             }
             Section("main_text") {
-                TextField("main_text", text: Binding(get: { return form.allInfo }, set: { onAction(.allInfoChanged($0)) }), axis: .vertical)
+                TextField(
+                    "main_text",
+                    text: Binding(get: { return text.allInfo }, set: { onAction(.allInfoChanged($0)) }),
+                    prompt: OriginalTextPrompt.prompt(form.allInfo, language: form.language),
+                    axis: .vertical
+                )
                     .lineLimit(Self.longTextLines...)
             }
             Section {
@@ -61,17 +77,24 @@ struct VeteranEditorForm: View {
                 )
             }
             Section {
-                ForEach(form.entries) { entry in
+                ForEach(text.entries) { entry in
                     InfoEntryRow(entry: entry) { onAction(.entryChanged($0)) }
                 }
                 .onMove { offsets, destination in
                     guard let source = offsets.first else {
                         return
                     }
-                    onAction(.entryMoved(form.entries[source].id, offset: destination > source ? destination - source - 1 : destination - source))
+                    onAction(.entryMoved(text.entries[source].id, offset: destination > source ? destination - source - 1 : destination - source))
                 }
                 .onDelete { offsets in
-                    offsets.map { return form.entries[$0].id }.forEach { onAction(.entryRemoved($0)) }
+                    offsets.map { return text.entries[$0].id }.forEach { onAction(.entryRemoved($0)) }
+                }
+                if form.language != .russian, text.entries.isEmpty, !form.entries.isEmpty {
+                    Button {
+                        onAction(.paragraphsCopiedFromOriginal)
+                    } label: {
+                        Label("copy_paragraphs_from_russian", systemImage: "doc.on.doc")
+                    }
                 }
                 Button {
                     onAction(.paragraphAdded)
