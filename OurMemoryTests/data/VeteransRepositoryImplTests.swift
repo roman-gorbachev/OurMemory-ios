@@ -4,7 +4,7 @@ import XCTest
 final class VeteransRepositoryImplTests: XCTestCase {
     func testVeteransAreLoadedOnceAndServedFromCache() async throws {
         let dataSource = CountingVeteransDataSource()
-        let repository = VeteransRepositoryImpl(dataSource: dataSource, yandexDisk: FailingYandexDisk())
+        let repository = VeteransRepositoryImpl(dataSource: dataSource, yandexDisk: FailingYandexDisk(), contentLanguage: { return nil })
         _ = try await repository.allVeterans()
         _ = try await repository.allVeterans()
         XCTAssertEqual(dataSource.calls, 1)
@@ -12,7 +12,7 @@ final class VeteransRepositoryImplTests: XCTestCase {
 
     func testInvalidateReloads() async throws {
         let dataSource = CountingVeteransDataSource()
-        let repository = VeteransRepositoryImpl(dataSource: dataSource, yandexDisk: FailingYandexDisk())
+        let repository = VeteransRepositoryImpl(dataSource: dataSource, yandexDisk: FailingYandexDisk(), contentLanguage: { return nil })
         _ = try await repository.allVeterans()
         repository.invalidate()
         _ = try await repository.allVeterans()
@@ -20,7 +20,7 @@ final class VeteransRepositoryImplTests: XCTestCase {
     }
 
     func testYandexLinkFallsBackToOriginalUrlWhenResolvingFails() async {
-        let repository = VeteransRepositoryImpl(dataSource: CountingVeteransDataSource(), yandexDisk: FailingYandexDisk())
+        let repository = VeteransRepositoryImpl(dataSource: CountingVeteransDataSource(), yandexDisk: FailingYandexDisk(), contentLanguage: { return nil })
         let link = "https://disk.yandex.ru/i/photo"
         let resolved = await repository.resolveDirectUrl(link)
         XCTAssertEqual(resolved, link)

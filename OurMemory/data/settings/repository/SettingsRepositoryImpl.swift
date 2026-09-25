@@ -37,7 +37,7 @@ final class SettingsRepositoryImpl: SettingsRepository {
             return AppSettings(
                 themeMode: defaults.string(forKey: Self.themeModeKey).flatMap(ThemeMode.init(rawValue:)) ?? .system,
                 textScale: defaults.string(forKey: Self.textScaleKey).flatMap(TextScale.init(rawValue:)) ?? .normal,
-                language: defaults.string(forKey: Self.languageKey).flatMap(AppLanguage.init(rawValue:)) ?? AppLanguage.preferredBySystem,
+                language: Self.language(in: defaults),
                 victoryDayReminder: defaults.object(forKey: Self.victoryDayReminderKey) as? Bool ?? true,
                 favoriteReminders: defaults.object(forKey: Self.favoriteRemindersKey) as? Bool ?? true
             )
@@ -52,6 +52,10 @@ final class SettingsRepositoryImpl: SettingsRepository {
         preferences.edit { $0.set(scale.rawValue, forKey: Self.textScaleKey) }
     }
 
+    func currentLanguage() -> AppLanguage {
+        return preferences.read(Self.language(in:))
+    }
+
     func setLanguage(_ language: AppLanguage) {
         preferences.edit { $0.set(language.rawValue, forKey: Self.languageKey) }
     }
@@ -62,5 +66,9 @@ final class SettingsRepositoryImpl: SettingsRepository {
 
     func setFavoriteReminders(isEnabled: Bool) {
         preferences.edit { $0.set(isEnabled, forKey: Self.favoriteRemindersKey) }
+    }
+
+    nonisolated private static func language(in defaults: UserDefaults) -> AppLanguage {
+        return defaults.string(forKey: languageKey).flatMap(AppLanguage.init(rawValue:)) ?? AppLanguage.preferredBySystem
     }
 }

@@ -60,7 +60,7 @@ final class HomeViewModel {
 
     private func filteredVeterans() -> [Veteran] {
         let matchesName: (Veteran) -> Bool = { [search] veteran in
-            return search.isEmpty || veteran.name.localizedCaseInsensitiveContains(search)
+            return search.isEmpty || veteran.allNames.contains { return $0.localizedCaseInsensitiveContains(search) }
         }
         switch (checkedWar, checkedArt) {
         case (true, true):

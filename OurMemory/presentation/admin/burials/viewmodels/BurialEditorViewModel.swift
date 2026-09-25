@@ -45,7 +45,7 @@ final class BurialEditorViewModel {
             rebuild()
             return
         }
-        guard let burial = try? await burialsRepository.allBurials().first(where: { return $0.id == burialId }) else {
+        guard let burial = try? await burialsRepository.originalBurials().first(where: { return $0.id == burialId }) else {
             burialEditorUiState = .error
             return
         }

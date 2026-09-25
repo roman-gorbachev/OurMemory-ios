@@ -14,6 +14,7 @@ nonisolated struct Veteran: Codable, Hashable, Identifiable, Sendable {
     var audioUrl = ""
     var birthDate = ""
     var deathDate = ""
+    var translations: [String: VeteranTranslation] = [:]
 
     init(
         id: String = "",
@@ -28,7 +29,8 @@ nonisolated struct Veteran: Codable, Hashable, Identifiable, Sendable {
         burialId: String = "",
         audioUrl: String = "",
         birthDate: String = "",
-        deathDate: String = ""
+        deathDate: String = "",
+        translations: [String: VeteranTranslation] = [:]
     ) {
         self.id = id
         self.name = name
@@ -43,6 +45,7 @@ nonisolated struct Veteran: Codable, Hashable, Identifiable, Sendable {
         self.audioUrl = audioUrl
         self.birthDate = birthDate
         self.deathDate = deathDate
+        self.translations = translations
     }
 
     init(from decoder: Decoder) throws {
@@ -60,5 +63,22 @@ nonisolated struct Veteran: Codable, Hashable, Identifiable, Sendable {
         audioUrl = container.lenientString(forKey: .audioUrl)
         birthDate = container.lenientString(forKey: .birthDate)
         deathDate = container.lenientString(forKey: .deathDate)
+        translations = (try? container.decodeIfPresent([String: VeteranTranslation].self, forKey: .translations)) ?? [:]
+    }
+
+    var allNames: [String] {
+        return [name] + translations.values.map { return $0.name }.filter { return !$0.isBlank }
+    }
+
+    func localized(to languageKey: String?) -> Veteran {
+        guard let languageKey, let translation = translations[languageKey] else {
+            return self
+        }
+        var veteran = self
+        veteran.name = translation.name.isBlank ? name : translation.name
+        veteran.baseInfo = translation.baseInfo.isBlank ? baseInfo : translation.baseInfo
+        veteran.allInfo = translation.allInfo.isBlank ? allInfo : translation.allInfo
+        veteran.veteransInfo = translation.veteransInfo.isEmpty ? veteransInfo : translation.veteransInfo
+        return veteran
     }
 }

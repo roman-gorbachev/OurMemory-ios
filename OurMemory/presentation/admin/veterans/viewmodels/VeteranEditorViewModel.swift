@@ -44,7 +44,7 @@ final class VeteranEditorViewModel {
             if isNew {
                 veteransRepository.invalidate()
             }
-            let veterans = try await veteransRepository.allVeterans()
+            let veterans = try await veteransRepository.originalVeterans()
             burials = ((try? await burialsRepository.allBurials()) ?? []).map { return $0.toUiModel() }
             if isNew {
                 form = VeteranForm(id: VeteranForm.nextId(after: veterans))

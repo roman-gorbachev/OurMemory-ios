@@ -18,6 +18,10 @@ final class FakeBurialsRepository: BurialsRepository {
         return burials
     }
 
+    func originalBurials() async throws -> [Burial] {
+        return try await allBurials()
+    }
+
     func invalidate() {
         invalidations += 1
     }

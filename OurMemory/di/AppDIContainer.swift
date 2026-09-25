@@ -13,6 +13,9 @@ final class AppDIContainer {
     @ObservationIgnored private lazy var calendar = Calendar.current
     @ObservationIgnored private lazy var anonymousSession = AnonymousSession(auth: auth)
     @ObservationIgnored private lazy var notificationCenter = UNUserNotificationCenter.current()
+    @ObservationIgnored private lazy var contentLanguage: () -> String? = { [unowned self] in
+        return settingsRepository.currentLanguage().contentKey
+    }
 
     @ObservationIgnored private lazy var favoritesLocalDataSource: FavoritesLocalDataSource =
         FavoritesLocalDataSourceImpl(preferences: preferences)
@@ -25,12 +28,13 @@ final class AppDIContainer {
 
     @ObservationIgnored lazy var veteransRepository: VeteransRepository = VeteransRepositoryImpl(
         dataSource: VeteransDataSourceImpl(root: root),
-        yandexDisk: YandexDiskDataSourceImpl(session: .shared)
+        yandexDisk: YandexDiskDataSourceImpl(session: .shared),
+        contentLanguage: contentLanguage
     )
     @ObservationIgnored lazy var burialsRepository: BurialsRepository =
-        BurialsRepositoryImpl(dataSource: BurialsDataSourceImpl(root: root))
+        BurialsRepositoryImpl(dataSource: BurialsDataSourceImpl(root: root), contentLanguage: contentLanguage)
     @ObservationIgnored lazy var toursRepository: ToursRepository =
-        ToursRepositoryImpl(dataSource: ToursDataSourceImpl(root: root))
+        ToursRepositoryImpl(dataSource: ToursDataSourceImpl(root: root), contentLanguage: contentLanguage)
     @ObservationIgnored lazy var tourProgressRepository: TourProgressRepository =
         TourProgressRepositoryImpl(preferences: preferences)
     @ObservationIgnored lazy var candlesRepository: CandlesRepository = CandlesRepositoryImpl(

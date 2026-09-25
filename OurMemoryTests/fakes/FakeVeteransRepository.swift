@@ -22,6 +22,10 @@ final class FakeVeteransRepository: VeteransRepository {
         return url
     }
 
+    func originalVeterans() async throws -> [Veteran] {
+        return try await allVeterans()
+    }
+
     func invalidate() {
         invalidations += 1
     }

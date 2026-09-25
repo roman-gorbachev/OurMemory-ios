@@ -10,6 +10,7 @@ nonisolated struct Burial: Codable, Hashable, Identifiable, Sendable {
     var type = ""
     var photo = ""
     var description = ""
+    var translations: [String: BurialTranslation] = [:]
 
     init(
         id: String = "",
@@ -20,7 +21,8 @@ nonisolated struct Burial: Codable, Hashable, Identifiable, Sendable {
         place: String = "",
         type: String = "",
         photo: String = "",
-        description: String = ""
+        description: String = "",
+        translations: [String: BurialTranslation] = [:]
     ) {
         self.id = id
         self.latitude = latitude
@@ -31,6 +33,7 @@ nonisolated struct Burial: Codable, Hashable, Identifiable, Sendable {
         self.type = type
         self.photo = photo
         self.description = description
+        self.translations = translations
     }
 
     init(from decoder: Decoder) throws {
@@ -44,5 +47,15 @@ nonisolated struct Burial: Codable, Hashable, Identifiable, Sendable {
         type = container.lenientString(forKey: .type)
         photo = container.lenientString(forKey: .photo)
         description = container.lenientString(forKey: .description)
+        translations = (try? container.decodeIfPresent([String: BurialTranslation].self, forKey: .translations)) ?? [:]
+    }
+
+    func localized(to languageKey: String?) -> Burial {
+        guard let languageKey, let translation = translations[languageKey], !translation.description.isBlank else {
+            return self
+        }
+        var burial = self
+        burial.description = translation.description
+        return burial
     }
 }

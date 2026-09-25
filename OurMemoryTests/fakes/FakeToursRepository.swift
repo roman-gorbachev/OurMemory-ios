@@ -18,6 +18,10 @@ final class FakeToursRepository: ToursRepository {
         return tours
     }
 
+    func originalTours() async throws -> [Tour] {
+        return try await allTours()
+    }
+
     func invalidate() {
         invalidations += 1
     }

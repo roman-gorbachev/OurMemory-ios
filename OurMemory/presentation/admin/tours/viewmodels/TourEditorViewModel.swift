@@ -56,7 +56,7 @@ final class TourEditorViewModel {
             }
             if isNew {
                 form = TourForm(id: contentEditorRepository.newTourId())
-            } else if let tour = try await toursRepository.allTours().first(where: { return $0.id == tourId }) {
+            } else if let tour = try await toursRepository.originalTours().first(where: { return $0.id == tourId }) {
                 form = TourForm(tour: tour)
             } else {
                 tourEditorUiState = .error
