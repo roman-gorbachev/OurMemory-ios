@@ -5,6 +5,7 @@ import Foundation
 final class RootViewModel {
     private(set) var settings = AppSettings()
     private(set) var isAdmin = false
+    private(set) var isIntroSeen = true
 
     @ObservationIgnored private let settingsRepository: SettingsRepository
     @ObservationIgnored private var cancellables = Set<AnyCancellable>()
@@ -12,6 +13,10 @@ final class RootViewModel {
     init(settingsRepository: SettingsRepository, authRepository: AuthRepository) {
         self.settingsRepository = settingsRepository
         observeRootUiState(authRepository: authRepository)
+    }
+
+    func markIntroSeen() {
+        settingsRepository.markIntroSeen()
     }
 
     func setLanguage(_ language: AppLanguage) {
@@ -25,6 +30,9 @@ final class RootViewModel {
                 L10n.language = settings.language
                 self?.settings = settings
             }
+            .store(in: &cancellables)
+        settingsRepository.introSeenPublisher()
+            .sink { [weak self] in self?.isIntroSeen = $0 }
             .store(in: &cancellables)
         authRepository.sessionPublisher()
             .map(\.isAdmin)

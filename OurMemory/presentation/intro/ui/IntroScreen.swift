@@ -1,36 +1,38 @@
 import SwiftUI
 
 struct IntroScreen: View {
-    private static let dimOpacity = 0.55
-    private static let blurRadius: CGFloat = 6
-    private static let ideaOpacity = 0.85
+    private static let heroHeightRatio: CGFloat = 0.4
+    private static let fadeStart = 0.55
 
     let onStart: () -> Void
 
     var body: some View {
-        return ZStack {
-            Image("splash")
-                .resizable()
-                .scaledToFill()
-                .blur(radius: Self.blurRadius)
-                .ignoresSafeArea()
-            Palette.black.opacity(Self.dimOpacity).ignoresSafeArea()
-            VStack(spacing: Spacing.xxl) {
-                Spacer()
-                Image(systemName: "flame.fill")
-                    .font(.system(.largeTitle))
-                    .symbolEffect(.pulse)
-                    .foregroundStyle(Palette.white)
-                Text("app_name")
-                    .appStyle(.largeTitle, weight: .bold)
-                    .fontDesign(.serif)
-                Text("slogan")
-                    .appStyle(.title3)
-                ImageSlideshow(images: CemeteryPhotos.all)
-                Text("idea")
-                    .appStyle(.body)
-                    .foregroundStyle(Palette.white.opacity(Self.ideaOpacity))
-                Spacer()
+        return GeometryReader { proxy in
+            VStack(spacing: 0) {
+                ScrollView {
+                    VStack(spacing: Spacing.xxl) {
+                        hero(height: proxy.size.height * Self.heroHeightRatio + proxy.safeAreaInsets.top)
+                        VStack(spacing: Spacing.m) {
+                            Text("app_name")
+                                .appStyle(.largeTitle, weight: .bold)
+                                .fontDesign(.serif)
+                            Text("slogan")
+                                .appStyle(.body)
+                                .foregroundStyle(Palette.onSurfaceVariant)
+                        }
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, Spacing.xxl)
+                        VStack(alignment: .leading, spacing: Spacing.xxl) {
+                            IntroFeatureRow(systemImage: "person.text.rectangle", title: "heroes_biographies", subtitle: "heroes_biographies_msg")
+                            IntroFeatureRow(systemImage: "figure.walk", title: "audio_tours_of_cemetery", subtitle: "audio_tours_of_cemetery_msg")
+                            IntroFeatureRow(systemImage: "flame", title: "candle_and_favorites", subtitle: "candle_and_favorites_msg")
+                        }
+                        .padding(.horizontal, Spacing.xxxl)
+                    }
+                    .padding(.bottom, Spacing.xxl)
+                }
+                .ignoresSafeArea(edges: .top)
+                .scrollBounceBehavior(.basedOnSize)
                 Button(action: onStart) {
                     Text("start")
                         .appStyle(.headline)
@@ -38,12 +40,32 @@ struct IntroScreen: View {
                 }
                 .buttonStyle(.borderedProminent)
                 .controlSize(.large)
+                .padding(.horizontal, Spacing.xxl)
+                .padding(.vertical, Spacing.xl)
             }
-            .multilineTextAlignment(.center)
-            .foregroundStyle(Palette.white)
-            .padding(.horizontal, Spacing.xxl)
-            .padding(.bottom, Spacing.xl)
         }
+        .background(Palette.background.ignoresSafeArea())
+    }
+
+    private func hero(height: CGFloat) -> some View {
+        return Color.clear
+            .frame(height: height)
+            .overlay {
+                Image("splash")
+                    .resizable()
+                    .scaledToFill()
+            }
+            .clipped()
+            .overlay {
+                LinearGradient(
+                    stops: [
+                        .init(color: .clear, location: Self.fadeStart),
+                        .init(color: Palette.background, location: 1)
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            }
     }
 }
 

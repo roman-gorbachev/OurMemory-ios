@@ -3,6 +3,7 @@ import Foundation
 
 final class SettingsRepositoryImpl: SettingsRepository {
     private static let notificationsAskedKey = "notifications_asked"
+    private static let introSeenKey = "intro_seen"
     private static let themeModeKey = "theme_mode"
     private static let textScaleKey = "text_scale"
     private static let languageKey = "app_language"
@@ -21,6 +22,14 @@ final class SettingsRepositoryImpl: SettingsRepository {
 
     func markNotificationsAsked() {
         preferences.edit { $0.set(true, forKey: Self.notificationsAskedKey) }
+    }
+
+    func introSeenPublisher() -> AnyPublisher<Bool, Never> {
+        return preferences.publisher { return $0.bool(forKey: Self.introSeenKey) }
+    }
+
+    func markIntroSeen() {
+        preferences.edit { $0.set(true, forKey: Self.introSeenKey) }
     }
 
     func settingsPublisher() -> AnyPublisher<AppSettings, Never> {

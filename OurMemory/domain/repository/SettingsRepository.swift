@@ -4,6 +4,8 @@ import Foundation
 protocol SettingsRepository: AnyObject {
     func notificationsAskedPublisher() -> AnyPublisher<Bool, Never>
     func markNotificationsAsked()
+    func introSeenPublisher() -> AnyPublisher<Bool, Never>
+    func markIntroSeen()
     func settingsPublisher() -> AnyPublisher<AppSettings, Never>
     func setThemeMode(_ mode: ThemeMode)
     func setTextScale(_ scale: TextScale)

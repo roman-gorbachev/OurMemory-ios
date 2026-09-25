@@ -2,7 +2,6 @@ import SwiftUI
 
 struct RootView: View {
     @State private var viewModel: RootViewModel
-    @State private var isIntroShown = true
     private let container: AppDIContainer
     private let deepLinks = DeepLinkCenter.shared
 
@@ -14,8 +13,8 @@ struct RootView: View {
     var body: some View {
         let settings = viewModel.settings
         return ZStack {
-            if isIntroShown && deepLinks.pendingVeteranId == nil {
-                IntroScreen { isIntroShown = false }
+            if !viewModel.isIntroSeen && deepLinks.pendingVeteranId == nil {
+                IntroScreen(onStart: viewModel.markIntroSeen)
                     .transition(.opacity)
             } else {
                 MainNavigationView(
@@ -26,7 +25,7 @@ struct RootView: View {
                 )
             }
         }
-        .animation(.easeInOut, value: isIntroShown)
+        .animation(.easeInOut, value: viewModel.isIntroSeen)
         .id(settings.language)
         .environment(\.locale, L10n.locale)
         .preferredColorScheme(settings.themeMode.colorScheme)

@@ -461,6 +461,40 @@
         }
       }
     },
+    "audio_tours_of_cemetery": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аўдыяэкскурсіі па могілках"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аудиоэкскурсии по кладбищу"
+          }
+        }
+      }
+    },
+    "audio_tours_of_cemetery_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маршруты на карце з расповедам ля кожнага пахавання"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Маршруты на карте с рассказом у каждого захоронения"
+          }
+        }
+      }
+    },
     "awaiting_review": {
       "extractionState": "manual",
       "localizations": {
@@ -721,6 +755,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "Отмена"
+          }
+        }
+      }
+    },
+    "candle_and_favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свечка памяці і абранае"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Свеча памяти и избранное"
+          }
+        }
+      }
+    },
+    "candle_and_favorites_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запаліце свечку, захавайце блізкіх у абраным і атрымлівайце напаміны пра памятныя даты"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зажгите свечу, сохраните близких в избранном и получайте напоминания о памятных датах"
           }
         }
       }
@@ -1682,6 +1750,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "Герои Советского Союза"
+          }
+        }
+      }
+    },
+    "heroes_biographies": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Біяграфіі герояў"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Биографии героев"
+          }
+        }
+      }
+    },
+    "heroes_biographies_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лёсы, узнагароды, фотаздымкі і дакументы тых, хто спачывае на могілках"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Судьбы, награды, фотографии и документы тех, кто покоится на кладбище"
           }
         }
       }
