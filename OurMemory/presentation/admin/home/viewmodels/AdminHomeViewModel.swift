@@ -39,7 +39,10 @@ final class AdminHomeViewModel {
     private func observeAdminHomeUiState(feedbackRepository: FeedbackRepository, moderationRepository: ModerationRepository) {
         authRepository.sessionPublisher()
             .receive(on: DispatchQueue.main)
-            .sink { [weak self] in self?.adminHomeUiData.email = $0.email }
+            .sink { [weak self] session in
+                self?.adminHomeUiData.email = session.email
+                self?.adminHomeUiData.isSuperAdmin = session.isSuperAdmin
+            }
             .store(in: &cancellables)
         moderationRepository.submissionsPublisher()
             .map { return $0.filter { return $0.status == .pending }.count }

@@ -7,6 +7,7 @@ final class FakeAuthDataSource: AuthDataSource {
 
     let user = CurrentValueSubject<AuthUser?, Never>(nil)
     let admins: CurrentValueSubject<Set<String>, Never>
+    let superAdmins = CurrentValueSubject<Set<String>, Never>([])
     private let accounts: [String: AuthUser]
 
     init(accounts: [String: AuthUser], adminUids: Set<String>) {
@@ -20,6 +21,10 @@ final class FakeAuthDataSource: AuthDataSource {
 
     func isAdminPublisher(uid: String) -> AnyPublisher<Bool, Never> {
         return admins.map { return $0.contains(uid) }.eraseToAnyPublisher()
+    }
+
+    func isSuperAdminPublisher(uid: String) -> AnyPublisher<Bool, Never> {
+        return superAdmins.map { return $0.contains(uid) }.eraseToAnyPublisher()
     }
 
     func isAdmin(uid: String) async throws -> Bool {

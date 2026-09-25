@@ -30,6 +30,14 @@ final class AuthDataSourceImpl: AuthDataSource {
             .eraseToAnyPublisher()
     }
 
+    func isSuperAdminPublisher(uid: String) -> AnyPublisher<Bool, Never> {
+        return root.child(DatabaseNodes.superAdmins).child(uid)
+            .valuePublisher()
+            .map { return $0.exists() }
+            .replaceError(with: false)
+            .eraseToAnyPublisher()
+    }
+
     func isAdmin(uid: String) async throws -> Bool {
         return try await adminReference(uid: uid).getData().exists()
     }

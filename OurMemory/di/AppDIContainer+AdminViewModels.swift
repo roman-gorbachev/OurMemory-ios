@@ -16,6 +16,10 @@ extension AppDIContainer {
         )
     }
 
+    func buildAdminsViewModel() -> AdminsViewModel {
+        return AdminsViewModel(adminsRepository: adminsRepository, authRepository: authRepository)
+    }
+
     func buildFeedbackListViewModel() -> FeedbackListViewModel {
         return FeedbackListViewModel(feedbackRepository: feedbackRepository, veteransRepository: veteransRepository)
     }

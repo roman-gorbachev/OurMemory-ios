@@ -8,6 +8,8 @@ nonisolated enum DatabaseNodes {
     static let candles = "Candles"
     static let submissions = "Submissions"
     static let admins = "Admins"
+    static let superAdmins = "SuperAdmins"
+    static let accounts = "Accounts"
     static let feedback = "Feedback"
     static let users = "Users"
     static let favorites = "favorites"

@@ -19,19 +19,70 @@
         }
       }
     },
+    "account_not_found_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Акаўнт з такім e-mail не знойдзены. Папрасіце чалавека спачатку ўвайсці ў праграму"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аккаунт с таким e-mail не найден. Попросите человека сначала войти в приложение"
+          }
+        }
+      }
+    },
+    "add_administrator": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дадаць адміністратара"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавить администратора"
+          }
+        }
+      }
+    },
     "add_administrator_steps": {
       "extractionState": "manual",
       "localizations": {
         "be": {
           "stringUnit": {
             "state": "translated",
-            "value": "Firebase Console → Authentication → Users → «Add user»: пазначце e-mail і пароль новага адміністратара.\nСкапіруйце са спіса карыстальнікаў яго User UID.\nRealtime Database → OurMemory → Admins: дадайце ключ з гэтым UID і значэннем true.\nStorage → Rules: дапішыце UID у спіс функцыі isAdmin(), напрыклад ['uid1', 'uid2'], і націсніце «Publish». Без гэтага новы адміністратар не зможа загружаць фота і аўдыя.\nНовы адміністратар уваходзіць праз «Яшчэ → Уваход для адміністратара», пасля чаго ў яго з’яўляецца ўкладка «Адмін».\nКаб зняць правы, выдаліце ключ з OurMemory/Admins і UID з правілаў Storage."
+            "value": "Новы адміністратар адзін раз уваходзіць у праграму: праз Google у «Яшчэ» або праз «Уваход для адміністратара» са сваім e-mail.\nСупер-адміністратар адкрывае Адмін → «Адміністратары» і дадае яго па e-mail.\nStorage → Rules: дапішыце UID новага адміністратара (яго можна скапіраваць на экране «Адміністратары») у спіс функцыі isAdmin() і націсніце «Publish». Без гэтага ён не зможа загружаць фота і аўдыя.\nПасля перазапуску праграмы ў новага адміністратара з’яўляецца ўкладка «Адмін».\nКаб зняць правы, выдаліце адміністратара на экране «Адміністратары» і прыбярыце яго UID з правілаў Storage.\nСупер-адміністратары прызначаюцца толькі ў Firebase Console: вузел OurMemory/SuperAdmins, ключ UID са значэннем true (і той жа UID у OurMemory/Admins)."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Firebase Console → Authentication → Users → «Add user»: укажите e-mail и пароль нового администратора.\nСкопируйте из списка пользователей его User UID.\nRealtime Database → OurMemory → Admins: добавьте ключ с этим UID и значением true.\nStorage → Rules: допишите UID в список функции isAdmin(), например ['uid1', 'uid2'], и нажмите «Publish». Без этого новый администратор не сможет загружать фото и аудио.\nНовый администратор входит через «Ещё → Вход для администратора», после чего у него появляется вкладка «Админ».\nЧтобы снять права, удалите ключ из OurMemory/Admins и UID из правил Storage."
+            "value": "Новый администратор один раз входит в приложение: через Google в «Ещё» или через «Вход для администратора» со своим e-mail.\nСупер-администратор открывает Админ → «Администраторы» и добавляет его по e-mail.\nStorage → Rules: допишите UID нового администратора (его можно скопировать на экране «Администраторы») в список функции isAdmin() и нажмите «Publish». Без этого он не сможет загружать фото и аудио.\nПосле перезапуска приложения у нового администратора появляется вкладка «Админ».\nЧтобы снять права, удалите администратора на экране «Администраторы» и уберите его UID из правил Storage.\nСупер-администраторы назначаются только в Firebase Console: узел OurMemory/SuperAdmins, ключ UID со значением true (и тот же UID в OurMemory/Admins)."
+          }
+        }
+      }
+    },
+    "add_and_remove_administrators_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Даданне і выдаленне адміністратараў"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Добавление и удаление администраторов"
           }
         }
       }
@@ -223,6 +274,23 @@
         }
       }
     },
+    "add_uid_to_storage_rules_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Каб адміністратар мог загружаць фота і аўдыя, дадайце яго UID у функцыю isAdmin() правілаў Storage"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Чтобы администратор мог загружать фото и аудио, добавьте его UID в функцию isAdmin() правил Storage"
+          }
+        }
+      }
+    },
     "add_veteran": {
       "extractionState": "manual",
       "localizations": {
@@ -308,6 +376,23 @@
         }
       }
     },
+    "administrator_added_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адміністратар дададзены. Укладка «Адмін» з’явіцца ў яго пасля перазапуску праграмы"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Администратор добавлен. Вкладка «Админ» появится у него после перезапуска приложения"
+          }
+        }
+      }
+    },
     "administrators": {
       "extractionState": "manual",
       "localizations": {
@@ -338,6 +423,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Разрешите доступ к геолокации, чтобы увидеть себя на карте"
+          }
+        }
+      }
+    },
+    "already_administrator_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Гэты акаўнт ужо адміністратар"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Этот аккаунт уже администратор"
           }
         }
       }
@@ -3111,6 +3213,23 @@
         }
       }
     },
+    "remove_administrator_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Зняць правы адміністратара?"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Снять права администратора?"
+          }
+        }
+      }
+    },
     "remove_from_favorites": {
       "extractionState": "manual",
       "localizations": {
@@ -3946,6 +4065,23 @@
           "stringUnit": {
             "state": "translated",
             "value": "Предложение"
+          }
+        }
+      }
+    },
+    "super_administrator": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Супер-адміністратар"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Супер-администратор"
           }
         }
       }

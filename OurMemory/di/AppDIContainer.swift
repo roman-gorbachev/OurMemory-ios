@@ -47,8 +47,12 @@ final class AppDIContainer {
         favoritesLocalDataSource: favoritesLocalDataSource,
         favoritesRemoteDataSource: favoritesRemoteDataSource
     )
-    @ObservationIgnored lazy var authRepository: AuthRepository =
-        AuthRepositoryImpl(dataSource: AuthDataSourceImpl(auth: auth, root: root))
+    @ObservationIgnored lazy var authRepository: AuthRepository = AuthRepositoryImpl(
+        dataSource: AuthDataSourceImpl(auth: auth, root: root),
+        accountIndex: AccountIndexDataSourceImpl(root: root)
+    )
+    @ObservationIgnored lazy var adminsRepository: AdminsRepository =
+        AdminsRepositoryImpl(dataSource: AdminsDataSourceImpl(root: root))
     @ObservationIgnored lazy var settingsRepository: SettingsRepository = SettingsRepositoryImpl(preferences: preferences)
     @ObservationIgnored lazy var myRequestsRepository: MyRequestsRepository = MyRequestsRepositoryImpl(
         dataSource: MyRequestsDataSourceImpl(auth: auth, root: root),

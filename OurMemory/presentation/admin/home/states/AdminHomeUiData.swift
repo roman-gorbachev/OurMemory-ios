@@ -2,6 +2,7 @@ import Foundation
 
 struct AdminHomeUiData: Hashable {
     var email = ""
+    var isSuperAdmin = false
     var pendingSubmissionsCount = 0
     var newFeedbackCount = 0
     var veteransCount = 0

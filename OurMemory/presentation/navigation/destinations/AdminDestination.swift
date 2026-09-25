@@ -11,4 +11,5 @@ enum AdminDestination: Hashable {
     case burialEditor(burialId: String)
     case tours
     case tourEditor(tourId: String)
+    case admins
 }

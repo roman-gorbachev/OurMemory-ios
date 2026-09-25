@@ -3,20 +3,26 @@ import Foundation
 
 final class AuthRepositoryImpl: AuthRepository {
     private let dataSource: AuthDataSource
+    private let accountIndex: AccountIndexDataSource
 
-    init(dataSource: AuthDataSource) {
+    init(dataSource: AuthDataSource, accountIndex: AccountIndexDataSource) {
         self.dataSource = dataSource
+        self.accountIndex = accountIndex
     }
 
     func sessionPublisher() -> AnyPublisher<AdminSession, Never> {
         let dataSource = dataSource
         return dataSource.userPublisher()
-            .map { user -> AnyPublisher<AdminSession, Never> in
+            .map { [weak self] user -> AnyPublisher<AdminSession, Never> in
                 guard let user, !user.isAnonymous else {
                     return Just(AdminSession()).eraseToAnyPublisher()
                 }
+                self?.registerAccount(user)
                 return dataSource.isAdminPublisher(uid: user.uid)
-                    .map { return AdminSession(email: user.email, isAdmin: $0) }
+                    .combineLatest(dataSource.isSuperAdminPublisher(uid: user.uid))
+                    .map { isAdmin, isSuperAdmin in
+                        return AdminSession(uid: user.uid, email: user.email, isAdmin: isAdmin, isSuperAdmin: isSuperAdmin)
+                    }
                     .eraseToAnyPublisher()
             }
             .switchToLatest()
@@ -28,6 +34,7 @@ final class AuthRepositoryImpl: AuthRepository {
         guard let user = try await dataSource.signIn(email: email, password: password) else {
             return .wrongCredentials
         }
+        registerAccount(user)
         if try await dataSource.isAdmin(uid: user.uid) {
             return .admin
         }
@@ -41,5 +48,13 @@ final class AuthRepositoryImpl: AuthRepository {
 
     var currentUid: String? {
         return dataSource.currentUid
+    }
+
+    private func registerAccount(_ user: AuthUser) {
+        guard !user.isAnonymous, !user.email.isBlank else {
+            return
+        }
+        let accountIndex = accountIndex
+        Task { try? await accountIndex.register(uid: user.uid, email: user.email) }
     }
 }

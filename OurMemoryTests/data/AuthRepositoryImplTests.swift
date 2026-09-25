@@ -9,7 +9,7 @@ final class AuthRepositoryImplTests: XCTestCase {
         accounts: [admin.email: admin, editor.email: editor],
         adminUids: [admin.uid, visitor.uid]
     )
-    private lazy var repository = AuthRepositoryImpl(dataSource: dataSource)
+    private lazy var repository = AuthRepositoryImpl(dataSource: dataSource, accountIndex: FakeAccountIndexDataSource())
 
     func testSignedOutUserIsNotAdmin() async throws {
         let session = try await repository.sessionPublisher().firstValue()
@@ -25,7 +25,7 @@ final class AuthRepositoryImplTests: XCTestCase {
     func testUserListedInAdminsIsAdmin() async throws {
         dataSource.user.send(admin)
         let session = try await repository.sessionPublisher().firstValue()
-        XCTAssertEqual(session, AdminSession(email: admin.email, isAdmin: true))
+        XCTAssertEqual(session, AdminSession(uid: admin.uid, email: admin.email, isAdmin: true))
     }
 
     func testRemovingAdminRecordRevokesRole() async throws {

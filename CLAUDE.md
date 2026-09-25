@@ -81,6 +81,8 @@ Three layers under `OurMemory/`, with a strict dependency direction `presentatio
 - **`di/AppDIContainer.swift`** — the single composition root: every data source and repository is a `private lazy var`, and the `extension AppDIContainer` block exposes `buildXViewModel()` factories. No DI framework. Any new repository must be wired here.
 - **`theme/`** — `Palette`, `Typography`, `Spacing`, `CornerRadius`.
 
+Roles: a user is an admin when `OurMemory/Admins/{uid}` exists and a super admin when `OurMemory/SuperAdmins/{uid}` exists (set only in the console). Every non-anonymous sign-in registers `Accounts/{emailKey}` (`AccountKeys.forEmail`), so super admins can add administrators by e-mail in Admin → «Администраторы» (`presentation/admin/admins`). Media uploads still need the uid in `isAdmin()` of the Storage rules; editors explain this when an upload is denied.
+
 Read-once caches (`Veterans`, `Burials`, `Tours`) live in actors with `invalidate()`; the content editor invalidates after every admin write. Offline persistence is enabled on `Database`. Local state is `UserDefaults` with the Android DataStore key names.
 
 ### Presentation pattern

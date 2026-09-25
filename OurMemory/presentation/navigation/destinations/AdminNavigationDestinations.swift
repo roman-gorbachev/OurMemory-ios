@@ -27,6 +27,8 @@ struct AdminNavigationDestinations: ViewModifier {
                 BurialEditorRoute(viewModel: container.buildBurialEditorViewModel(burialId: burialId), onClose: router.pop)
             case .tours:
                 AdminToursRoute(viewModel: container.buildAdminToursViewModel()) { router.push($0) }
+            case .admins:
+                AdminsRoute(viewModel: container.buildAdminsViewModel())
             case .tourEditor(let tourId):
                 TourEditorRoute(viewModel: container.buildTourEditorViewModel(tourId: tourId), onClose: router.pop)
             }

@@ -44,6 +44,15 @@ struct AdminHomeScreen: View {
                     countText(data.toursCount)
                 }
             }
+            if data.isSuperAdmin {
+                Section {
+                    DisclosureRow(title: "administrators", systemImage: "person.badge.shield.checkmark", color: .purple) {
+                        onOpen(.admins)
+                    }
+                } footer: {
+                    Text("add_and_remove_administrators_msg")
+                }
+            }
             Section {
                 GuideLinkRow(title: "editor_guide") { onOpen(.guide(section: nil)) }
             } footer: {
