@@ -5,10 +5,10 @@ struct SectionTitle: View {
 
     var body: some View {
         return Text(text)
-            .appStyle(.titleLarge, weight: .bold)
-            .foregroundStyle(Palette.primary)
+            .appStyle(.title3, weight: .bold)
+            .foregroundStyle(Palette.onSurface)
             .padding(.horizontal, Spacing.screen)
-            .padding(.bottom, Spacing.l)
+            .padding(.bottom, Spacing.m)
             .frame(maxWidth: .infinity, alignment: .leading)
     }
 }

@@ -6,10 +6,10 @@ struct AudioPickButton: View {
     @State private var isImporterPresented = false
 
     var body: some View {
-        return AppButton(title: "add_audio", kind: .outlined) {
+        return Button("add_audio") {
             isImporterPresented = true
         }
-        .fixedSize()
+        .buttonStyle(.bordered)
         .fileImporter(isPresented: $isImporterPresented, allowedContentTypes: [.audio]) { result in
             if case .success(let url) = result, let copy = try? AudioFileCopier.temporaryCopy(of: url) {
                 onPicked(copy)

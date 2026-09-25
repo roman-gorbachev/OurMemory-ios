@@ -3,31 +3,49 @@ import SwiftUI
 struct MapControls: View {
     private static let size: CGFloat = 44
 
+    let checkedWar: Bool
+    let checkedArt: Bool
     let isSatellite: Bool
+    let onWarChange: (Bool) -> Void
+    let onArtChange: (Bool) -> Void
     let onMapTypeTap: () -> Void
     let onMyLocationTap: () -> Void
 
     var body: some View {
-        return VStack(spacing: Spacing.l) {
-            control(systemImage: "square.3.layers.3d", label: isSatellite ? "scheme" : "satellite", action: onMapTypeTap)
-            control(systemImage: "location", label: "my_location", action: onMyLocationTap)
-        }
-    }
-
-    private func control(systemImage: String, label: LocalizedStringKey, action: @escaping () -> Void) -> some View {
-        return Button(action: action) {
-            Image(systemName: systemImage)
-                .font(.title3)
-                .foregroundStyle(Palette.primary)
+        return VStack(spacing: 0) {
+            CategoryFilterMenu(checkedWar: checkedWar, checkedArt: checkedArt, onWarChange: onWarChange, onArtChange: onArtChange)
                 .frame(width: Self.size, height: Self.size)
-                .background(RoundedRectangle(cornerRadius: CornerRadius.large).fill(Palette.surface))
-                .shadow(color: Palette.shadow, radius: Shadow.mediumRadius, y: Shadow.offsetY)
+            Divider()
+            Button(action: onMapTypeTap) {
+                Image(systemName: isSatellite ? "map" : "globe.europe.africa")
+                    .frame(width: Self.size, height: Self.size)
+            }
+            .accessibilityLabel(isSatellite ? "scheme" : "satellite")
+            Divider()
+            Button(action: onMyLocationTap) {
+                Image(systemName: "location")
+                    .frame(width: Self.size, height: Self.size)
+            }
+            .accessibilityLabel("my_location")
         }
-        .buttonStyle(.plain)
-        .accessibilityLabel(label)
+        .font(.title3)
+        .foregroundStyle(Palette.primary)
+        .frame(width: Self.size)
+        .background(.regularMaterial, in: RoundedRectangle(cornerRadius: CornerRadius.large, style: .continuous))
+        .shadow(color: Palette.shadow, radius: Shadow.largeRadius, y: Shadow.offsetY)
     }
 }
 
 #Preview {
-    MapControls(isSatellite: false, onMapTypeTap: {}, onMyLocationTap: {})
+    MapControls(
+        checkedWar: true,
+        checkedArt: true,
+        isSatellite: false,
+        onWarChange: { _ in },
+        onArtChange: { _ in },
+        onMapTypeTap: {},
+        onMyLocationTap: {}
+    )
+    .padding()
+    .background(Color.gray)
 }

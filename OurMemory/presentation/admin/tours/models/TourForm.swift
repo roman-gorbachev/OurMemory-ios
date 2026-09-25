@@ -18,7 +18,7 @@ struct TourForm: Hashable {
         id = tour.id
         title = tour.title
         description = tour.description
-        stops = tour.stops.map(TourStopForm.init(stop:))
+        stops = tour.stops.map { return TourStopForm(stop: $0) }
     }
 
     func toTour() -> Tour {

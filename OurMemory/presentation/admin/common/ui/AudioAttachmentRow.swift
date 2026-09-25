@@ -7,14 +7,15 @@ struct AudioAttachmentRow: View {
 
     var body: some View {
         return HStack(spacing: Spacing.m) {
-            Text(audioUrl.isBlank ? "no_audio" : "audio_attached")
-                .appStyle(.bodyMedium)
-                .foregroundStyle(Palette.onSurface)
+            Label(audioUrl.isBlank ? "no_audio" : "audio_attached", systemImage: audioUrl.isBlank ? "waveform.slash" : "waveform")
+                .foregroundStyle(audioUrl.isBlank ? Palette.onSurfaceVariant : Palette.onSurface)
                 .frame(maxWidth: .infinity, alignment: .leading)
             if !audioUrl.isBlank {
-                Button("delete", action: onRemove)
-                    .appStyle(.labelLarge, weight: .semibold)
-                    .foregroundStyle(Palette.error)
+                Button(role: .destructive, action: onRemove) {
+                    Image(systemName: "trash")
+                }
+                .buttonStyle(.borderless)
+                .accessibilityLabel("delete")
             }
             AudioPickButton(onPicked: onPicked)
         }

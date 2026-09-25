@@ -8,19 +8,11 @@ struct MoreNavigationDestinations: ViewModifier {
         return content.navigationDestination(for: MoreDestination.self) { destination in
             switch destination {
             case .myRequests:
-                MyRequestsRoute(viewModel: container.buildMyRequestsViewModel(), onBack: router.pop)
+                MyRequestsRoute(viewModel: container.buildMyRequestsViewModel())
             case .favorites:
-                FavoritesRoute(
-                    viewModel: container.buildFavoritesViewModel(),
-                    onBack: router.pop,
-                    onVeteranOpen: { router.push(VeteranDestination.details(veteranId: $0)) }
-                )
+                FavoritesRoute(viewModel: container.buildFavoritesViewModel(), onVeteranOpen: router.openVeteran)
             case .adminLogin:
-                AdminLoginRoute(
-                    viewModel: container.buildAdminLoginViewModel(),
-                    onBack: router.pop,
-                    onSignedIn: { router.switchTab(.admin) }
-                )
+                AdminLoginRoute(viewModel: container.buildAdminLoginViewModel()) { router.switchTab(.admin) }
             }
         }
     }

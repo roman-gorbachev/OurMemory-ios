@@ -4,43 +4,41 @@ struct SubmissionCard: View {
     private static let previewLines = 3
 
     let item: SubmissionItemUi
-    let action: () -> Void
 
     var body: some View {
         let isPending = item.status == .pending
-        return Button(action: action) {
-            VStack(alignment: .leading, spacing: Spacing.s) {
+        return HStack(alignment: .top, spacing: Spacing.l) {
+            Circle()
+                .fill(isPending ? Palette.primary : Color.clear)
+                .frame(width: Spacing.m, height: Spacing.m)
+                .padding(.top, Spacing.s)
+            VStack(alignment: .leading, spacing: Spacing.xs) {
                 HStack {
                     Text(verbatim: item.veteranName)
-                        .appStyle(.titleMedium, weight: .bold)
-                        .foregroundStyle(Palette.primary)
+                        .appStyle(.headline)
                         .lineLimit(1)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Spacer()
                     Text(verbatim: item.date)
-                        .appStyle(.labelMedium)
+                        .appStyle(.caption)
                         .foregroundStyle(Palette.onSurfaceVariant)
                 }
                 Text(verbatim: item.text)
-                    .appStyle(.bodyMedium)
-                    .foregroundStyle(Palette.onSurface)
+                    .appStyle(.subheadline)
+                    .foregroundStyle(Palette.onSurfaceVariant)
                     .lineLimit(Self.previewLines)
                 HStack {
                     Text(item.status.titleKey)
-                        .appStyle(.labelLarge)
+                        .appStyle(.caption, weight: .semibold)
                         .foregroundStyle(isPending ? Palette.primary : Palette.onSurfaceVariant)
-                        .frame(maxWidth: .infinity, alignment: .leading)
+                    Spacer()
                     if item.photoCount > 0 {
-                        Text(verbatim: L10n.format("photos_count", item.photoCount))
-                            .appStyle(.labelLarge)
+                        Label { Text(verbatim: L10n.format("photos_count", item.photoCount)) } icon: { Image(systemName: "photo") }
+                            .appStyle(.caption)
                             .foregroundStyle(Palette.onSurfaceVariant)
                     }
                 }
             }
-            .multilineTextAlignment(.leading)
-            .padding(Spacing.xl)
-            .background(RoundedRectangle(cornerRadius: CornerRadius.large).fill(isPending ? Palette.surface : Palette.surfaceVariant))
-            .shadow(color: isPending ? Palette.shadow : .clear, radius: Shadow.smallRadius, y: Shadow.offsetY)
         }
-        .buttonStyle(.plain)
+        .contentShape(Rectangle())
     }
 }

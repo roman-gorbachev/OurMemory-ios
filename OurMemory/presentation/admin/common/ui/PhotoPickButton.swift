@@ -3,15 +3,14 @@ import SwiftUI
 
 struct PhotoPickButton: View {
     let title: LocalizedStringKey
-    var kind = AppButtonKind.outlined
+    var systemImage = "photo.badge.plus"
     let onPicked: (Data) -> Void
     @State private var selection: PhotosPickerItem?
 
     var body: some View {
         return PhotosPicker(selection: $selection, matching: .images) {
-            Text(title)
+            Label(title, systemImage: systemImage)
         }
-        .buttonStyle(AppButtonStyle(kind: kind))
         .onChange(of: selection) { _, item in
             guard let item else {
                 return

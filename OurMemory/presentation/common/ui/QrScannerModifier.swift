@@ -15,7 +15,7 @@ struct QrScannerModifier: ViewModifier {
                 }
             }
             .fullScreenCover(isPresented: $isPresented) {
-                ZStack(alignment: .topLeading) {
+                NavigationStack {
                     QrScannerView { payload in
                         isPresented = false
                         if let veteranId = VeteranLink.parseVeteranId(payload) {
@@ -25,10 +25,14 @@ struct QrScannerModifier: ViewModifier {
                         }
                     }
                     .ignoresSafeArea()
-                    CircleIconButton(systemImage: "xmark", accessibilityLabel: "cancel") {
-                        isPresented = false
+                    .navigationTitle("scan_qr_code")
+                    .navigationBarTitleDisplayMode(.inline)
+                    .toolbarBackground(.visible, for: .navigationBar)
+                    .toolbar {
+                        ToolbarItem(placement: .cancellationAction) {
+                            Button("cancel") { isPresented = false }
+                        }
                     }
-                    .padding(Spacing.l)
                 }
             }
             .alert(

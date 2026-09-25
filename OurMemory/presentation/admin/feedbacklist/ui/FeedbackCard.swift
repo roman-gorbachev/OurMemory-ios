@@ -10,65 +10,54 @@ struct FeedbackCard: View {
         return VStack(alignment: .leading, spacing: Spacing.m) {
             HStack {
                 Text(item.type.titleKey)
-                    .appStyle(.labelLarge, weight: .bold)
+                    .appStyle(.caption, weight: .semibold)
                     .foregroundStyle(Palette.primary)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                Spacer()
                 Text(verbatim: item.date)
-                    .appStyle(.labelMedium)
+                    .appStyle(.caption)
                     .foregroundStyle(Palette.onSurfaceVariant)
             }
             Text(verbatim: item.text)
-                .appStyle(.bodyLarge)
-                .foregroundStyle(Palette.onSurface)
+                .appStyle(.body)
             if !item.contact.isBlank {
-                Text(verbatim: item.contact)
-                    .appStyle(.bodyMedium)
+                Label { Text(verbatim: item.contact) } icon: { Image(systemName: "person.crop.circle") }
+                    .appStyle(.subheadline)
                     .foregroundStyle(Palette.onSurfaceVariant)
                     .textSelection(.enabled)
             }
-            replySection
-            HStack {
-                if !item.veteranId.isBlank {
+            if !item.veteranId.isBlank {
+                Button {
+                    onVeteranOpen(item.veteranId)
+                } label: {
+                    Label { Text(verbatim: item.veteranName.isBlank ? item.veteranId : item.veteranName) } icon: { Image(systemName: "person.text.rectangle") }
+                        .appStyle(.subheadline)
+                }
+                .buttonStyle(.borderless)
+            }
+            if !item.reply.isBlank {
+                Text(verbatim: L10n.format("your_reply", item.reply))
+                    .appStyle(.callout)
+                    .foregroundStyle(Palette.primary)
+            } else {
+                HStack(spacing: Spacing.m) {
+                    TextField("reply", text: $reply, axis: .vertical)
+                        .textFieldStyle(.roundedBorder)
                     Button {
-                        onVeteranOpen(item.veteranId)
+                        onAction(.reply(feedbackId: item.id, text: reply))
                     } label: {
-                        Text(verbatim: item.veteranName.isBlank ? item.veteranId : item.veteranName)
-                            .appStyle(.labelLarge, weight: .semibold)
-                            .foregroundStyle(Palette.primary)
-                            .lineLimit(1)
+                        Image(systemName: "arrow.up.circle.fill").font(.title2)
                     }
-                }
-                Spacer()
-                if item.isReviewed {
-                    Text("reviewed")
-                        .appStyle(.labelLarge)
-                        .foregroundStyle(Palette.onSurfaceVariant)
-                } else {
-                    AppButton(title: "mark_as_reviewed", kind: .outlined) {
-                        onAction(.markReviewed(feedbackId: item.id))
-                    }
-                    .fixedSize()
+                    .buttonStyle(.borderless)
+                    .disabled(reply.isBlank)
+                    .accessibilityLabel("send_reply")
                 }
             }
-        }
-        .padding(Spacing.xl)
-        .background(RoundedRectangle(cornerRadius: CornerRadius.large).fill(item.isReviewed ? Palette.surfaceVariant : Palette.surface))
-        .shadow(color: item.isReviewed ? .clear : Palette.shadow, radius: Shadow.smallRadius, y: Shadow.offsetY)
-    }
-
-    @ViewBuilder
-    private var replySection: some View {
-        if !item.reply.isBlank {
-            Text(verbatim: L10n.format("your_reply", item.reply))
-                .appStyle(.bodyMedium)
-                .foregroundStyle(Palette.primary)
-        } else {
-            AppTextField(label: "reply", text: $reply, axis: .vertical)
-            if !reply.isBlank {
-                AppButton(title: "send_reply") {
-                    onAction(.reply(feedbackId: item.id, text: reply))
-                }
+            if item.isReviewed {
+                Label("reviewed", systemImage: "checkmark.circle.fill")
+                    .appStyle(.caption)
+                    .foregroundStyle(Palette.success)
             }
         }
+        .padding(.vertical, Spacing.xs)
     }
 }

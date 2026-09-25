@@ -2,30 +2,38 @@ import SwiftUI
 
 struct VeteranEditorRoute: View {
     @State private var viewModel: VeteranEditorViewModel
-    let onBack: () -> Void
+    let onClose: () -> Void
 
-    init(viewModel: VeteranEditorViewModel, onBack: @escaping () -> Void) {
+    init(viewModel: VeteranEditorViewModel, onClose: @escaping () -> Void) {
         _viewModel = State(initialValue: viewModel)
-        self.onBack = onBack
+        self.onClose = onClose
     }
 
     var body: some View {
-        return TopBarContainer(title: title, onBack: onBack) {
-            switch viewModel.veteranEditorUiState {
-            case .loading:
-                LoadingView()
-            case .error:
-                ErrorView()
-            case .editing(let data):
-                VeteranEditorScreen(data: data, onAction: viewModel.onAction)
-                    .onChange(of: data.status.isClosed) { _, isClosed in
-                        if isClosed {
-                            onBack()
-                        }
+        return content
+            .navigationTitle(title)
+            .navigationBarTitleDisplayMode(.inline)
+            .task { await viewModel.load() }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch viewModel.veteranEditorUiState {
+        case .loading:
+            LoadingView()
+        case .error:
+            ErrorView()
+        case .editing(let data):
+            VeteranEditorForm(data: data, onAction: viewModel.onAction)
+                .toolbar {
+                    EditorToolbar(status: data.status, canSave: data.canSave) { viewModel.onAction(.save) }
+                }
+                .onChange(of: data.status.isClosed) { _, isClosed in
+                    if isClosed {
+                        onClose()
                     }
-            }
+                }
         }
-        .task { await viewModel.load() }
     }
 
     private var title: String {

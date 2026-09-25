@@ -12,8 +12,16 @@ struct HomeRoute: View {
 
     var body: some View {
         return content
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Palette.background.ignoresSafeArea())
+            .navigationTitle("app_name")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        isScannerPresented = true
+                    } label: {
+                        Label("scan_qr_code", systemImage: "qrcode.viewfinder")
+                    }
+                }
+            }
             .task { await viewModel.load() }
             .qrScanner(isPresented: $isScannerPresented, onVeteranScanned: onVeteranOpen)
     }
@@ -26,12 +34,7 @@ struct HomeRoute: View {
         case .error:
             ErrorView()
         case .success(let data):
-            HomeScreen(
-                data: data,
-                onAction: viewModel.onAction,
-                onVeteranOpen: onVeteranOpen,
-                onScanTap: { isScannerPresented = true }
-            )
+            HomeScreen(data: data, onAction: viewModel.onAction, onVeteranOpen: onVeteranOpen)
         }
     }
 }

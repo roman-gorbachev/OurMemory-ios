@@ -3,7 +3,6 @@ import SwiftUI
 struct ImageSlideshow: View {
     private static let intervalSeconds = 4.0
     private static let height: CGFloat = 150
-    private static let aspectRatio: CGFloat = 2.5
     private static let fadeSeconds = 0.6
 
     let images: [String]
@@ -20,8 +19,9 @@ struct ImageSlideshow: View {
                 }
             }
         }
-        .frame(width: Self.height * Self.aspectRatio, height: Self.height)
-        .clipShape(RoundedRectangle(cornerRadius: CornerRadius.large))
+        .frame(maxWidth: .infinity)
+        .frame(height: Self.height)
+        .clipShape(RoundedRectangle(cornerRadius: CornerRadius.extraLarge, style: .continuous))
         .task {
             while !Task.isCancelled {
                 try? await Task.sleep(for: .seconds(Self.intervalSeconds))

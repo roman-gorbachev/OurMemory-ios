@@ -5,7 +5,7 @@ struct ErrorView: View {
 
     var body: some View {
         return Text(message)
-            .appStyle(.bodyLarge)
+            .appStyle(.body)
             .foregroundStyle(Palette.onSurfaceVariant)
             .multilineTextAlignment(.center)
             .padding(Spacing.xxxl)

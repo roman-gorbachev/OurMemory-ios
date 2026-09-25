@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct CountBadge: View {
-    private static let minSize: CGFloat = 20
+    private static let minSize: CGFloat = 22
 
     let count: Int
 
     var body: some View {
         return Text(verbatim: String(count))
-            .appStyle(.labelSmall, weight: .bold)
+            .appStyle(.footnote, weight: .semibold)
             .foregroundStyle(Palette.white)
             .padding(.horizontal, Spacing.s)
             .frame(minWidth: Self.minSize, minHeight: Self.minSize)

@@ -2,30 +2,18 @@ import SwiftUI
 
 struct TourEditorRoute: View {
     @State private var viewModel: TourEditorViewModel
-    let onBack: () -> Void
+    let onClose: () -> Void
 
-    init(viewModel: TourEditorViewModel, onBack: @escaping () -> Void) {
+    init(viewModel: TourEditorViewModel, onClose: @escaping () -> Void) {
         _viewModel = State(initialValue: viewModel)
-        self.onBack = onBack
+        self.onClose = onClose
     }
 
     var body: some View {
-        return TopBarContainer(title: L10n.string(isNew ? "new_tour" : "tours"), onBack: onBack) {
-            switch viewModel.tourEditorUiState {
-            case .loading:
-                LoadingView()
-            case .error:
-                ErrorView()
-            case .editing(let data):
-                TourEditorScreen(data: data, onAction: viewModel.onAction)
-                    .onChange(of: data.status.isClosed) { _, isClosed in
-                        if isClosed {
-                            onBack()
-                        }
-                    }
-            }
-        }
-        .task { await viewModel.load() }
+        return content
+            .navigationTitle(isNew ? "new_tour" : "tour")
+            .navigationBarTitleDisplayMode(.inline)
+            .task { await viewModel.load() }
     }
 
     private var isNew: Bool {
@@ -33,5 +21,25 @@ struct TourEditorRoute: View {
             return data.isNew
         }
         return false
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch viewModel.tourEditorUiState {
+        case .loading:
+            LoadingView()
+        case .error:
+            ErrorView()
+        case .editing(let data):
+            TourEditorScreen(data: data, onAction: viewModel.onAction)
+                .toolbar {
+                    EditorToolbar(status: data.status, canSave: data.canSave) { viewModel.onAction(.save) }
+                }
+                .onChange(of: data.status.isClosed) { _, isClosed in
+                    if isClosed {
+                        onClose()
+                    }
+                }
+        }
     }
 }

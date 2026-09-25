@@ -36,7 +36,7 @@ struct PhotoViewer: View {
                 Spacer()
                 if !description.isBlank {
                     Text(verbatim: description)
-                        .appStyle(.bodyLarge)
+                        .appStyle(.body)
                         .foregroundStyle(Palette.white)
                         .padding(Spacing.xl)
                         .frame(maxWidth: .infinity, alignment: .leading)

@@ -3,29 +3,39 @@ import SwiftUI
 struct MyRequestsRoute: View {
     @State private var viewModel: MyRequestsViewModel
     @Environment(\.scenePhase) private var scenePhase
-    let onBack: () -> Void
 
-    init(viewModel: MyRequestsViewModel, onBack: @escaping () -> Void) {
+    init(viewModel: MyRequestsViewModel) {
         _viewModel = State(initialValue: viewModel)
-        self.onBack = onBack
     }
 
     var body: some View {
-        return TopBarContainer(title: L10n.string("my_requests"), onBack: onBack) {
-            switch viewModel.myRequestsUiState {
-            case .loading:
-                LoadingView()
-            case .error:
-                ErrorView()
-            case .success(let items):
-                MyRequestsScreen(items: items)
+        return content
+            .navigationTitle("my_requests")
+            .task { await viewModel.loadNames() }
+            .onAppear { viewModel.markAllSeen() }
+            .onChange(of: scenePhase) { _, phase in
+                if phase == .active {
+                    viewModel.markAllSeen()
+                }
             }
-        }
-        .task { await viewModel.loadNames() }
-        .onAppear { viewModel.markAllSeen() }
-        .onChange(of: scenePhase) { _, phase in
-            if phase == .active {
-                viewModel.markAllSeen()
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch viewModel.myRequestsUiState {
+        case .loading:
+            LoadingView()
+        case .error:
+            ErrorView()
+        case .success(let items):
+            List(items) { item in
+                MyRequestCard(item: item)
+            }
+            .listStyle(.insetGrouped)
+            .overlay {
+                if items.isEmpty {
+                    ContentUnavailableView("my_requests", systemImage: "tray", description: Text("no_requests_yet_msg"))
+                }
             }
         }
     }

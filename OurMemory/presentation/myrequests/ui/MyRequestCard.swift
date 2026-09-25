@@ -8,35 +8,46 @@ struct MyRequestCard: View {
     var body: some View {
         return VStack(alignment: .leading, spacing: Spacing.s) {
             HStack {
-                Text(item.kind.titleKey)
-                    .appStyle(.labelLarge)
+                Label(item.kind.titleKey, systemImage: item.kind == .submission ? "photo.on.rectangle" : "envelope")
+                    .appStyle(.caption)
                     .foregroundStyle(Palette.onSurfaceVariant)
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                Spacer()
                 Text(verbatim: item.date)
-                    .appStyle(.labelMedium)
+                    .appStyle(.caption)
                     .foregroundStyle(Palette.onSurfaceVariant)
             }
             if !item.veteranName.isBlank {
                 Text(verbatim: item.veteranName)
-                    .appStyle(.titleMedium, weight: .bold)
-                    .foregroundStyle(Palette.primary)
+                    .appStyle(.headline)
             }
             Text(verbatim: item.text)
-                .appStyle(.bodyMedium)
-                .foregroundStyle(Palette.onSurface)
+                .appStyle(.callout)
                 .lineLimit(Self.textLines)
             Text(item.status.titleKey)
-                .appStyle(.labelLarge, weight: .bold)
-                .foregroundStyle(item.status == .rejected ? Palette.error : Palette.primary)
+                .appStyle(.caption, weight: .semibold)
+                .foregroundStyle(statusColor)
+                .padding(.horizontal, Spacing.m)
+                .padding(.vertical, Spacing.xs)
+                .background(Capsule().fill(statusColor.opacity(0.15)))
             if !item.reply.isBlank {
                 Text(verbatim: L10n.format("reply_from_cemetery", item.reply))
-                    .appStyle(.bodyMedium)
-                    .foregroundStyle(Palette.onSurface)
+                    .appStyle(.callout)
+                    .padding(Spacing.l)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(RoundedRectangle(cornerRadius: CornerRadius.medium, style: .continuous).fill(Palette.containerHigh))
             }
         }
-        .padding(Spacing.xl)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: CornerRadius.large).fill(Palette.surface))
-        .shadow(color: Palette.shadow, radius: Shadow.smallRadius, y: Shadow.offsetY)
+        .padding(.vertical, Spacing.xs)
+    }
+
+    private var statusColor: Color {
+        switch item.status {
+        case .inReview:
+            return .orange
+        case .approved, .reviewed:
+            return Palette.success
+        case .rejected:
+            return Palette.error
+        }
     }
 }

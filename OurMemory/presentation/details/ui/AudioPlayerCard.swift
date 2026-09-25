@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct AudioPlayerCard: View {
-    private static let buttonSize: CGFloat = 52
+    private static let buttonSize: CGFloat = 48
     private static let secondsInMinute = 60
     private static let minimumDuration = 1.0
 
@@ -13,29 +13,27 @@ struct AudioPlayerCard: View {
         let isStarted = playbackState.currentAudio != nil
         let duration = playbackState.duration
         let position = min(max(draggedPosition ?? playbackState.currentPosition, 0), max(duration, 0))
-        return VStack(alignment: .leading, spacing: Spacing.m) {
+        return VStack(alignment: .leading, spacing: Spacing.l) {
             HStack(spacing: Spacing.xl) {
                 Button {
                     onAction(nextAction)
                 } label: {
                     Image(systemName: playbackState.isPlaying ? "pause.fill" : "play.fill")
                         .font(.title2)
-                        .foregroundStyle(Palette.onPrimary)
+                        .contentTransition(.symbolEffect(.replace))
                         .frame(width: Self.buttonSize, height: Self.buttonSize)
-                        .background(Circle().fill(Palette.primary))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.circle)
                 .accessibilityLabel(playbackState.isPlaying ? "pause" : "play")
                 VStack(alignment: .leading, spacing: Spacing.xxs) {
                     Text("listen_to_biography")
-                        .appStyle(.titleMedium, weight: .bold)
-                    if isStarted {
-                        Text(verbatim: "\(Self.format(position)) / \(Self.format(duration))")
-                            .appStyle(.bodySmall)
-                            .monospacedDigit()
-                    }
+                        .appStyle(.headline)
+                    Text(verbatim: isStarted ? "\(Self.format(position)) / \(Self.format(duration))" : " ")
+                        .appStyle(.subheadline)
+                        .foregroundStyle(Palette.onSurfaceVariant)
+                        .monospacedDigit()
                 }
-                .foregroundStyle(Palette.onPrimaryContainer)
             }
             Slider(
                 value: Binding(get: { return position }, set: { draggedPosition = $0 }),
@@ -47,12 +45,9 @@ struct AudioPlayerCard: View {
                     }
                 }
             )
-            .tint(Palette.primary)
             .disabled(!isStarted || duration <= 0)
         }
-        .padding(Spacing.xl)
-        .background(RoundedRectangle(cornerRadius: CornerRadius.card).fill(Palette.primaryContainer))
-        .padding(.horizontal, Spacing.screen)
+        .cardBackground()
     }
 
     private var nextAction: AudioAction {
@@ -70,4 +65,5 @@ struct AudioPlayerCard: View {
 
 #Preview {
     AudioPlayerCard(playbackState: AudioPlaybackState()) { _ in }
+        .background(Palette.groupedBackground)
 }

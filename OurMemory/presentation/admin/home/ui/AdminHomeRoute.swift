@@ -12,14 +12,18 @@ struct AdminHomeRoute: View {
     }
 
     var body: some View {
-        return AdminHomeScreen(
-            data: viewModel.adminHomeUiData,
-            onOpen: onOpen,
-            onSignOut: {
-                viewModel.signOut()
-                onSignedOut()
+        return AdminHomeScreen(data: viewModel.adminHomeUiData, onOpen: onOpen)
+            .navigationTitle("administration")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(role: .destructive) {
+                        viewModel.signOut()
+                        onSignedOut()
+                    } label: {
+                        Label("sign_out", systemImage: "rectangle.portrait.and.arrow.right")
+                    }
+                }
             }
-        )
-        .task { await viewModel.loadContentCounts() }
+            .task { await viewModel.loadContentCounts() }
     }
 }

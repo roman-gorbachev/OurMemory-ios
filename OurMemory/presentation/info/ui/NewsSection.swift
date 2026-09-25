@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct NewsSection: View {
-    private static let iconSize: CGFloat = 40
+    private static let iconSize: CGFloat = 36
 
     let news: [NewsUi]
     let onOpen: (NewsUi) -> Void
@@ -9,8 +9,11 @@ struct NewsSection: View {
     var body: some View {
         return VStack(alignment: .leading, spacing: 0) {
             SectionTitle(text: "news")
-            VStack(spacing: Spacing.m) {
-                ForEach(news) { item in
+            VStack(spacing: 0) {
+                ForEach(Array(news.enumerated()), id: \.element.id) { index, item in
+                    if index > 0 {
+                        Divider().padding(.leading, Self.iconSize + Spacing.xl + Spacing.l)
+                    }
                     Button {
                         onOpen(item)
                     } label: {
@@ -19,20 +22,23 @@ struct NewsSection: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: Self.iconSize, height: Self.iconSize)
-                                .clipShape(Circle())
+                                .clipShape(RoundedRectangle(cornerRadius: CornerRadius.small, style: .continuous))
                             Text(verbatim: item.title)
-                                .appStyle(.titleMedium, weight: .bold)
+                                .appStyle(.body)
                                 .foregroundStyle(Palette.onSurface)
                                 .frame(maxWidth: .infinity, alignment: .leading)
-                            Image(systemName: "chevron.right")
-                                .foregroundStyle(Palette.primary)
+                            Image(systemName: "arrow.up.right")
+                                .appStyle(.footnote, weight: .semibold)
+                                .foregroundStyle(Palette.tertiaryLabel)
                         }
-                        .padding(Spacing.l)
-                        .background(RoundedRectangle(cornerRadius: CornerRadius.extraLarge).fill(Palette.container))
+                        .padding(.horizontal, Spacing.xl)
+                        .padding(.vertical, Spacing.l)
+                        .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
                 }
             }
+            .background(RoundedRectangle(cornerRadius: CornerRadius.card, style: .continuous).fill(Palette.surface))
             .padding(.horizontal, Spacing.screen)
         }
     }

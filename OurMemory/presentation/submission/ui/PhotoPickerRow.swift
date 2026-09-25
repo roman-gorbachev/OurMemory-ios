@@ -32,7 +32,7 @@ struct PhotoPickerRow: View {
                             Image(systemName: "photo.badge.plus")
                                 .font(.title2)
                             Text("add_photos")
-                                .appStyle(.labelSmall)
+                                .appStyle(.caption2)
                         }
                         .foregroundStyle(Palette.primary)
                         .frame(width: Self.photoSize, height: Self.photoSize)

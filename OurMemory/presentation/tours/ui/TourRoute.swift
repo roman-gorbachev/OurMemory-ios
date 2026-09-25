@@ -2,22 +2,14 @@ import SwiftUI
 
 struct TourRoute: View {
     @State private var viewModel: TourViewModel
-    let onBack: () -> Void
 
-    init(viewModel: TourViewModel, onBack: @escaping () -> Void) {
+    init(viewModel: TourViewModel) {
         _viewModel = State(initialValue: viewModel)
-        self.onBack = onBack
     }
 
     var body: some View {
         return content
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Palette.background.ignoresSafeArea())
-            .overlay(alignment: .topLeading) {
-                CircleIconButton(systemImage: "chevron.left", accessibilityLabel: "back", action: onBack)
-                    .padding(Spacing.l)
-            }
-            .toolbar(.hidden, for: .navigationBar)
+            .navigationBarTitleDisplayMode(.inline)
             .task { await viewModel.load() }
     }
 

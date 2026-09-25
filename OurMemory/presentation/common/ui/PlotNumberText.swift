@@ -6,7 +6,7 @@ struct PlotNumberText: View {
     var body: some View {
         if burial.hasPlotNumber {
             Text(verbatim: L10n.format("section_row_place_msg", burial.section, burial.row, burial.place))
-                .appStyle(.bodyLarge)
+                .appStyle(.body)
                 .foregroundStyle(Palette.onSurface)
         }
     }

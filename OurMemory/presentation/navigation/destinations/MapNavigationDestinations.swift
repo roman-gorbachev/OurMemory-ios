@@ -10,12 +10,12 @@ struct MapNavigationDestinations: ViewModifier {
             case .burialMap(let burialId):
                 MapRoute(
                     viewModel: container.buildMapViewModel(focusedBurialId: burialId),
-                    onBack: router.pop,
-                    onVeteranOpen: { router.push(VeteranDestination.details(veteranId: $0)) },
+                    isRoot: false,
+                    onVeteranOpen: router.openVeteran,
                     onTourOpen: { router.push(MapDestination.tour(tourId: $0)) }
                 )
             case .tour(let tourId):
-                TourRoute(viewModel: container.buildTourViewModel(tourId: tourId), onBack: router.pop)
+                TourRoute(viewModel: container.buildTourViewModel(tourId: tourId))
             }
         }
     }

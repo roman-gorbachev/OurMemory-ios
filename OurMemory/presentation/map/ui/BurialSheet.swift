@@ -1,70 +1,71 @@
 import SwiftUI
 
 struct BurialSheet: View {
-    private static let photoMaxHeight: CGFloat = 240
-    private static let portraitSize: CGFloat = 56
+    private static let photoHeight: CGFloat = 200
+    private static let portraitSize: CGFloat = 44
 
     let details: BurialDetailsUi
     let onVeteranOpen: (String) -> Void
 
     var body: some View {
-        return ScrollView {
-            VStack(alignment: .leading, spacing: Spacing.l) {
-                VStack(alignment: .leading, spacing: Spacing.xs) {
-                    Text(details.type.titleKey)
-                        .appStyle(.titleLarge, weight: .bold)
-                        .foregroundStyle(Palette.primary)
-                    PlotNumberText(burial: details.burial)
-                }
-                if !details.photo.isBlank {
-                    RemoteImage(url: details.photo)
-                        .frame(maxWidth: .infinity)
-                        .frame(height: Self.photoMaxHeight)
-                        .background(Palette.containerHigh)
-                        .clipShape(RoundedRectangle(cornerRadius: CornerRadius.extraLarge))
-                }
-                if !details.description.isBlank {
-                    Text(verbatim: details.description)
-                        .appStyle(.bodyLarge)
-                        .foregroundStyle(Palette.onSurface)
-                }
-                ForEach(details.veterans) { veteran in
-                    veteranRow(veteran)
-                }
-            }
-            .padding(.horizontal, Spacing.xxl)
-            .padding(.top, Spacing.xxl)
-            .padding(.bottom, Spacing.xxxl)
-        }
-    }
-
-    private func veteranRow(_ veteran: VeteranShortUi) -> some View {
-        return Button {
-            onVeteranOpen(veteran.id)
-        } label: {
-            HStack(spacing: Spacing.l) {
-                PortraitImage(url: veteran.portrait)
-                    .frame(width: Self.portraitSize, height: Self.portraitSize)
-                    .clipShape(Circle())
-                VStack(alignment: .leading, spacing: Spacing.xxs) {
-                    Text(verbatim: veteran.name)
-                        .appStyle(.titleMedium, weight: .bold)
-                        .foregroundStyle(Palette.onSurface)
-                    if !veteran.years.isBlank {
-                        Text(verbatim: veteran.years)
-                            .appStyle(.bodyMedium)
-                            .foregroundStyle(Palette.onSurfaceVariant)
+        return NavigationStack {
+            List {
+                if !details.photo.isBlank || !details.description.isBlank {
+                    Section {
+                        if !details.photo.isBlank {
+                            RemoteImage(url: details.photo)
+                                .frame(height: Self.photoHeight)
+                                .clipped()
+                                .listRowInsets(EdgeInsets())
+                        }
+                        if !details.description.isBlank {
+                            Text(verbatim: details.description)
+                                .appStyle(.body)
+                        }
                     }
                 }
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: "chevron.right")
-                    .foregroundStyle(Palette.primary)
+                if !details.veterans.isEmpty {
+                    Section("veterans") {
+                        ForEach(details.veterans) { veteran in
+                            Button {
+                                onVeteranOpen(veteran.id)
+                            } label: {
+                                HStack(spacing: Spacing.l) {
+                                    PortraitImage(url: veteran.portrait)
+                                        .frame(width: Self.portraitSize, height: Self.portraitSize)
+                                        .clipShape(Circle())
+                                    VStack(alignment: .leading, spacing: Spacing.xxs) {
+                                        Text(verbatim: veteran.name)
+                                            .appStyle(.headline)
+                                            .foregroundStyle(Palette.onSurface)
+                                        if !veteran.years.isBlank {
+                                            Text(verbatim: veteran.years)
+                                                .appStyle(.subheadline)
+                                                .foregroundStyle(Palette.onSurfaceVariant)
+                                        }
+                                    }
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .appStyle(.footnote, weight: .semibold)
+                                        .foregroundStyle(Palette.tertiaryLabel)
+                                }
+                            }
+                        }
+                    }
+                }
             }
-            .padding(Spacing.l)
-            .background(RoundedRectangle(cornerRadius: CornerRadius.extraLarge).fill(Palette.container))
+            .listStyle(.insetGrouped)
+            .navigationTitle(details.type.titleKey)
+            .navigationBarTitleDisplayMode(.inline)
+            .safeAreaInset(edge: .top, spacing: 0) {
+                if details.burial.hasPlotNumber {
+                    PlotNumberText(burial: details.burial)
+                        .appStyle(.subheadline)
+                        .foregroundStyle(Palette.onSurfaceVariant)
+                        .padding(.bottom, Spacing.s)
+                }
+            }
         }
-        .buttonStyle(.plain)
     }
 }
 

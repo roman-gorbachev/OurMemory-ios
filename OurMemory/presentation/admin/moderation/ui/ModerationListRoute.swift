@@ -2,36 +2,41 @@ import SwiftUI
 
 struct ModerationListRoute: View {
     @State private var viewModel: ModerationListViewModel
-    let onBack: () -> Void
     let onSubmissionOpen: (String) -> Void
 
-    init(viewModel: ModerationListViewModel, onBack: @escaping () -> Void, onSubmissionOpen: @escaping (String) -> Void) {
+    init(viewModel: ModerationListViewModel, onSubmissionOpen: @escaping (String) -> Void) {
         _viewModel = State(initialValue: viewModel)
-        self.onBack = onBack
         self.onSubmissionOpen = onSubmissionOpen
     }
 
     var body: some View {
-        return TopBarContainer(title: L10n.string("moderation"), onBack: onBack) {
-            switch viewModel.moderationListUiState {
-            case .loading:
-                LoadingView()
-            case .error:
-                ErrorView()
-            case .success(let items):
-                ScrollView {
-                    LazyVStack(alignment: .leading, spacing: Spacing.l) {
-                        if items.isEmpty {
-                            EmptyListText()
-                        }
-                        ForEach(items) { item in
-                            SubmissionCard(item: item) { onSubmissionOpen(item.id) }
-                        }
-                    }
-                    .padding(Spacing.screen)
+        return content
+            .navigationTitle("moderation")
+            .task { await viewModel.loadNames() }
+    }
+
+    @ViewBuilder
+    private var content: some View {
+        switch viewModel.moderationListUiState {
+        case .loading:
+            LoadingView()
+        case .error:
+            ErrorView()
+        case .success(let items):
+            List(items) { item in
+                Button {
+                    onSubmissionOpen(item.id)
+                } label: {
+                    SubmissionCard(item: item)
+                }
+                .buttonStyle(.plain)
+            }
+            .listStyle(.insetGrouped)
+            .overlay {
+                if items.isEmpty {
+                    ContentUnavailableView("nothing_here_yet", systemImage: "tray")
                 }
             }
         }
-        .task { await viewModel.loadNames() }
     }
 }

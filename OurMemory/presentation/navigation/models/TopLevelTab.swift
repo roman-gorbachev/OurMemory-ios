@@ -10,15 +10,15 @@ enum TopLevelTab: CaseIterable, Hashable {
     var systemImage: String {
         switch self {
         case .veterans:
-            return "person"
+            return "person.2"
         case .map:
             return "map"
         case .about:
             return "building.columns"
         case .more:
-            return "ellipsis"
+            return "ellipsis.circle"
         case .admin:
-            return "shield"
+            return "checkmark.shield"
         }
     }
 

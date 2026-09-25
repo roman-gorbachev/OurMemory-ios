@@ -1,39 +1,68 @@
 import SwiftUI
 
 struct EditorGuideScreen: View {
-    let onBack: () -> Void
+    private static let stepNumberSize: CGFloat = 24
+
     @State private var expanded: Set<GuideSection>
 
-    init(initialSection: GuideSection?, onBack: @escaping () -> Void) {
-        self.onBack = onBack
+    init(initialSection: GuideSection?) {
         _expanded = State(initialValue: Set([initialSection].compactMap { return $0 }))
     }
 
     var body: some View {
-        return TopBarContainer(title: L10n.string("editor_guide"), onBack: onBack) {
-            ScrollView {
-                VStack(alignment: .leading, spacing: Spacing.l) {
-                    Text("add_burials_first_msg")
-                        .appStyle(.bodyMedium)
-                        .foregroundStyle(Palette.onSurfaceVariant)
-                    ForEach(GuideSection.allCases, id: \.self) { section in
-                        GuideSectionCard(section: section, isExpanded: expanded.contains(section)) {
-                            withAnimation(.easeInOut) {
-                                if expanded.contains(section) {
-                                    expanded.remove(section)
-                                } else {
-                                    expanded.insert(section)
-                                }
+        return List {
+            Section {
+                Text("add_burials_first_msg")
+                    .appStyle(.subheadline)
+                    .foregroundStyle(Palette.onSurfaceVariant)
+            }
+            ForEach(GuideSection.allCases, id: \.self) { section in
+                Section {
+                    DisclosureGroup(isExpanded: binding(for: section)) {
+                        ForEach(Array(section.steps.enumerated()), id: \.offset) { index, step in
+                            HStack(alignment: .firstTextBaseline, spacing: Spacing.l) {
+                                Text(verbatim: String(index + 1))
+                                    .appStyle(.caption, weight: .bold)
+                                    .foregroundStyle(Palette.white)
+                                    .frame(width: Self.stepNumberSize, height: Self.stepNumberSize)
+                                    .background(Circle().fill(Palette.primary))
+                                Text(verbatim: step)
+                                    .appStyle(.callout)
                             }
+                        }
+                        Label(section.tipKey, systemImage: "lightbulb")
+                            .appStyle(.callout)
+                            .foregroundStyle(Palette.primary)
+                    } label: {
+                        Label {
+                            Text(section.titleKey).appStyle(.headline)
+                        } icon: {
+                            SettingsIcon(systemImage: section.systemImage)
                         }
                     }
                 }
-                .padding(Spacing.screen)
             }
         }
+        .listStyle(.insetGrouped)
+        .navigationTitle("editor_guide")
+    }
+
+    private func binding(for section: GuideSection) -> Binding<Bool> {
+        return Binding(
+            get: { return expanded.contains(section) },
+            set: { isExpanded in
+                if isExpanded {
+                    expanded.insert(section)
+                } else {
+                    expanded.remove(section)
+                }
+            }
+        )
     }
 }
 
 #Preview {
-    EditorGuideScreen(initialSection: .veteran) {}
+    NavigationStack {
+        EditorGuideScreen(initialSection: .veteran)
+    }
 }

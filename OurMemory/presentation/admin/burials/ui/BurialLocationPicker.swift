@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BurialLocationPicker: View {
-    private static let mapHeight: CGFloat = 260
+    private static let mapHeight: CGFloat = 240
     private static let zoom: Float = 18
 
     let latitude: Double?
@@ -13,33 +13,32 @@ struct BurialLocationPicker: View {
     @State private var locationProvider = CurrentLocationProvider()
 
     var body: some View {
-        return VStack(alignment: .leading, spacing: Spacing.m) {
-            YandexMapView(
-                content: MapContent(markers: marker),
-                camera: camera,
-                onMapTap: onPointPicked
-            )
+        return YandexMapView(content: MapContent(markers: marker), camera: camera, onMapTap: onPointPicked)
             .frame(height: Self.mapHeight)
-            .clipShape(RoundedRectangle(cornerRadius: CornerRadius.large))
-            Text("tap_map_to_move_marker_msg")
-                .appStyle(.bodySmall)
-                .foregroundStyle(Palette.onSurfaceVariant)
-            AppButton(title: "my_location", systemImage: "location", kind: .outlined, action: requestLocation)
-            if isPermissionDenied {
-                Text("allow_location_access_msg")
-                    .appStyle(.bodySmall)
-                    .foregroundStyle(Palette.error)
+            .listRowInsets(EdgeInsets())
+            .overlay(alignment: .bottomTrailing) {
+                Button(action: requestLocation) {
+                    Image(systemName: "location.fill")
+                        .padding(Spacing.l)
+                        .background(.regularMaterial, in: Circle())
+                }
+                .buttonStyle(.plain)
+                .foregroundStyle(Palette.primary)
+                .padding(Spacing.l)
+                .accessibilityLabel("my_location")
             }
-        }
-        .onAppear {
-            if camera == nil {
-                camera = MapCamera(
-                    latitude: latitude ?? CemeteryLocation.latitude,
-                    longitude: longitude ?? CemeteryLocation.longitude,
-                    zoom: Self.zoom
-                )
+            .alert("allow_location_access_msg", isPresented: $isPermissionDenied) {
+                Button("done", role: .cancel) {}
             }
-        }
+            .onAppear {
+                if camera == nil {
+                    camera = MapCamera(
+                        latitude: latitude ?? CemeteryLocation.latitude,
+                        longitude: longitude ?? CemeteryLocation.longitude,
+                        zoom: Self.zoom
+                    )
+                }
+            }
     }
 
     private var marker: [MapMarker] {
@@ -55,7 +54,6 @@ struct BurialLocationPicker: View {
                 isPermissionDenied = true
                 return
             }
-            isPermissionDenied = false
             guard let coordinate = await locationProvider.currentCoordinate() else {
                 return
             }

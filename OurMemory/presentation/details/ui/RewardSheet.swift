@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RewardSheet: View {
-    private static let imageSize: CGFloat = 200
+    private static let imageSize: CGFloat = 180
 
     let item: RewardCount
 
@@ -12,8 +12,7 @@ struct RewardSheet: View {
                 .scaledToFit()
                 .frame(width: Self.imageSize, height: Self.imageSize)
             Text(item.reward.nameKey)
-                .appStyle(.titleLarge, weight: .bold)
-                .foregroundStyle(Palette.primary)
+                .appStyle(.title2, weight: .bold)
                 .multilineTextAlignment(.center)
             if item.count > 1 {
                 RewardTimes(count: item.count)

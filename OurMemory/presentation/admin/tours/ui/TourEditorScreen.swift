@@ -8,7 +8,6 @@ struct TourEditorScreen: View {
     let data: TourEditorUiData
     let onAction: (TourEditorUserAction) -> Void
     @State private var isChoosingStop = false
-    @State private var isDeleteConfirmationPresented = false
 
     var body: some View {
         let form = data.form
@@ -42,31 +41,13 @@ struct TourEditorScreen: View {
                 }
             }
             .disabled(data.status.isBusy)
-            Section {
-                Button {
-                    onAction(.save)
-                } label: {
-                    HStack {
-                        Spacer()
-                        if data.status.isSaving {
-                            ProgressView()
-                        } else {
-                            Text("save").bold()
-                        }
-                        Spacer()
-                    }
+            if data.status.hasFailed || data.status.isUploading {
+                Section {
+                    EditorStatusFooter(status: data.status)
                 }
-                .disabled(!data.canSave)
-                if !data.isNew {
-                    Button("delete", role: .destructive) { isDeleteConfirmationPresented = true }
-                        .disabled(data.status.isBusy)
-                }
-            } footer: {
-                if data.status.hasFailed {
-                    Text("failed_to_save_msg").foregroundStyle(.red)
-                } else if data.status.isUploading {
-                    Text("uploading_file")
-                }
+            }
+            if !data.isNew {
+                DeleteSection(message: "delete_tour_msg", isDisabled: data.status.isBusy) { onAction(.delete) }
             }
         }
         .environment(\.editMode, .constant(.active))
@@ -75,9 +56,6 @@ struct TourEditorScreen: View {
                 isChoosingStop = false
                 onAction(.stopAdded(burialId: burialId))
             }
-        }
-        .confirmationDialog("delete_tour_msg", isPresented: $isDeleteConfirmationPresented, titleVisibility: .visible) {
-            Button("delete", role: .destructive) { onAction(.delete) }
         }
     }
 

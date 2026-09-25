@@ -8,7 +8,7 @@ OurMemory — the SwiftUI iOS port of the Android app in `~/Personal/OurMemory-8
 
 Both apps share one Firebase Realtime Database (`chatroom-85fb8`, everything under the `OurMemory` node), so node names, field names, status strings and write shapes must stay byte-for-byte identical to Android.
 
-Dependencies: Firebase (Auth, Database, Storage), GoogleSignIn and Nuke through SwiftPM; `YandexMapsMobile` (lite) through CocoaPods, because Yandex ships no SwiftPM package.
+Fonts are the system SF family (no bundled fonts). Dependencies: Firebase (Auth, Database, Storage), GoogleSignIn and Nuke through SwiftPM; `YandexMapsMobile` (lite) through CocoaPods, because Yandex ships no SwiftPM package.
 
 ## Team Conventions
 
@@ -89,14 +89,15 @@ Read-once caches (`Veterans`, `Burials`, `Tours`) live in actors with `invalidat
 
 ### Navigation
 
-One global router: `Router` protocol wrapping a `NavigationPath`, single `@Observable` conformer `MainRouter`. `MainNavigationView` owns the only `NavigationStack(path:)` and puts the tab view inside it, so pushed screens slide over the tab bar. Never hide the tab bar with `.toolbar(.hidden, for: .tabBar)`.
+Follow Apple's tab pattern: a system `TabView` whose every tab owns its own `NavigationStack`, so the tab bar stays visible while pushing, and system navigation bars (large titles on tab roots, inline titles on pushed screens, native back button and swipe back). One global router, `MainRouter` (`presentation/navigation/main/MainRouter.swift`, conforming to `Router`), keeps the selected tab and a `NavigationPath` per tab; `push` appends to the selected tab's path.
 
-Destinations are `Hashable` structs (`VeteranDestinations.swift`, `AdminDestinations.swift`, …) and every `.navigationDestination(for:)` is registered exactly once, on the tab view, through a per-feature `ViewModifier`. Tabs: veterans, map, about, more, admin (only while the session is admin). Deep links (`https://chatroom-85fb8.web.app/veteran/{id}`, also the QR payload) go through `VeteranLink.parseVeteranId` and push the details destination; a launch from a link skips the intro.
+Destinations are `Hashable` enums (`VeteranDestination`, `MapDestination`, `MoreDestination`, `AdminDestination`). Every `.navigationDestination(for:)` lives in a per-feature `ViewModifier`, and `AppNavigationDestinations` applies all of them once to the root of each tab's stack. Tabs: veterans, map, about, more, admin (only while the session is admin). Deep links (`https://chatroom-85fb8.web.app/veteran/{id}`, also the QR payload and notification taps) go through `DeepLinkCenter` → `VeteranLink.parseVeteranId` and push the details destination on the veterans tab; a launch from a link skips the intro.
 
 ## Conventions
 
 - Swift concurrency: the project builds with `SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor` and `SWIFT_APPROACHABLE_CONCURRENCY = YES` (Swift 5 language mode). Background types are explicitly marked `nonisolated`, `actor`, or `@unchecked Sendable`.
-- Theming: never hardcode colors, fonts, spacing or shadows. Use the tokens in `theme/` — `Palette` (dynamic colors from the asset catalog, light and dark), `Typography` applied with `.appStyle(...)` (Mulish, scales with Dynamic Type), `Spacing`, `CornerRadius`. The user picks system/light/dark and text size in More; the root applies them with `preferredColorScheme` and `dynamicTypeSize`.
+- Design follows Apple's Human Interface Guidelines, not the Android/Material look: system tab bar and navigation bars, `List`/`Form` (insetGrouped) for lists, settings, forms and admin editors, `.searchable`, toolbar buttons (Save as `.confirmationAction`, add as `+`), `ContentUnavailableView` for empty states, sheets with detents, swipe actions, `Stepper`/`Picker`/`Toggle`/`DatePicker` instead of custom controls. Content pages (veteran card, About) use a stretchy hero under a transparent navigation bar and grouped cards (`cardBackground()`).
+- Theming: never hardcode colors, fonts, spacing or shadows. Use the tokens in `theme/` — `Palette` (iOS semantic colors plus the brand accent `Primary` from the asset catalog), `Typography` applied with `.appStyle(...)` (the system SF font through Dynamic Type text styles; no custom fonts), `Spacing`, `CornerRadius`, `Shadow`. The user picks system/light/dark and text size in More; the root applies them with `preferredColorScheme` and `dynamicTypeSize`.
 - Icons: prefer SF Symbols. The only imagesets are photos, reward medals, news logos, the map marker and the app icon.
 - Naming: this is a port of an Android app, so avoid carrying Compose/Material vocabulary back in. No `Scaffold`, `Dimens`, `Block`, `Pill`, `Chip`, `Widget` in type names; no `containerColor`/`contentColor`/`elevation` parameters (use `background`/`foreground`/`shadowRadius`); no `XxxDefaults` constant holders (use `private static let`, or a file-private `enum XMetrics`); no SCREAMING_SNAKE constants; no `get`-prefixed accessors. Design-system types carry no prefix — only `AppButton`/`AppButtonStyle` do.
 - Files under `OurMemory/` and `OurMemoryTests/` are picked up by `xcodegen generate`; rerun it (and `pod install`) after adding files.

@@ -5,52 +5,42 @@ struct ToursSheet: View {
     let onTourOpen: (String) -> Void
 
     var body: some View {
-        return ScrollView {
-            VStack(alignment: .leading, spacing: Spacing.m) {
-                Text("tours")
-                    .appStyle(.titleLarge, weight: .bold)
-                    .foregroundStyle(Palette.primary)
-                    .padding(.bottom, Spacing.m)
-                ForEach(tours) { tour in
-                    row(tour)
-                }
-            }
-            .padding(.horizontal, Spacing.xxl)
-            .padding(.top, Spacing.xxl)
-            .padding(.bottom, Spacing.xxxl)
-        }
-    }
-
-    private func row(_ tour: TourSummaryUi) -> some View {
-        return Button {
-            onTourOpen(tour.id)
-        } label: {
-            HStack {
-                VStack(alignment: .leading, spacing: Spacing.xxs) {
-                    Text(verbatim: tour.title)
-                        .appStyle(.titleMedium, weight: .bold)
-                        .foregroundStyle(Palette.onSurface)
-                    if !tour.description.isBlank {
-                        Text(verbatim: tour.description)
-                            .appStyle(.bodyMedium)
-                            .foregroundStyle(Palette.onSurfaceVariant)
+        return NavigationStack {
+            List(tours) { tour in
+                Button {
+                    onTourOpen(tour.id)
+                } label: {
+                    HStack(spacing: Spacing.l) {
+                        Image(systemName: "figure.walk.circle.fill")
+                            .font(.largeTitle)
+                            .foregroundStyle(Palette.primary)
+                        VStack(alignment: .leading, spacing: Spacing.xxs) {
+                            Text(verbatim: tour.title)
+                                .appStyle(.headline)
+                                .foregroundStyle(Palette.onSurface)
+                            if !tour.description.isBlank {
+                                Text(verbatim: tour.description)
+                                    .appStyle(.subheadline)
+                                    .foregroundStyle(Palette.onSurfaceVariant)
+                                    .lineLimit(2)
+                            }
+                            Text(verbatim: tour.visitedCount > 0
+                                ? L10n.format("visited_of_total", tour.visitedCount, tour.stopsCount)
+                                : L10n.format("stops_count", tour.stopsCount))
+                                .appStyle(.caption, weight: .semibold)
+                                .foregroundStyle(Palette.primary)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .appStyle(.footnote, weight: .semibold)
+                            .foregroundStyle(Palette.tertiaryLabel)
                     }
-                    Text(verbatim: tour.visitedCount > 0
-                        ? L10n.format("visited_of_total", tour.visitedCount, tour.stopsCount)
-                        : L10n.format("stops_count", tour.stopsCount))
-                        .appStyle(.labelMedium)
-                        .foregroundStyle(Palette.primary)
-                        .padding(.top, Spacing.xs)
                 }
-                .multilineTextAlignment(.leading)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                Image(systemName: "chevron.right")
-                    .foregroundStyle(Palette.primary)
             }
-            .padding(Spacing.l)
-            .background(RoundedRectangle(cornerRadius: CornerRadius.extraLarge).fill(Palette.container))
+            .listStyle(.insetGrouped)
+            .navigationTitle("tours")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .buttonStyle(.plain)
     }
 }
 

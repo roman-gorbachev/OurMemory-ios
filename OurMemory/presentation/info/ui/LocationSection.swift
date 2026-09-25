@@ -10,21 +10,27 @@ struct LocationSection: View {
     var body: some View {
         return VStack(alignment: .leading, spacing: 0) {
             SectionTitle(text: "locationHeader")
-            Text("address")
-                .appStyle(.bodyLarge)
-                .foregroundStyle(Palette.onSurface)
-                .padding(.horizontal, Spacing.screen)
-                .padding(.bottom, Spacing.l)
-            MapPreview(latitude: CemeteryLocation.latitude, longitude: CemeteryLocation.longitude, zoom: Self.zoom)
-                .frame(height: Self.mapHeight)
-                .clipShape(RoundedRectangle(cornerRadius: CornerRadius.extraLarge))
-                .padding(.horizontal, Spacing.screen)
-            VStack(spacing: Spacing.m) {
-                AppButton(title: "cemetery_map", systemImage: "map", action: onOpenMap)
-                AppButton(title: "get_directions", systemImage: "location", kind: .outlined, action: onRoute)
+            VStack(alignment: .leading, spacing: Spacing.l) {
+                MapPreview(latitude: CemeteryLocation.latitude, longitude: CemeteryLocation.longitude, zoom: Self.zoom)
+                    .frame(height: Self.mapHeight)
+                    .clipShape(RoundedRectangle(cornerRadius: CornerRadius.large, style: .continuous))
+                Label("address", systemImage: "mappin.and.ellipse")
+                    .appStyle(.body)
+                HStack(spacing: Spacing.m) {
+                    Button(action: onOpenMap) {
+                        Label("cemetery_map", systemImage: "map")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    Button(action: onRoute) {
+                        Label("get_directions", systemImage: "arrow.triangle.turn.up.right.diamond")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                }
+                .controlSize(.large)
             }
-            .padding(.horizontal, Spacing.screen)
-            .padding(.top, Spacing.l)
+            .cardBackground()
         }
     }
 }

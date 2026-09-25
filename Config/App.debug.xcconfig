@@ -1,2 +1,4 @@
 #include? "../Pods/Target Support Files/Pods-OurMemory/Pods-OurMemory.debug.xcconfig"
 #include "Base.xcconfig"
+
+MapKitApiKey=27aa072a-42c6-49e3-8554-d9c29493f541

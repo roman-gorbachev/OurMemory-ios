@@ -10,15 +10,14 @@ struct VeteranNavigationDestinations: ViewModifier {
             case .details(let veteranId):
                 DetailsRoute(
                     viewModel: container.buildDetailsViewModel(veteranId: veteranId),
-                    onBack: router.pop,
                     onShowOnMap: { router.push(MapDestination.burialMap(burialId: $0)) },
                     onAddToHistory: { router.push(VeteranDestination.submission(veteranId: veteranId)) },
                     onReportError: { router.push(VeteranDestination.feedback(veteranId: veteranId)) }
                 )
             case .submission(let veteranId):
-                SubmissionRoute(viewModel: container.buildSubmissionViewModel(veteranId: veteranId), onBack: router.pop)
+                SubmissionRoute(viewModel: container.buildSubmissionViewModel(veteranId: veteranId), onClose: router.pop)
             case .feedback(let veteranId):
-                FeedbackRoute(viewModel: container.buildFeedbackViewModel(veteranId: veteranId), onBack: router.pop)
+                FeedbackRoute(viewModel: container.buildFeedbackViewModel(veteranId: veteranId), onClose: router.pop)
             }
         }
     }

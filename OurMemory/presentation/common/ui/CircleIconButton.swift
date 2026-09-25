@@ -6,8 +6,8 @@ struct CircleIconButton: View {
 
     let systemImage: String
     let accessibilityLabel: LocalizedStringKey
-    var background = Palette.glass
-    var foreground = Palette.onSurface
+    var background = Palette.dimmed
+    var foreground = Palette.white
     let action: () -> Void
 
     var body: some View {

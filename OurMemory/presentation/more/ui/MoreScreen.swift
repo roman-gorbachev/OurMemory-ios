@@ -1,8 +1,6 @@
 import SwiftUI
 
 struct MoreScreen: View {
-    private static let sectionSpacing: CGFloat = 20
-
     let data: MoreUiData
     let onAction: (MoreUserAction) -> Void
     let onGoogleSignIn: () -> Void
@@ -13,104 +11,92 @@ struct MoreScreen: View {
     let onAdmin: () -> Void
 
     var body: some View {
-        return ScrollView {
-            VStack(alignment: .leading, spacing: Self.sectionSpacing) {
-                Text("more")
-                    .appStyle(.headlineMedium, weight: .bold)
-                    .foregroundStyle(Palette.primary)
+        return List {
+            Section {
                 MemoryBanner()
-                AccountCard(
-                    account: data.account,
-                    signInStatus: data.signInStatus,
-                    onSignIn: onGoogleSignIn,
-                    onSignOut: { onAction(.signOut) }
-                )
-                personalGroup
-                appearanceGroup
-                remindersGroup
-                AppButton(title: "sign_in_as_admin", kind: .text, action: onAdmin)
+                    .listRowInsets(EdgeInsets())
             }
-            .padding(Spacing.screen)
-            .padding(.bottom, Spacing.tabBarInset)
-        }
-        .background(Palette.background.ignoresSafeArea())
-    }
-
-    private var personalGroup: some View {
-        return SettingsGroup(title: "mine") {
-            SettingRow(systemImage: "envelope", title: "my_requests", action: onMyRequests) {
-                HStack(spacing: Spacing.m) {
+            Section {
+                AccountRow(account: data.account, signInStatus: data.signInStatus, onSignIn: onGoogleSignIn) {
+                    onAction(.signOut)
+                }
+            } footer: {
+                Text(data.account == nil ? "sign_in_to_keep_favorites_msg" : "favorites_and_requests_are_saved_msg")
+            }
+            Section("mine") {
+                DisclosureRow(title: "my_requests", systemImage: "envelope.fill", color: .blue, action: onMyRequests) {
                     if data.unseenRequestsCount > 0 {
                         CountBadge(count: data.unseenRequestsCount)
                     }
-                    ChevronIcon()
+                }
+                DisclosureRow(title: "favorites", systemImage: "heart.fill", color: .pink, action: onFavorites)
+                DisclosureRow(title: "scan_qr_code", systemImage: "qrcode.viewfinder", color: .gray, action: onScanQr)
+                DisclosureRow(title: "write_to_us", systemImage: "square.and.pencil", color: .green, action: onWriteToUs)
+            }
+            Section("appearance") {
+                Picker(selection: Binding(get: { return data.settings.themeMode }, set: { onAction(.themeModeChanged($0)) })) {
+                    ForEach(ThemeMode.allCases, id: \.self) { Text($0.titleKey).tag($0) }
+                } label: {
+                    Label { Text("theme") } icon: { SettingsIcon(systemImage: "circle.lefthalf.filled", color: .indigo) }
+                }
+                Picker(selection: Binding(get: { return data.settings.textScale }, set: { onAction(.textScaleChanged($0)) })) {
+                    ForEach(TextScale.allCases, id: \.self) { Text($0.titleKey).tag($0) }
+                } label: {
+                    Label { Text("text_size") } icon: { SettingsIcon(systemImage: "textformat.size", color: .blue) }
+                }
+                Picker(selection: Binding(get: { return data.settings.language }, set: { onAction(.languageChanged($0)) })) {
+                    ForEach(AppLanguage.allCases, id: \.self) { Text($0.titleKey).tag($0) }
+                } label: {
+                    Label { Text("language") } icon: { SettingsIcon(systemImage: "globe", color: .teal) }
                 }
             }
-            SettingsDivider()
-            SettingRow(systemImage: "heart.fill", title: "favorites", action: onFavorites)
-            SettingsDivider()
-            SettingRow(systemImage: "qrcode.viewfinder", title: "scan_qr_code", action: onScanQr)
-            SettingsDivider()
-            SettingRow(systemImage: "pencil", title: "write_to_us", action: onWriteToUs)
+            Section("reminders") {
+                Toggle(isOn: Binding(get: { return data.settings.victoryDayReminder }, set: { onAction(.victoryDayReminderChanged($0)) })) {
+                    Label {
+                        VStack(alignment: .leading, spacing: Spacing.xxs) {
+                            Text("victory_day")
+                            Text("in_the_morning_of_may_9_msg")
+                                .appStyle(.footnote)
+                                .foregroundStyle(Palette.onSurfaceVariant)
+                        }
+                    } icon: {
+                        SettingsIcon(systemImage: "star.fill", color: Palette.primary)
+                    }
+                }
+                Toggle(isOn: Binding(get: { return data.settings.favoriteReminders }, set: { onAction(.favoriteRemindersChanged($0)) })) {
+                    Label {
+                        VStack(alignment: .leading, spacing: Spacing.xxs) {
+                            Text("memorable_dates_of_favorites")
+                            Text("on_birthdays_and_memorial_days_msg")
+                                .appStyle(.footnote)
+                                .foregroundStyle(Palette.onSurfaceVariant)
+                        }
+                    } icon: {
+                        SettingsIcon(systemImage: "bell.fill", color: .red)
+                    }
+                }
+            }
+            Section {
+                Button("sign_in_as_admin", action: onAdmin)
+                    .frame(maxWidth: .infinity)
+            }
         }
-    }
-
-    private var appearanceGroup: some View {
-        return SettingsGroup(title: "appearance") {
-            ChoiceSettingRow(
-                systemImage: "paintpalette",
-                title: "theme",
-                options: ThemeMode.allCases,
-                selected: data.settings.themeMode,
-                label: \.titleKey
-            ) { onAction(.themeModeChanged($0)) }
-            SettingsDivider()
-            ChoiceSettingRow(
-                systemImage: "textformat.size",
-                title: "text_size",
-                options: TextScale.allCases,
-                selected: data.settings.textScale,
-                label: \.titleKey
-            ) { onAction(.textScaleChanged($0)) }
-            SettingsDivider()
-            ChoiceSettingRow(
-                systemImage: "globe",
-                title: "language",
-                options: AppLanguage.allCases,
-                selected: data.settings.language,
-                label: \.titleKey
-            ) { onAction(.languageChanged($0)) }
-        }
-    }
-
-    private var remindersGroup: some View {
-        return SettingsGroup(title: "reminders") {
-            SwitchSettingRow(
-                systemImage: "star.fill",
-                title: "victory_day",
-                subtitle: "in_the_morning_of_may_9_msg",
-                isOn: data.settings.victoryDayReminder
-            ) { onAction(.victoryDayReminderChanged($0)) }
-            SettingsDivider()
-            SwitchSettingRow(
-                systemImage: "bell",
-                title: "memorable_dates_of_favorites",
-                subtitle: "on_birthdays_and_memorial_days_msg",
-                isOn: data.settings.favoriteReminders
-            ) { onAction(.favoriteRemindersChanged($0)) }
-        }
+        .listStyle(.insetGrouped)
     }
 }
 
 #Preview {
-    MoreScreen(
-        data: MoreUiData(),
-        onAction: { _ in },
-        onGoogleSignIn: {},
-        onWriteToUs: {},
-        onMyRequests: {},
-        onFavorites: {},
-        onScanQr: {},
-        onAdmin: {}
-    )
+    NavigationStack {
+        MoreScreen(
+            data: MoreUiData(),
+            onAction: { _ in },
+            onGoogleSignIn: {},
+            onWriteToUs: {},
+            onMyRequests: {},
+            onFavorites: {},
+            onScanQr: {},
+            onAdmin: {}
+        )
+        .navigationTitle("more")
+    }
 }

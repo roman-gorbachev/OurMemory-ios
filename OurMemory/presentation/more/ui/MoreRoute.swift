@@ -39,6 +39,7 @@ struct MoreRoute: View {
             onScanQr: { isScannerPresented = true },
             onAdmin: onAdmin
         )
+        .navigationTitle("more")
         .qrScanner(isPresented: $isScannerPresented, onVeteranScanned: onVeteranOpen)
     }
 }

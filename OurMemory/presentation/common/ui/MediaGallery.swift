@@ -42,7 +42,7 @@ struct MediaGallery: View {
                 .clipShape(RoundedRectangle(cornerRadius: CornerRadius.large))
             if !item.description.isBlank {
                 Text(verbatim: item.description)
-                    .appStyle(.bodySmall)
+                    .appStyle(.footnote)
                     .foregroundStyle(Palette.onSurfaceVariant)
                     .lineLimit(Self.captionLines)
                     .frame(width: Self.thumbnailWidth, alignment: .leading)

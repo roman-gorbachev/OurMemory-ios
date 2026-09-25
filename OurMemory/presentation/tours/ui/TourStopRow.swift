@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct TourStopRow: View {
-    private static let numberSize: CGFloat = 32
-    private static let audioButtonSize: CGFloat = 40
+    private static let numberSize: CGFloat = 30
     private static let collapsedTextLines = 3
 
     let stop: TourStopUi
@@ -15,49 +14,58 @@ struct TourStopRow: View {
 
     var body: some View {
         return HStack(alignment: .top, spacing: Spacing.l) {
-            Text(verbatim: String(stop.number))
-                .appStyle(.labelLarge, weight: .bold)
-                .foregroundStyle(Palette.onPrimary)
+            Button(action: onVisitedToggle) {
+                ZStack {
+                    Circle().fill(isVisited ? Palette.success : Palette.primary)
+                    if isVisited {
+                        Image(systemName: "checkmark")
+                            .appStyle(.subheadline, weight: .bold)
+                    } else {
+                        Text(verbatim: String(stop.number))
+                            .appStyle(.subheadline, weight: .bold)
+                    }
+                }
+                .foregroundStyle(Palette.white)
                 .frame(width: Self.numberSize, height: Self.numberSize)
-                .background(Circle().fill(Palette.primary))
+                .contentTransition(.symbolEffect(.replace))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("visited")
+            .accessibilityAddTraits(isVisited ? .isSelected : [])
             VStack(alignment: .leading, spacing: Spacing.xs) {
                 Text(verbatim: stop.title.isBlank ? stop.type.titleText : stop.title)
-                    .appStyle(.titleMedium, weight: .bold)
+                    .appStyle(.headline)
                     .foregroundStyle(Palette.onSurface)
                 PlotNumberText(burial: stop.burial)
+                    .appStyle(.subheadline)
+                    .foregroundStyle(Palette.onSurfaceVariant)
                 if !stop.text.isBlank {
                     Text(verbatim: stop.text)
-                        .appStyle(.bodyMedium)
+                        .appStyle(.callout)
                         .foregroundStyle(Palette.onSurfaceVariant)
                         .lineLimit(isSelected ? nil : Self.collapsedTextLines)
                 }
-                Button(action: onVisitedToggle) {
-                    HStack(spacing: Spacing.m) {
-                        Image(systemName: isVisited ? "checkmark.square.fill" : "square")
-                            .foregroundStyle(isVisited ? Palette.primary : Palette.onSurfaceVariant)
-                        Text("visited")
-                            .appStyle(.labelLarge)
-                            .foregroundStyle(Palette.onSurfaceVariant)
-                    }
-                    .padding(.vertical, Spacing.xs)
-                }
-                .buttonStyle(.plain)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
+            .contentShape(Rectangle())
+            .onTapGesture(perform: onTap)
             if stop.audio != nil {
                 Button(action: onAudioTap) {
-                    Image(systemName: isPlaying ? "pause.fill" : "play.fill")
-                        .foregroundStyle(Palette.onPrimary)
-                        .frame(width: Self.audioButtonSize, height: Self.audioButtonSize)
-                        .background(Circle().fill(Palette.primary))
+                    Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                        .font(.largeTitle)
+                        .foregroundStyle(Palette.primary)
+                        .contentTransition(.symbolEffect(.replace))
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(isPlaying ? "pause" : "play")
             }
         }
-        .padding(Spacing.l)
-        .background(RoundedRectangle(cornerRadius: CornerRadius.extraLarge).fill(isSelected ? Palette.primaryContainer : Palette.container))
-        .contentShape(RoundedRectangle(cornerRadius: CornerRadius.extraLarge))
-        .onTapGesture(perform: onTap)
+        .padding(.vertical, Spacing.xs)
+        .swipeActions(edge: .leading) {
+            Button(action: onVisitedToggle) {
+                Label("visited", systemImage: isVisited ? "arrow.uturn.backward" : "checkmark")
+            }
+            .tint(Palette.success)
+        }
     }
 }

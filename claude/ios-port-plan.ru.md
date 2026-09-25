@@ -219,3 +219,20 @@ struct HomeRoute: View {
 
 ## Уточнение: тесты
 По решению пользователя новые тесты не пишутся. Уже готовые тесты data/domain (38 штук: ссылки, награды, даты, мат, ApprovalUpdates, кэши, свечи, авторизация, настройки) остаются; порт ViewModel-тестов из этапа 7 отменён.
+
+## Уточнение: дизайн по Apple HIG (новый этап 6)
+По требованию пользователя интерфейс не копирует Material-дизайн Android, а следует Apple Human Interface Guidelines на всех экранах:
+- системный `TabView` с собственным `NavigationStack` в каждой вкладке (таб-бар не прячется при переходах, как в приложениях Apple), системные навигационные панели с крупными заголовками, свайп назад;
+- `List`/`Form` в стиле insetGrouped для настроек, списков, форм и админки; `.searchable`, кнопки в тулбаре, `ContentUnavailableView` для пустых состояний, листы с detents;
+- системный шрифт (SF, Dynamic Type) и семантические цвета iOS; от бренда остаётся только акцентный тёмно-красный.
+
+```swift
+TabView(selection: $router.selectedTab) {
+    Tab("veterans", systemImage: "person.2", value: TopLevelTab.veterans) {
+        NavigationStack(path: $router.veteransPath) {
+            HomeRoute(viewModel: container.buildHomeViewModel(), onVeteranOpen: router.openVeteran)
+                .modifier(AppNavigationDestinations(container: container, router: router))
+        }
+    }
+}
+```

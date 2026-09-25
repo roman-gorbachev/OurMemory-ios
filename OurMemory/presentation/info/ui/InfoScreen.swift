@@ -4,8 +4,6 @@ struct InfoScreen: View {
     private static let coordinateSpace = "info"
     private static let sectionSpacing: CGFloat = 28
     private static let heroAspectRatio: CGFloat = 1.1
-    private static let addressOpacity = 0.85
-    private static let heroTextPadding: CGFloat = 20
 
     let language: AppLanguage
     let onLanguageChange: (AppLanguage) -> Void
@@ -15,13 +13,19 @@ struct InfoScreen: View {
 
     var body: some View {
         return GeometryReader { proxy in
-            let isCollapsed = heroBottom <= proxy.safeAreaInsets.top + Spacing.topBarHeight
+            let isCollapsed = heroBottom <= proxy.safeAreaInsets.top
             ScrollView {
                 VStack(spacing: Self.sectionSpacing) {
-                    hero(height: proxy.size.width / Self.heroAspectRatio + proxy.safeAreaInsets.top)
-                        .background(alignment: .bottom) {
-                            ScrollOffsetReader(coordinateSpace: Self.coordinateSpace) { heroBottom = $0 }
-                        }
+                    StretchyHeader(height: proxy.size.width / Self.heroAspectRatio + proxy.safeAreaInsets.top) {
+                        Image("warwar")
+                            .resizable()
+                            .scaledToFill()
+                    } overlay: {
+                        HeroTitle(title: L10n.string("warHeader"), subtitle: L10n.string("address"))
+                    }
+                    .background(alignment: .bottom) {
+                        ScrollOffsetReader(coordinateSpace: Self.coordinateSpace) { heroBottom = $0 }
+                    }
                     ExpandableTextSection(title: "historyInfoHeader", paragraphs: InfoContent.historyParagraphs())
                     MediaGallery(title: "galleryHeader", media: CemeteryPhotos.all.map { return MediaUi.asset($0) })
                     LocationSection(onOpenMap: onOpenMap) {
@@ -32,47 +36,34 @@ struct InfoScreen: View {
                     ContactsSection()
                     NewsSection(news: InfoContent.news) { openURL($0.url) }
                 }
-                .padding(.bottom, Spacing.xxxl + Spacing.tabBarInset)
+                .padding(.bottom, Spacing.xxxl)
             }
             .coordinateSpace(name: Self.coordinateSpace)
             .ignoresSafeArea(edges: .top)
-            .overlay(alignment: .top) {
-                FloatingTopBar(title: L10n.string("warHeader"), isCollapsed: isCollapsed, onBack: nil) {
-                    CapsuleButton(title: L10n.string(language == .russian ? "bel" : "rus")) {
-                        onLanguageChange(language == .russian ? .belarusian : .russian)
+            .background(Palette.groupedBackground)
+            .navigationTitle(isCollapsed ? L10n.string("warHeader") : "")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbarBackground(isCollapsed ? .visible : .hidden, for: .navigationBar)
+            .toolbarColorScheme(isCollapsed ? nil : .dark, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Menu {
+                        Picker("language", selection: Binding(get: { return language }, set: onLanguageChange)) {
+                            ForEach(AppLanguage.allCases, id: \.self) { item in
+                                Text(item.titleKey).tag(item)
+                            }
+                        }
+                    } label: {
+                        Label("language", systemImage: "globe")
                     }
                 }
             }
         }
-        .background(Palette.background.ignoresSafeArea())
-    }
-
-    private func hero(height: CGFloat) -> some View {
-        return ZStack(alignment: .bottomLeading) {
-            Color.clear
-                .overlay {
-                    Image("warwar")
-                        .resizable()
-                        .scaledToFill()
-                }
-                .clipped()
-            HeroScrim()
-            VStack(alignment: .leading, spacing: Spacing.xs) {
-                Text("warHeader")
-                    .appStyle(.headlineMedium, weight: .bold)
-                    .foregroundStyle(Palette.white)
-                Text("address")
-                    .appStyle(.titleMedium)
-                    .foregroundStyle(Palette.white.opacity(Self.addressOpacity))
-            }
-            .padding(Self.heroTextPadding)
-        }
-        .frame(height: height)
-        .frame(maxWidth: .infinity)
-        .clipped()
     }
 }
 
 #Preview {
-    InfoScreen(language: .russian, onLanguageChange: { _ in }, onOpenMap: {})
+    NavigationStack {
+        InfoScreen(language: .russian, onLanguageChange: { _ in }, onOpenMap: {})
+    }
 }

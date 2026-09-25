@@ -1,91 +1,50 @@
 import SwiftUI
 
 enum Typography {
-    case displaySmall
-    case headlineLarge
-    case headlineMedium
-    case headlineSmall
-    case titleLarge
-    case titleMedium
-    case titleSmall
-    case bodyLarge
-    case bodyMedium
-    case bodySmall
-    case labelLarge
-    case labelMedium
-    case labelSmall
+    case largeTitle
+    case title
+    case title2
+    case title3
+    case headline
+    case subheadline
+    case body
+    case callout
+    case footnote
+    case caption
+    case caption2
 
-    var size: CGFloat {
+    var textStyle: Font.TextStyle {
         switch self {
-        case .displaySmall:
-            return 36
-        case .headlineLarge:
-            return 32
-        case .headlineMedium:
-            return 28
-        case .headlineSmall:
-            return 24
-        case .titleLarge:
-            return 22
-        case .titleMedium, .bodyLarge:
-            return 16
-        case .titleSmall, .bodyMedium, .labelLarge:
-            return 14
-        case .bodySmall, .labelMedium:
-            return 12
-        case .labelSmall:
-            return 11
-        }
-    }
-
-    var relativeStyle: Font.TextStyle {
-        switch self {
-        case .displaySmall, .headlineLarge:
+        case .largeTitle:
             return .largeTitle
-        case .headlineMedium:
+        case .title:
             return .title
-        case .headlineSmall, .titleLarge:
+        case .title2:
             return .title2
-        case .titleMedium:
+        case .title3:
+            return .title3
+        case .headline:
             return .headline
-        case .titleSmall, .labelLarge:
+        case .subheadline:
             return .subheadline
-        case .bodyLarge:
+        case .body:
             return .body
-        case .bodyMedium:
+        case .callout:
             return .callout
-        case .bodySmall, .labelMedium:
+        case .footnote:
+            return .footnote
+        case .caption:
             return .caption
-        case .labelSmall:
+        case .caption2:
             return .caption2
         }
     }
 
-    var defaultWeight: Font.Weight {
-        switch self {
-        case .titleMedium, .titleSmall, .labelLarge, .labelMedium, .labelSmall:
-            return .medium
-        default:
-            return .regular
-        }
-    }
-
     func font(weight: Font.Weight? = nil) -> Font {
-        return Font.custom(Self.fontName(for: weight ?? defaultWeight), size: size, relativeTo: relativeStyle)
-    }
-
-    static func custom(size: CGFloat, weight: Font.Weight, relativeTo style: Font.TextStyle) -> Font {
-        return Font.custom(fontName(for: weight), size: size, relativeTo: style)
-    }
-
-    private static func fontName(for weight: Font.Weight) -> String {
-        switch weight {
-        case .medium:
-            return "Mulish-Medium"
-        case .semibold, .bold, .heavy, .black:
-            return "Mulish-Bold"
-        default:
-            return "Mulish-Regular"
+        let font = Font.system(textStyle)
+        guard let weight else {
+            return font
         }
+        return font.weight(weight)
     }
 }

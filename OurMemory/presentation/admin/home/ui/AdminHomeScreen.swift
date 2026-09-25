@@ -3,57 +3,77 @@ import SwiftUI
 struct AdminHomeScreen: View {
     let data: AdminHomeUiData
     let onOpen: (AdminDestination) -> Void
-    let onSignOut: () -> Void
 
     var body: some View {
-        return ScrollView {
-            VStack(alignment: .leading, spacing: Spacing.l) {
-                AdminHeader(email: data.email, onSignOut: onSignOut)
-                GroupTitle(text: "requires_attention")
-                HStack(spacing: Spacing.l) {
-                    StatTile(count: data.pendingSubmissionsCount, title: "pending_submissions", systemImage: "photo.badge.plus") {
-                        onOpen(.moderation)
-                    }
-                    StatTile(count: data.newFeedbackCount, title: "new_requests", systemImage: "envelope") {
-                        onOpen(.feedback)
-                    }
+        return List {
+            Section {
+                Label {
+                    Text(verbatim: L10n.format("signed_in_as", data.email))
+                        .appStyle(.subheadline)
+                } icon: {
+                    Image(systemName: "person.crop.circle.fill")
+                        .foregroundStyle(Palette.primary)
                 }
-                .fixedSize(horizontal: false, vertical: true)
-                GroupTitle(text: "content")
-                HStack(spacing: Spacing.l) {
-                    ContentTile(
-                        title: "veterans",
-                        subtitle: L10n.format("veteran_cards_count", data.veteransCount),
-                        systemImage: "person"
-                    ) { onOpen(.veterans) }
-                    ContentTile(
-                        title: "burial_places",
-                        subtitle: L10n.format("burial_places_count", data.burialsCount),
-                        systemImage: "building.columns"
-                    ) { onOpen(.burials) }
-                }
-                .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: Spacing.l) {
-                    ContentTile(
-                        title: "tours",
-                        subtitle: L10n.format("routes_count", data.toursCount),
-                        systemImage: "figure.walk"
-                    ) { onOpen(.tours) }
-                    ContentTile(
-                        title: "editor_guide",
-                        subtitle: L10n.string("how_to_add_and_edit_content_msg"),
-                        systemImage: "book"
-                    ) { onOpen(.guide(section: nil)) }
-                }
-                .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(Spacing.screen)
-            .padding(.bottom, Spacing.tabBarInset)
+            Section("requires_attention") {
+                DisclosureRow(title: "pending_submissions", systemImage: "photo.on.rectangle.angled", color: .orange) {
+                    onOpen(.moderation)
+                } trailing: {
+                    attentionValue(data.pendingSubmissionsCount)
+                }
+                DisclosureRow(title: "new_requests", systemImage: "envelope.fill", color: .blue) {
+                    onOpen(.feedback)
+                } trailing: {
+                    attentionValue(data.newFeedbackCount)
+                }
+            }
+            Section("content") {
+                DisclosureRow(title: "veterans", systemImage: "person.2.fill", color: Palette.primary) {
+                    onOpen(.veterans)
+                } trailing: {
+                    countText(data.veteransCount)
+                }
+                DisclosureRow(title: "burial_places", systemImage: "building.columns.fill", color: .brown) {
+                    onOpen(.burials)
+                } trailing: {
+                    countText(data.burialsCount)
+                }
+                DisclosureRow(title: "tours", systemImage: "figure.walk", color: .green) {
+                    onOpen(.tours)
+                } trailing: {
+                    countText(data.toursCount)
+                }
+            }
+            Section {
+                GuideLinkRow(title: "editor_guide") { onOpen(.guide(section: nil)) }
+            } footer: {
+                Text("how_to_add_and_edit_content_msg")
+            }
         }
-        .background(Palette.background.ignoresSafeArea())
+        .listStyle(.insetGrouped)
+    }
+
+    @ViewBuilder
+    private func attentionValue(_ count: Int) -> some View {
+        if count > 0 {
+            CountBadge(count: count)
+        } else {
+            Image(systemName: "checkmark.circle.fill")
+                .foregroundStyle(Palette.success)
+                .accessibilityLabel("everything_is_reviewed_msg")
+        }
+    }
+
+    private func countText(_ count: Int) -> some View {
+        return Text(verbatim: String(count))
+            .foregroundStyle(Palette.onSurfaceVariant)
+            .monospacedDigit()
     }
 }
 
 #Preview {
-    AdminHomeScreen(data: AdminHomeUiData(email: "admin@memory.by", pendingSubmissionsCount: 2), onOpen: { _ in }, onSignOut: {})
+    NavigationStack {
+        AdminHomeScreen(data: AdminHomeUiData(email: "admin@memory.by", pendingSubmissionsCount: 2), onOpen: { _ in })
+            .navigationTitle("administration")
+    }
 }

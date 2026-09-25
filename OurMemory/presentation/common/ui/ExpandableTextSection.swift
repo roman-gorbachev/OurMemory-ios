@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ExpandableTextSection: View {
-    private static let collapsedMaxLines = 8
+    private static let collapsedMaxLines = 6
 
     let title: LocalizedStringKey
     let paragraphs: [String]
@@ -14,28 +14,24 @@ struct ExpandableTextSection: View {
             VStack(alignment: .leading, spacing: Spacing.l) {
                 ForEach(Array(visible.enumerated()), id: \.offset) { _, paragraph in
                     Text(verbatim: paragraph)
-                        .appStyle(.bodyLarge)
+                        .appStyle(.body)
                         .foregroundStyle(Palette.onSurface)
                         .lineLimit(isExpanded ? nil : Self.collapsedMaxLines)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-            }
-            .padding(.horizontal, Spacing.screen)
-            Button {
-                withAnimation(.easeInOut) {
-                    isExpanded.toggle()
+                Button(isExpanded ? "rollup" : "expand") {
+                    withAnimation(.snappy) {
+                        isExpanded.toggle()
+                    }
                 }
-            } label: {
-                Text(isExpanded ? "rollup" : "expand")
-                    .appStyle(.labelLarge, weight: .semibold)
-                    .foregroundStyle(Palette.primary)
+                .appStyle(.subheadline, weight: .semibold)
             }
-            .padding(.horizontal, Spacing.screen)
-            .padding(.vertical, Spacing.m)
+            .cardBackground()
         }
     }
 }
 
 #Preview {
     ExpandableTextSection(title: "biography", paragraphs: ["Первый абзац", "Второй абзац"])
+        .background(Palette.groupedBackground)
 }
