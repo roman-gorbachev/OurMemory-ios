@@ -32,11 +32,11 @@
 	<key>MapKitApiKey</key>
 	<string>$(MAPKIT_API_KEY)</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Камера нужна, чтобы сканировать QR-коды на захоронениях.</string>
+	<string>The camera is needed to scan QR codes on the graves.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Геопозиция нужна, чтобы показать вас на карте мемориала.</string>
+	<string>Your location is needed to show you on the memorial map.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Доступ к фото нужен, чтобы приложить семейные фотографии.</string>
+	<string>Access to photos is required to attach family photos.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
