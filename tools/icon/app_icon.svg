@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2E2C31"/><stop offset="1" stop-color="#121114"/></linearGradient>
+    <radialGradient id="glow" cx="512" cy="470" r="400" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#E5484D" stop-opacity="0.34"/><stop offset="1" stop-color="#E5484D" stop-opacity="0"/></radialGradient>
+    <linearGradient id="flame" x1="0" y1="236" x2="0" y2="616" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#F5A04A"/><stop offset="1" stop-color="#D9303A"/></linearGradient>
+    <linearGradient id="inner" x1="0" y1="404" x2="0" y2="616" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFF1C2"/><stop offset="1" stop-color="#FFC25A"/></linearGradient>
+    <linearGradient id="slab" x1="0" y1="632" x2="0" y2="708" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#55525A"/><stop offset="1" stop-color="#2C2A30"/></linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <rect width="1024" height="1024" fill="url(#glow)"/>
+  <path d="M512 236 C560 322 648 384 648 494 C648 572 590 616 512 616 C434 616 376 572 376 494 C376 436 408 396 438 366 C444 414 462 444 488 456 C472 386 482 298 512 236 Z" fill="url(#flame)"/>
+  <path d="M512 404 C544 454 584 488 584 540 C584 584 552 616 512 616 C472 616 440 584 440 540 C440 488 480 454 512 404 Z" fill="url(#inner)"/>
+  <path d="M326 632 L698 632 L738 708 L286 708 Z" fill="url(#slab)"/>
+  <path d="M326 632 L698 632 L704 644 L320 644 Z" fill="#8A8690"/>
+</svg>
