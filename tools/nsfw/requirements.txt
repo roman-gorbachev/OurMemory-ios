@@ -1,0 +1,4 @@
+tensorflow==2.15.1
+coremltools==8.3.0
+requests==2.32.3
+numpy<2
