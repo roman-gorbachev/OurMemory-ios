@@ -20,6 +20,8 @@ final class AppDIContainer {
         FavoritesRemoteDataSourceImpl(root: root)
     @ObservationIgnored private lazy var googleAccountDataSource: GoogleAccountDataSource =
         GoogleAccountDataSourceImpl(auth: auth)
+    @ObservationIgnored private lazy var accountIndexDataSource: AccountIndexDataSource =
+        AccountIndexDataSourceImpl(root: root)
 
     @ObservationIgnored lazy var veteransRepository: VeteransRepository = VeteransRepositoryImpl(
         dataSource: VeteransDataSourceImpl(root: root),
@@ -45,11 +47,12 @@ final class AppDIContainer {
     @ObservationIgnored lazy var visitorAccountRepository: VisitorAccountRepository = VisitorAccountRepositoryImpl(
         accountDataSource: googleAccountDataSource,
         favoritesLocalDataSource: favoritesLocalDataSource,
-        favoritesRemoteDataSource: favoritesRemoteDataSource
+        favoritesRemoteDataSource: favoritesRemoteDataSource,
+        accountIndex: accountIndexDataSource
     )
     @ObservationIgnored lazy var authRepository: AuthRepository = AuthRepositoryImpl(
         dataSource: AuthDataSourceImpl(auth: auth, root: root),
-        accountIndex: AccountIndexDataSourceImpl(root: root)
+        accountIndex: accountIndexDataSource
     )
     @ObservationIgnored lazy var adminsRepository: AdminsRepository =
         AdminsRepositoryImpl(dataSource: AdminsDataSourceImpl(root: root))

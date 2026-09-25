@@ -39,6 +39,7 @@ final class GoogleAccountDataSourceImpl: GoogleAccountDataSource {
         } catch {
             user = nil
         }
+        _ = try? await user?.getIDTokenResult(forcingRefresh: true)
         accountVersion.send(accountVersion.value + 1)
         return user.flatMap { return visitorAccount(from: $0) }
     }
