@@ -13,6 +13,7 @@ final class TourEditorViewModel {
     @ObservationIgnored private let veteransRepository: VeteransRepository
     @ObservationIgnored private let contentEditorRepository: ContentEditorRepository
     @ObservationIgnored private let mediaRepository: MediaRepository
+    @ObservationIgnored private let currentUid: String
     @ObservationIgnored private var form: TourForm?
     @ObservationIgnored private var burials: [AdminBurialItemUi] = []
     @ObservationIgnored private var status = EditorStatus()
@@ -23,7 +24,8 @@ final class TourEditorViewModel {
         burialsRepository: BurialsRepository,
         veteransRepository: VeteransRepository,
         contentEditorRepository: ContentEditorRepository,
-        mediaRepository: MediaRepository
+        mediaRepository: MediaRepository,
+        currentUid: String
     ) {
         self.tourId = tourId
         self.toursRepository = toursRepository
@@ -31,6 +33,7 @@ final class TourEditorViewModel {
         self.veteransRepository = veteransRepository
         self.contentEditorRepository = contentEditorRepository
         self.mediaRepository = mediaRepository
+        self.currentUid = currentUid
     }
 
     private var isNew: Bool {
@@ -83,6 +86,9 @@ final class TourEditorViewModel {
             update { $0.stops.move(fromOffsets: offsets, toOffset: destination) }
         case .stopsRemoved(let offsets):
             update { $0.stops.remove(atOffsets: offsets) }
+        case .failureDismissed:
+            status.failure = nil
+            rebuild()
         case .save:
             guard let form, form.isValid else {
                 return
@@ -118,7 +124,7 @@ final class TourEditorViewModel {
             return
         }
         status.uploads += 1
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         let folder = "\(Self.mediaFolder)/\(form.id)"
         Task {
@@ -126,7 +132,7 @@ final class TourEditorViewModel {
                 let url = try await mediaRepository.uploadAudio(fileURL: fileURL, folder: folder)
                 updateStop(stopId) { $0.audioUrl = url }
             } catch {
-                status.hasFailed = true
+                status.failure = EditorFailure(uploadError: error)
             }
             status.uploads -= 1
             rebuild()
@@ -138,14 +144,14 @@ final class TourEditorViewModel {
             return
         }
         status.isSaving = true
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         Task {
             do {
                 try await write()
                 status.isClosed = true
             } catch {
-                status.hasFailed = true
+                status.failure = .save
             }
             status.isSaving = false
             rebuild()
@@ -156,6 +162,6 @@ final class TourEditorViewModel {
         guard let form else {
             return
         }
-        tourEditorUiState = .editing(data: TourEditorUiData(form: form, burials: burials, isNew: isNew, status: status))
+        tourEditorUiState = .editing(data: TourEditorUiData(form: form, burials: burials, isNew: isNew, status: status, currentUid: currentUid))
     }
 }

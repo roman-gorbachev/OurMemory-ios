@@ -10,6 +10,7 @@ final class BurialEditorViewModel {
     @ObservationIgnored private let burialsRepository: BurialsRepository
     @ObservationIgnored private let contentEditorRepository: ContentEditorRepository
     @ObservationIgnored private let mediaRepository: MediaRepository
+    @ObservationIgnored private let currentUid: String
     @ObservationIgnored private var form: BurialForm?
     @ObservationIgnored private var status = EditorStatus()
 
@@ -17,12 +18,14 @@ final class BurialEditorViewModel {
         burialId: String,
         burialsRepository: BurialsRepository,
         contentEditorRepository: ContentEditorRepository,
-        mediaRepository: MediaRepository
+        mediaRepository: MediaRepository,
+        currentUid: String
     ) {
         self.burialId = burialId
         self.burialsRepository = burialsRepository
         self.contentEditorRepository = contentEditorRepository
         self.mediaRepository = mediaRepository
+        self.currentUid = currentUid
     }
 
     private var isNew: Bool {
@@ -75,6 +78,9 @@ final class BurialEditorViewModel {
             uploadPhoto(data)
         case .photoRemoved:
             update { $0.photo = "" }
+        case .failureDismissed:
+            status.failure = nil
+            rebuild()
         case .save:
             save()
         }
@@ -94,7 +100,7 @@ final class BurialEditorViewModel {
             return
         }
         status.uploads += 1
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         let folder = "\(Self.mediaFolder)/\(form.id)"
         Task {
@@ -102,7 +108,7 @@ final class BurialEditorViewModel {
                 let url = try await mediaRepository.uploadPhoto(data, folder: folder)
                 update { $0.photo = url }
             } catch {
-                status.hasFailed = true
+                status.failure = EditorFailure(uploadError: error)
             }
             status.uploads -= 1
             rebuild()
@@ -114,14 +120,14 @@ final class BurialEditorViewModel {
             return
         }
         status.isSaving = true
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         Task {
             do {
                 try await contentEditorRepository.saveBurial(form.toBurial())
                 status.isClosed = true
             } catch {
-                status.hasFailed = true
+                status.failure = .save
             }
             status.isSaving = false
             rebuild()
@@ -132,6 +138,6 @@ final class BurialEditorViewModel {
         guard let form else {
             return
         }
-        burialEditorUiState = .editing(data: BurialEditorUiData(form: form, isNew: isNew, status: status))
+        burialEditorUiState = .editing(data: BurialEditorUiData(form: form, isNew: isNew, status: status, currentUid: currentUid))
     }
 }

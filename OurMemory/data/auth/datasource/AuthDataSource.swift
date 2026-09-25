@@ -7,4 +7,5 @@ protocol AuthDataSource: AnyObject {
     func isAdmin(uid: String) async throws -> Bool
     func signIn(email: String, password: String) async throws -> AuthUser?
     func signOut()
+    var currentUid: String? { get }
 }

@@ -19,7 +19,7 @@ final class MediaUploader: MediaRepository {
         let reference = mediaReference(folder: folder, fileName: UUID().uuidString + Self.jpegExtension)
         let metadata = StorageMetadata()
         metadata.contentType = Self.jpegType
-        _ = try await reference.putDataAsync(bytes, metadata: metadata)
+        try await upload { _ = try await reference.putDataAsync(bytes, metadata: metadata) }
         return try await reference.downloadURL().absoluteString
     }
 
@@ -27,8 +27,16 @@ final class MediaUploader: MediaRepository {
         let reference = mediaReference(folder: folder, fileName: UUID().uuidString)
         let metadata = StorageMetadata()
         metadata.contentType = UTType(filenameExtension: fileURL.pathExtension)?.preferredMIMEType ?? Self.defaultAudioType
-        _ = try await reference.putFileAsync(from: fileURL, metadata: metadata)
+        try await upload { _ = try await reference.putFileAsync(from: fileURL, metadata: metadata) }
         return try await reference.downloadURL().absoluteString
+    }
+
+    private func upload(_ operation: () async throws -> Void) async throws {
+        do {
+            try await operation()
+        } catch let error as NSError where error.domain == StorageErrorDomain && StorageErrorCode(rawValue: error.code) == .unauthorized {
+            throw MediaError.uploadDenied
+        }
     }
 
     private func mediaReference(folder: String, fileName: String) -> StorageReference {

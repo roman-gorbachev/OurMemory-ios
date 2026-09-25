@@ -38,4 +38,8 @@ final class AuthRepositoryImpl: AuthRepository {
     func signOut() {
         dataSource.signOut()
     }
+
+    var currentUid: String? {
+        return dataSource.currentUid
+    }
 }

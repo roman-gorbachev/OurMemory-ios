@@ -41,7 +41,7 @@ struct TourEditorScreen: View {
                 }
             }
             .disabled(data.status.isBusy)
-            if data.status.hasFailed || data.status.isUploading {
+            if data.status.failure != nil || data.status.isUploading {
                 Section {
                     EditorStatusFooter(status: data.status)
                 }

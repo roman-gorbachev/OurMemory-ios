@@ -18,6 +18,7 @@ enum VeteranEditorUserAction {
     case entryChanged(InfoEntry)
     case entryMoved(UUID, offset: Int)
     case entryRemoved(UUID)
+    case failureDismissed
     case save
     case delete
 }

@@ -37,4 +37,8 @@ final class FakeAuthDataSource: AuthDataSource {
     func signOut() {
         user.send(nil)
     }
+
+    var currentUid: String? {
+        return user.value?.uid
+    }
 }

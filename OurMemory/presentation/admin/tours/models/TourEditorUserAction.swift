@@ -9,6 +9,7 @@ enum TourEditorUserAction {
     case stopAudioRemoved(UUID)
     case stopsMoved(IndexSet, Int)
     case stopsRemoved(IndexSet)
+    case failureDismissed
     case save
     case delete
 }

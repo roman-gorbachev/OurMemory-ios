@@ -11,6 +11,7 @@ final class VeteranEditorViewModel {
     @ObservationIgnored private let burialsRepository: BurialsRepository
     @ObservationIgnored private let contentEditorRepository: ContentEditorRepository
     @ObservationIgnored private let mediaRepository: MediaRepository
+    @ObservationIgnored private let currentUid: String
     @ObservationIgnored private var form: VeteranForm?
     @ObservationIgnored private var burials: [BurialUi] = []
     @ObservationIgnored private var status = EditorStatus()
@@ -20,13 +21,15 @@ final class VeteranEditorViewModel {
         veteransRepository: VeteransRepository,
         burialsRepository: BurialsRepository,
         contentEditorRepository: ContentEditorRepository,
-        mediaRepository: MediaRepository
+        mediaRepository: MediaRepository,
+        currentUid: String
     ) {
         self.veteranId = veteranId
         self.veteransRepository = veteransRepository
         self.burialsRepository = burialsRepository
         self.contentEditorRepository = contentEditorRepository
         self.mediaRepository = mediaRepository
+        self.currentUid = currentUid
     }
 
     private var isNew: Bool {
@@ -106,6 +109,9 @@ final class VeteranEditorViewModel {
             }
         case .entryRemoved(let id):
             update { $0.entries.removeAll { return $0.id == id } }
+        case .failureDismissed:
+            status.failure = nil
+            rebuild()
         case .save:
             guard let form, form.isValid else {
                 return
@@ -136,7 +142,7 @@ final class VeteranEditorViewModel {
             return
         }
         status.uploads += 1
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         let folder = "\(Self.mediaFolder)/\(form.id)"
         Task {
@@ -144,7 +150,7 @@ final class VeteranEditorViewModel {
                 let url = try await request(mediaRepository, folder)
                 update { apply(&$0, url) }
             } catch {
-                status.hasFailed = true
+                status.failure = EditorFailure(uploadError: error)
             }
             status.uploads -= 1
             rebuild()
@@ -156,14 +162,14 @@ final class VeteranEditorViewModel {
             return
         }
         status.isSaving = true
-        status.hasFailed = false
+        status.failure = nil
         rebuild()
         Task {
             do {
                 try await write()
                 status.isClosed = true
             } catch {
-                status.hasFailed = true
+                status.failure = .save
             }
             status.isSaving = false
             rebuild()
@@ -174,6 +180,6 @@ final class VeteranEditorViewModel {
         guard let form else {
             return
         }
-        veteranEditorUiState = .editing(data: VeteranEditorUiData(form: form, burials: burials, isNew: isNew, status: status))
+        veteranEditorUiState = .editing(data: VeteranEditorUiData(form: form, burials: burials, isNew: isNew, status: status, currentUid: currentUid))
     }
 }

@@ -49,6 +49,10 @@ final class AuthDataSourceImpl: AuthDataSource {
         try? auth.signOut()
     }
 
+    var currentUid: String? {
+        return auth.currentUser?.uid
+    }
+
     private func adminReference(uid: String) -> DatabaseReference {
         return root.child(DatabaseNodes.admins).child(uid)
     }

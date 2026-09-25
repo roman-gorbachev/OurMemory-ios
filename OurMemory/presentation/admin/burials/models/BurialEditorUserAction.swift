@@ -11,5 +11,6 @@ enum BurialEditorUserAction {
     case pointPicked(latitude: Double, longitude: Double)
     case photoPicked(Data)
     case photoRemoved
+    case failureDismissed
     case save
 }

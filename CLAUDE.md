@@ -60,6 +60,8 @@ xcodebuild -workspace OurMemory.xcworkspace -scheme OurMemory \
 
 Unit tests live in `OurMemoryTests/` (fakes in `OurMemoryTests/fakes/`); run one class with `-only-testing:OurMemoryTests/<ClassName>`.
 
+Strings shared with Android are synced with `python3 tools/strings/sync_android_strings.py OurMemory/Resources/Localizable.xcstrings`: Android `values/` and `values-be/` win for shared keys, iOS-only keys stay untouched. Add a string used by both apps to Android first, then sync; add an iOS-only string straight to the catalog.
+
 The NSFW model is rebuilt with `uv run --python 3.11 --with-requirements tools/nsfw/requirements.txt tools/nsfw/convert_coreml.py`; the resulting `NsfwClassifier.mlpackage` is committed.
 
 ## Configuration & secrets

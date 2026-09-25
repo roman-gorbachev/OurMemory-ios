@@ -35,6 +35,7 @@ struct TourEditorRoute: View {
                 .toolbar {
                     EditorToolbar(status: data.status, canSave: data.canSave) { viewModel.onAction(.save) }
                 }
+                .editorFailureAlert(data.status.failure, uid: data.currentUid) { viewModel.onAction(.failureDismissed) }
                 .onChange(of: data.status.isClosed) { _, isClosed in
                     if isClosed {
                         onClose()

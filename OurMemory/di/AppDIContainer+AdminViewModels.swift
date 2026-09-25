@@ -42,7 +42,8 @@ extension AppDIContainer {
             veteransRepository: veteransRepository,
             burialsRepository: burialsRepository,
             contentEditorRepository: contentEditorRepository,
-            mediaRepository: mediaRepository
+            mediaRepository: mediaRepository,
+            currentUid: authRepository.currentUid ?? ""
         )
     }
 
@@ -55,7 +56,8 @@ extension AppDIContainer {
             burialId: burialId,
             burialsRepository: burialsRepository,
             contentEditorRepository: contentEditorRepository,
-            mediaRepository: mediaRepository
+            mediaRepository: mediaRepository,
+            currentUid: authRepository.currentUid ?? ""
         )
     }
 
@@ -70,7 +72,8 @@ extension AppDIContainer {
             burialsRepository: burialsRepository,
             veteransRepository: veteransRepository,
             contentEditorRepository: contentEditorRepository,
-            mediaRepository: mediaRepository
+            mediaRepository: mediaRepository,
+            currentUid: authRepository.currentUid ?? ""
         )
     }
 }
