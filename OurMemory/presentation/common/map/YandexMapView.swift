@@ -12,9 +12,17 @@ struct YandexMapView: UIViewRepresentable {
     @Environment(\.colorScheme) private var colorScheme
 
     func makeUIView(context: Context) -> YMKMapView {
-        let mapView = YMKMapView(frame: .zero) ?? YMKMapView()
+        let mapView = YMKMapView(frame: .zero, vulkanPreferred: Self.isSimulator) ?? YMKMapView()
         context.coordinator.attach(to: mapView)
         return mapView
+    }
+
+    private static var isSimulator: Bool {
+        #if targetEnvironment(simulator)
+        return true
+        #else
+        return false
+        #endif
     }
 
     func updateUIView(_ mapView: YMKMapView, context: Context) {

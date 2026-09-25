@@ -1,7 +1,7 @@
 import Foundation
 import UserNotifications
 
-enum ReminderNotifications {
+nonisolated enum ReminderNotifications {
     static let victoryDayId = "victory_day_reminder"
     static let anniversaryIdPrefix = "anniversary_"
     static let veteranIdKey = "veteranId"

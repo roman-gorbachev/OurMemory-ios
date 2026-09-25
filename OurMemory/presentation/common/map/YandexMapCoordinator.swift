@@ -102,7 +102,9 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
         if points.count > 1 {
             let polyline = routeCollection?.addPolyline(with: YMKPolyline(points: points))
             polyline?.setStrokeColorWith(MapImages.accentColor)
-            polyline?.strokeWidth = Self.routeStrokeWidth
+            let style = YMKLineStyle()
+            style.strokeWidth = Self.routeStrokeWidth
+            polyline?.style = style
         }
         for stop in stops {
             let placemark = routeCollection?.addPlacemark()
