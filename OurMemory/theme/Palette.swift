@@ -1,0 +1,38 @@
+import SwiftUI
+
+enum Palette {
+    static let primary = Color("Primary")
+    static let onPrimary = Color("OnPrimary")
+    static let primaryContainer = Color("PrimaryContainer")
+    static let onPrimaryContainer = Color("OnPrimaryContainer")
+    static let secondary = Color("Secondary")
+    static let onSecondary = Color("OnSecondary")
+    static let background = Color("Background")
+    static let onBackground = Color("OnBackground")
+    static let surface = Color("Background")
+    static let onSurface = Color("OnBackground")
+    static let surfaceVariant = Color("SurfaceVariant")
+    static let onSurfaceVariant = Color("OnSurfaceVariant")
+    static let containerLowest = Color("ContainerLowest")
+    static let containerLow = Color("ContainerLow")
+    static let container = Color("Container")
+    static let containerHigh = Color("ContainerHigh")
+    static let containerHighest = Color("ContainerHighest")
+    static let outline = Color("Outline")
+    static let outlineVariant = Color("OutlineVariant")
+    static let error = Color("Error")
+    static let brandRed = Color(red: 0x7F / 255.0, green: 0x04 / 255.0, blue: 0x10 / 255.0)
+    static let brandBrightRed = Color(red: 0xBB / 255.0, green: 0x10 / 255.0, blue: 0x20 / 255.0)
+    static let white = Color.white
+    static let black = Color.black
+    static let scrimTop = Color.black.opacity(0.45)
+    static let scrimBottom = Color.black.opacity(0.8)
+    static let dimmed = Color.black.opacity(0.5)
+    static let captionBackground = Color.black.opacity(0.6)
+    static let glass = Color("Background").opacity(0.92)
+    static let barBackground = Color("ContainerLow").opacity(0.96)
+    static let collapsedBar = Color("Background").opacity(0.97)
+    static let shadow = Color.black.opacity(0.15)
+    static let accuracyFill = brandRed.opacity(0.15)
+    static let accuracyStroke = brandRed.opacity(0.4)
+}
