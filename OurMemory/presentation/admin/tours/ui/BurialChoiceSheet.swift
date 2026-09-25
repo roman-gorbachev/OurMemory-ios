@@ -23,6 +23,7 @@ struct BurialChoiceSheet: View {
                 }
             }
             .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always))
+            .scrollDismissesKeyboard(.interactively)
             .navigationTitle("add_stop")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

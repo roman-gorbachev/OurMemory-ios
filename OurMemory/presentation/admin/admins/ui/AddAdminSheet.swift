@@ -23,6 +23,7 @@ struct AddAdminSheet: View {
                     }
                 }
             }
+            .scrollDismissesKeyboard(.interactively)
             .disabled(status == .adding)
             .navigationTitle("add_administrator")
             .navigationBarTitleDisplayMode(.inline)

@@ -19,6 +19,7 @@ struct MainNavigationView: View {
                 .tag(tab)
             }
         }
+        .scrollDismissesKeyboard(.interactively)
         .onChange(of: deepLinks.pendingVeteranId, initial: true) { _, veteranId in
             guard let veteranId else {
                 return
