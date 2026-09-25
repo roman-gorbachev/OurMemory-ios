@@ -2,7 +2,7 @@
 
     python3 tools/strings/sync_android_strings.py OurMemory/Resources/Localizable.xcstrings [path/to/android/app/src/main/res]
 
-Android values/ (Russian) and values-be/ (Belarusian) are the source of truth for shared keys.
+Android values/ (Russian) and values-be/, values-en/, values-zh/ are the source of truth for shared keys.
 Keys that exist only in the catalog (iOS-only strings) are kept as they are.
 """
 import xml.etree.ElementTree as ET, json, os, re, sys
@@ -27,7 +27,8 @@ def load(lang):
         elif el.tag=='plurals': out[n]=('p',{i.get('quantity'):unesc(text(i)) for i in el})
         elif el.tag=='string-array': out[n]=('s','\n'.join(unesc(text(i)) for i in el))
     return out
-ru=load(''); be=load('be')
+TRANSLATIONS=[('be','be'),('en','en'),('zh','zh-Hans')]
+ru=load(''); translated={locale: load(folder) for folder,locale in TRANSLATIONS}
 cat={"sourceLanguage":"ru","version":"1.0","strings":{}}
 def unit(v): return {"stringUnit":{"state":"translated","value":v}}
 def loc(kind,val):
@@ -35,13 +36,14 @@ def loc(kind,val):
     return {"variations":{"plural":{q:unit(v) for q,v in val.items()}}}
 for k,(kind,val) in ru.items():
     e={"extractionState":"manual","localizations":{"ru":loc(kind,val)}}
-    if k in be: e["localizations"]["be"]=loc(*be[k])
-    else: e["shouldTranslate"]=False
+    for locale,values in translated.items():
+        if k in values: e["localizations"][locale]=loc(*values[k])
+    if not any(k in values for values in translated.values()): e["shouldTranslate"]=False
     cat["strings"][k]=e
 if os.path.exists(sys.argv[1]):
     existing=json.load(open(sys.argv[1]))['strings']
     for k,v in existing.items():
         if k not in cat['strings']: cat['strings'][k]=v
 json.dump(cat, open(sys.argv[1],'w'), ensure_ascii=False, indent=2, sort_keys=True)
-print(len(cat["strings"]), 'keys; missing be:', [k for k in ru if k not in be])
+print(len(cat["strings"]), 'keys; missing:', {locale: [k for k in ru if k not in values] for locale,values in translated.items()})
 print('plurals:', [k for k,(t,_) in ru.items() if t=='p'])

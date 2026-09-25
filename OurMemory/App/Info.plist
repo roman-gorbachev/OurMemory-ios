@@ -16,6 +16,8 @@
 	<array>
 		<string>ru</string>
 		<string>be</string>
+		<string>en</string>
+		<string>zh-Hans</string>
 	</array>
 	<key>CFBundleName</key>
 	<string>Наша память</string>

@@ -33,6 +33,10 @@ extension AppLanguage {
             return "russian"
         case .belarusian:
             return "belarusian"
+        case .english:
+            return "english"
+        case .chinese:
+            return "chinese"
         }
     }
 }

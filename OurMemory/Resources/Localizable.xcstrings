@@ -11,10 +11,22 @@
             "value": "Пра могілкі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "About"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "О кладбище"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "关于公墓"
           }
         }
       }
@@ -28,10 +40,22 @@
             "value": "Акаўнт з такім e-mail не знойдзены. Папрасіце чалавека спачатку ўвайсці ў праграму"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No account with this e-mail was found. Ask the person to sign in to the app first"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Аккаунт с таким e-mail не найден. Попросите человека сначала войти в приложение"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到使用此电子邮件的账户。请让对方先登录应用"
           }
         }
       }
@@ -45,10 +69,22 @@
             "value": "Дадаць адміністратара"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add administrator"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить администратора"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加管理员"
           }
         }
       }
@@ -62,10 +98,22 @@
             "value": "Новы адміністратар адзін раз уваходзіць у праграму: праз Google у «Яшчэ» або праз «Уваход для адміністратара» са сваім e-mail.\nСупер-адміністратар адкрывае Адмін → «Адміністратары» і дадае яго па e-mail.\nStorage → Rules: дапішыце UID новага адміністратара (яго можна скапіраваць на экране «Адміністратары») у спіс функцыі isAdmin() і націсніце «Publish». Без гэтага ён не зможа загружаць фота і аўдыя.\nПасля перазапуску праграмы ў новага адміністратара з’яўляецца ўкладка «Адмін».\nКаб зняць правы, выдаліце адміністратара на экране «Адміністратары» і прыбярыце яго UID з правілаў Storage.\nСупер-адміністратары прызначаюцца толькі ў Firebase Console: вузел OurMemory/SuperAdmins, ключ UID са значэннем true (і той жа UID у OurMemory/Admins)."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The new administrator signs in to the app once: with Google in More or via “Administrator sign-in” with their e-mail.\nA super administrator opens Admin → “Administrators” and adds them by e-mail.\nStorage → Rules: add the new administrator's UID (it can be copied on the Administrators screen) to the isAdmin() function list and tap “Publish”. Without this they cannot upload photos and audio.\nAfter restarting the app, the new administrator gets the Admin tab.\nTo revoke rights, remove the administrator on the Administrators screen and delete their UID from the Storage rules.\nSuper administrators are assigned only in the Firebase Console: the OurMemory/SuperAdmins node, the UID key with the value true (and the same UID in OurMemory/Admins)."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новый администратор один раз входит в приложение: через Google в «Ещё» или через «Вход для администратора» со своим e-mail.\nСупер-администратор открывает Админ → «Администраторы» и добавляет его по e-mail.\nStorage → Rules: допишите UID нового администратора (его можно скопировать на экране «Администраторы») в список функции isAdmin() и нажмите «Publish». Без этого он не сможет загружать фото и аудио.\nПосле перезапуска приложения у нового администратора появляется вкладка «Админ».\nЧтобы снять права, удалите администратора на экране «Администраторы» и уберите его UID из правил Storage.\nСупер-администраторы назначаются только в Firebase Console: узел OurMemory/SuperAdmins, ключ UID со значением true (и тот же UID в OurMemory/Admins)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新管理员先登录一次应用：在“更多”中使用 Google，或通过“管理员登录”使用自己的电子邮件。\n超级管理员打开 管理 → “管理员”，按电子邮件添加。\nStorage → Rules：将新管理员的 UID（可在“管理员”页面复制）添加到 isAdmin() 函数列表中，然后点击“Publish”。否则对方无法上传照片和音频。\n重启应用后，新管理员会看到“管理”标签页。\n要撤销权限，请在“管理员”页面移除该管理员，并从 Storage 规则中删除其 UID。\n超级管理员只能在 Firebase Console 中指定：在 OurMemory/SuperAdmins 节点下添加 UID 键，值为 true（并在 OurMemory/Admins 中添加同一 UID）。"
           }
         }
       }
@@ -79,10 +127,22 @@
             "value": "Даданне і выдаленне адміністратараў"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add and remove administrators"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавление и удаление администраторов"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加和移除管理员"
           }
         }
       }
@@ -96,10 +156,22 @@
             "value": "Дадаць аўдыя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add audio"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить аудио"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加音频"
           }
         }
       }
@@ -113,10 +185,22 @@
             "value": "Дадаць месца"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add place"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить место"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加地点"
           }
         }
       }
@@ -130,10 +214,22 @@
             "value": "Пачніце з месцаў пахавання: ветэраны і экскурсіі спасылаюцца на іх"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start with burial places: veterans and tours refer to them"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Начните с мест захоронения: ветераны и экскурсии ссылаются на них"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请先添加安葬地点：老兵和导览都会引用它们"
           }
         }
       }
@@ -147,10 +243,22 @@
             "value": "Дадаць абзац"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add paragraph"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить абзац"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加段落"
           }
         }
       }
@@ -164,10 +272,22 @@
             "value": "Дадаць фота"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add photo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить фото"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加照片"
           }
         }
       }
@@ -181,10 +301,22 @@
             "value": "Дадаць фота"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add photos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить фото"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加照片"
           }
         }
       }
@@ -198,10 +330,22 @@
             "value": "Дадаць прыпынак"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add stop"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить остановку"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加站点"
           }
         }
       }
@@ -215,10 +359,22 @@
             "value": "Дадаць у картку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to card"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить в карточку"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加到卡片"
           }
         }
       }
@@ -232,10 +388,22 @@
             "value": "Дадаць у абранае"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to favorites"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить в избранное"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加到收藏"
           }
         }
       }
@@ -249,10 +417,22 @@
             "value": "Дапоўніць гісторыю"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add to the story"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Дополнить историю"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "补充故事"
           }
         }
       }
@@ -266,10 +446,22 @@
             "value": "Дадаць экскурсію"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add tour"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить экскурсию"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加导览"
           }
         }
       }
@@ -283,10 +475,22 @@
             "value": "Каб адміністратар мог загружаць фота і аўдыя, дадайце яго UID у функцыю isAdmin() правілаў Storage"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To let the administrator upload photos and audio, add their UID to the isAdmin() function of the Storage rules"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Чтобы администратор мог загружать фото и аудио, добавьте его UID в функцию isAdmin() правил Storage"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "要让管理员能上传照片和音频，请将其 UID 添加到 Storage 规则的 isAdmin() 函数中"
           }
         }
       }
@@ -300,10 +504,22 @@
             "value": "Дадаць ветэрана"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Add veteran"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавить ветерана"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "添加老兵"
           }
         }
       }
@@ -317,10 +533,22 @@
             "value": "Дададзена ў картку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Added to card"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Добавлено в карточку"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已添加到卡片"
           }
         }
       }
@@ -334,10 +562,22 @@
             "value": "вул. Казлова, 11, Мiнск"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "11 Kozlova St, Minsk"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "ул. Козлова, 11, Минск"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "明斯克，科兹洛夫街11号"
           }
         }
       }
@@ -351,10 +591,22 @@
             "value": "Адмін"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Админ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理"
           }
         }
       }
@@ -368,10 +620,22 @@
             "value": "Адміністраванне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administration"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Администрирование"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理"
           }
         }
       }
@@ -385,10 +649,22 @@
             "value": "Адміністратар дададзены. Укладка «Адмін» з’явіцца ў яго пасля перазапуску праграмы"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrator added. The Admin tab will appear for them after restarting the app"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Администратор добавлен. Вкладка «Админ» появится у него после перезапуска приложения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已添加管理员。重启应用后，对方将看到“管理”标签页"
           }
         }
       }
@@ -402,10 +678,22 @@
             "value": "Адміністратары"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrators"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Администраторы"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理员"
           }
         }
       }
@@ -419,10 +707,22 @@
             "value": "Дазвольце доступ да геалакацыі, каб убачыць сябе на карце"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow location access to see yourself on the map"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Разрешите доступ к геолокации, чтобы увидеть себя на карте"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许访问位置，即可在地图上看到自己"
           }
         }
       }
@@ -436,10 +736,22 @@
             "value": "Гэты акаўнт ужо адміністратар"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This account is already an administrator"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Этот аккаунт уже администратор"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此账户已是管理员"
           }
         }
       }
@@ -453,10 +765,22 @@
             "value": "Наша памяць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Our Memory"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Наша память"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我们的记忆"
           }
         }
       }
@@ -470,10 +794,22 @@
             "value": "Афармленне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Appearance"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Оформление"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外观"
           }
         }
       }
@@ -487,10 +823,22 @@
             "value": "Ухваліць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Approve"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Одобрить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "通过"
           }
         }
       }
@@ -504,10 +852,22 @@
             "value": "Ухвалена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Approved"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Одобрено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已通过"
           }
         }
       }
@@ -521,10 +881,22 @@
             "value": "Творчасць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Artists"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Деятели искусств"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "艺术家"
           }
         }
       }
@@ -538,10 +910,22 @@
             "value": "Як у сістэме"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как в системе"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "跟随系统"
           }
         }
       }
@@ -555,10 +939,22 @@
             "value": "Аўдыя прымацавана"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Audio attached"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Аудио прикреплено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已附加音频"
           }
         }
       }
@@ -572,10 +968,22 @@
             "value": "Аўдыяэкскурсіі па могілках"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Audio tours of the cemetery"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Аудиоэкскурсии по кладбищу"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公墓语音导览"
           }
         }
       }
@@ -589,10 +997,22 @@
             "value": "Маршруты на карце з расповедам ля кожнага пахавання"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Routes on the map with a story at every grave"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Маршруты на карте с рассказом у каждого захоронения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地图上的路线，每处墓地都有讲解"
           }
         }
       }
@@ -606,10 +1026,22 @@
             "value": "На праверцы"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaiting review"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "На проверке"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待审核"
           }
         }
       }
@@ -623,10 +1055,22 @@
             "value": "Узнагароды"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awards"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Награды"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "荣誉"
           }
         }
       }
@@ -640,10 +1084,22 @@
             "value": "Назад"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Back"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Назад"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "返回"
           }
         }
       }
@@ -663,19 +1119,14 @@
     "belarusian": {
       "extractionState": "manual",
       "localizations": {
-        "be": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Беларуская"
-          }
-        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Беларуская"
           }
         }
-      }
+      },
+      "shouldTranslate": false
     },
     "biography": {
       "extractionState": "manual",
@@ -686,10 +1137,22 @@
             "value": "Бiяграфiя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biography"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Биография"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生平"
           }
         }
       }
@@ -703,10 +1166,22 @@
             "value": "Біяграфія і медыя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Biography and media"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Биография и медиа"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生平和媒体"
           }
         }
       }
@@ -720,10 +1195,22 @@
             "value": "Дзень нараджэння · %1$lld"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Birthday · %1$lld"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "День рождения · %1$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生日 · %1$lld"
           }
         }
       }
@@ -737,10 +1224,22 @@
             "value": "Месца пахавання"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burial place"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Место захоронения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安葬地点"
           }
         }
       }
@@ -754,10 +1253,22 @@
             "value": "Адмін → Месцы пахавання → «Дадаць месца».\nВыберыце тып: магіла, брацкая магіла або помнік.\nУпішыце ўчастак, рад і месца з таблічкі могілак. Гэта дакладней за GPS, і наведвальнікі шукаюць менавіта па гэтых нумарах.\nСтаньце каля магілы і націсніце «Маё месцазнаходжанне». Калі метка лягла недакладна, націсніце на карту ў патрэбнай кропцы.\nДадайце фота і кароткае апісанне, калі ёсць, і націсніце «Захаваць»."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin → Burial places → “Add place”.\nChoose the type: grave, mass grave or monument.\nEnter the section, row and plot from the cemetery plate. This is more accurate than GPS, and visitors search by these numbers.\nStand by the grave and tap “My location”. If the marker is off, tap the map at the right point.\nAdd a photo and a short description if you have them, and tap “Save”."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Админ → Места захоронения → «Добавить место».\nВыберите тип: могила, братская могила или памятник.\nВпишите участок, ряд и место с таблички кладбища. Это точнее GPS, и посетители ищут именно по этим номерам.\nВстаньте у могилы и нажмите «Моё местоположение». Если метка легла неточно, нажмите на карту в нужной точке.\nДобавьте фото и короткое описание, если есть, и нажмите «Сохранить»."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理 → 安葬地点 → “添加地点”。\n选择类型：墓、合葬墓或纪念碑。\n填写公墓标牌上的区、排和号。这比 GPS 更准确，访客也是按这些编号查找的。\n站在墓旁点击“我的位置”。如果标记不准确，请点击地图上的正确位置。\n如有照片和简短描述，请添加后点击“保存”。"
           }
         }
       }
@@ -771,10 +1282,22 @@
             "value": "Месцы пахавання"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Burial places"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Места захоронения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安葬地点"
           }
         }
       }
@@ -812,6 +1335,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld place"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld places"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -841,6 +1382,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 个地点"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -853,10 +1406,22 @@
             "value": "Адмена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cancel"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отмена"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "取消"
           }
         }
       }
@@ -870,10 +1435,22 @@
             "value": "Свечка памяці і абранае"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memorial candle and favorites"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Свеча памяти и избранное"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纪念蜡烛和收藏"
           }
         }
       }
@@ -887,10 +1464,22 @@
             "value": "Запаліце свечку, захавайце блізкіх у абраным і атрымлівайце напаміны пра памятныя даты"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light a candle, keep your loved ones in favorites and get reminders of memorable dates"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Зажгите свечу, сохраните близких в избранном и получайте напоминания о памятных датах"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点亮蜡烛，收藏亲人，并接收纪念日提醒"
           }
         }
       }
@@ -904,10 +1493,22 @@
             "value": "Свечка запалена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Candle is lit"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Свеча зажжена"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "蜡烛已点亮"
           }
         }
       }
@@ -945,6 +1546,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld candle lit"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld candles lit"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -974,6 +1593,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "已点亮 %lld 支蜡烛"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -986,10 +1617,22 @@
             "value": "Подпіс"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Caption"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Подпись"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "说明"
           }
         }
       }
@@ -1003,10 +1646,22 @@
             "value": "Карта могілак"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cemetery map"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Карта кладбища"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "公墓地图"
           }
         }
       }
@@ -1020,7 +1675,19 @@
             "value": ""
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        },
         "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": ""
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": ""
@@ -1049,10 +1716,22 @@
             "value": "Праверце вынік на ўкладцы «Карта»: новая метка павінна стаяць на сваім месцы."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the result on the Map tab: the new marker should be in its place."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Проверьте результат на вкладке «Карта»: новая метка должна стоять на своём месте."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在“地图”标签页检查结果：新标记应位于正确的位置。"
           }
         }
       }
@@ -1066,10 +1745,22 @@
             "value": "Перад агучкай праверце тэкст: націскі ў прозвішчах, гады словамі, скарачэнні раскрыты цалкам."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check the text before recording: stresses in surnames, years written out in words, abbreviations spelled out in full."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Перед озвучкой проверьте текст: ударения в фамилиях, годы прописью, сокращения раскрыты полностью."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "录音前请检查文本：姓氏的重音、年份用文字写出、缩写完整展开。"
           }
         }
       }
@@ -1083,13 +1774,37 @@
             "value": "Правяраем фота"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Checking photo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Проверяем фото"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在检查照片"
+          }
         }
       }
+    },
+    "chinese": {
+      "extractionState": "manual",
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "中文"
+          }
+        }
+      },
+      "shouldTranslate": false
     },
     "chooseCategory": {
       "extractionState": "manual",
@@ -1100,10 +1815,22 @@
             "value": "Выберыце катэгорыю"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a category"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Выберите категорию"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择类别"
           }
         }
       }
@@ -1117,10 +1844,22 @@
             "value": "Выбраць партрэт"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose portrait"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Выбрать портрет"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择肖像"
           }
         }
       }
@@ -1134,10 +1873,22 @@
             "value": "Ачысціць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Clear"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Очистить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "清除"
           }
         }
       }
@@ -1151,10 +1902,22 @@
             "value": "Каментар для аўтара (неабавязкова)"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Comment for the author (optional)"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Комментарий для автора (необязательно)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "给作者的备注（可选）"
           }
         }
       }
@@ -1168,10 +1931,22 @@
             "value": "Я згодны(ная), каб мае кантактныя даныя выкарыстоўваліся толькі для сувязі па гэтым матэрыяле"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "I agree that my contact details will be used only to contact me about this material"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Я согласен(на), чтобы мои контактные данные использовались только для связи по этому материалу"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我同意我的联系方式仅用于就此材料与我联系"
           }
         }
       }
@@ -1185,10 +1960,22 @@
             "value": "Як з вамі звязацца (неабавязкова)"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to reach you (optional)"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как с вами связаться (необязательно)"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "联系方式（可选）"
           }
         }
       }
@@ -1202,10 +1989,80 @@
             "value": "Кантэнт"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Content"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Контент"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容"
+          }
+        }
+      }
+    },
+    "content_language": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Мова кантэнту"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Content language"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Язык контента"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "内容语言"
+          }
+        }
+      }
+    },
+    "copy_paragraphs_from_russian": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скапіраваць абзацы з рускай"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy paragraphs from Russian"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Скопировать абзацы из русского"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从俄语复制段落"
           }
         }
       }
@@ -1219,10 +2076,22 @@
             "value": "Скапіраваць UID"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy UID"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Скопировать UID"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制 UID"
           }
         }
       }
@@ -1236,10 +2105,22 @@
             "value": "Не атрымалася адкрыць фота. Выберыце іншае"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't open the photo. Choose another one"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось открыть фото. Выберите другое"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法打开照片。请选择其他照片"
           }
         }
       }
@@ -1253,10 +2134,22 @@
             "value": "Не атрымалася ўвайсці. Праверце інтэрнэт і паспрабуйце яшчэ раз"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't sign in. Check your internet connection and try again"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось войти. Проверьте интернет и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录失败。请检查网络后重试"
           }
         }
       }
@@ -1270,10 +2163,22 @@
             "value": "Цёмная"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dark"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Тёмная"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "深色"
           }
         }
       }
@@ -1287,10 +2192,22 @@
             "value": "Памылка ў даных"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Data error"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ошибка в данных"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数据错误"
           }
         }
       }
@@ -1304,10 +2221,22 @@
             "value": "Дата нараджэння"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date of birth"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Дата рождения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出生日期"
           }
         }
       }
@@ -1321,10 +2250,22 @@
             "value": "Дата смерці"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Date of death"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Дата смерти"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "逝世日期"
           }
         }
       }
@@ -1338,10 +2279,22 @@
             "value": "Дзень памяці · %1$lld"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Day of remembrance · %1$lld"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "День памяти · %1$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纪念日 · %1$lld"
           }
         }
       }
@@ -1355,10 +2308,22 @@
             "value": "Выдаліць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Удалить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除"
           }
         }
       }
@@ -1372,10 +2337,22 @@
             "value": "Выдаліць экскурсію? Яна знікне з праграмы"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete this tour? It will disappear from the app"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Удалить экскурсию? Она исчезнет из приложения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除此导览？它将从应用中消失"
           }
         }
       }
@@ -1389,10 +2366,22 @@
             "value": "Выдаліць ветэрана? Картка знікне з праграмы"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Delete this veteran? The card will disappear from the app"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Удалить ветерана? Карточка исчезнет из приложения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除这位老兵？卡片将从应用中消失"
           }
         }
       }
@@ -1406,10 +2395,22 @@
             "value": "Выдаленае можна вярнуць толькі ўручную, таму перад выдаленнем пераканайцеся, што адкрыта патрэбная картка."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deleted items can only be restored by hand, so make sure the right card is open before deleting."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Удалённое можно вернуть только вручную, поэтому перед удалением убедитесь, что открыта нужная карточка."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除的内容只能手动恢复，因此删除前请确认打开的是正确的卡片。"
           }
         }
       }
@@ -1423,10 +2424,22 @@
             "value": "Апісанне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Description"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Описание"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "描述"
           }
         }
       }
@@ -1440,10 +2453,22 @@
             "value": "Не публікуйце файлы правілаў з праекта цалкам: база агульная з іншымі праграмамі, і іх правілы сатруцца. Змяняйце толькі вузел OurMemory."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Don't publish the rules files from the project as a whole: the database is shared with other apps, and their rules would be erased. Edit only the OurMemory node."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не публикуйте файлы правил из проекта целиком: база общая с другими приложениями, и их правила сотрутся. Правьте только узел OurMemory."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "不要整体发布项目中的规则文件：数据库与其他应用共用，它们的规则会被清除。只修改 OurMemory 节点。"
           }
         }
       }
@@ -1457,10 +2482,22 @@
             "value": "Дакументы i фатаздымкi"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Documents and photos"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Документы и фотографии"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件和照片"
           }
         }
       }
@@ -1474,10 +2511,22 @@
             "value": "Гатова"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Done"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Готово"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "完成"
           }
         }
       }
@@ -1491,10 +2540,22 @@
             "value": "Памятка рэдактара"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Editor's guide"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Памятка редактора"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "编辑指南"
           }
         }
       }
@@ -1508,13 +2569,37 @@
             "value": "E-mail"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "E-mail"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "E-mail"
           }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电子邮件"
+          }
         }
       }
+    },
+    "english": {
+      "extractionState": "manual",
+      "localizations": {
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "English"
+          }
+        }
+      },
+      "shouldTranslate": false
     },
     "everything_is_reviewed_msg": {
       "extractionState": "manual",
@@ -1525,10 +2610,22 @@
             "value": "Усё прагледжана"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "All reviewed"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Всё просмотрено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已全部处理"
           }
         }
       }
@@ -1542,10 +2639,22 @@
             "value": "Разгарнуць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expand"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Развернуть"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "展开"
           }
         }
       }
@@ -1559,10 +2668,22 @@
             "value": "Вельмі буйны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Extra large"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Очень крупный"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "特大"
           }
         }
       }
@@ -1576,10 +2697,22 @@
             "value": "Не атрымалася загрузіць даныя. Праверце падключэнне да інтэрнэту"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't load data. Check your internet connection"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось загрузить данные. Проверьте подключение к интернету"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法加载数据。请检查网络连接"
           }
         }
       }
@@ -1593,10 +2726,22 @@
             "value": "Не ўдалося адкрыць сканер. Паспрабуйце навесці звычайную камеру на QR-код"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't open the scanner. Try pointing the regular camera at the QR code"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось открыть сканер. Попробуйте навести обычную камеру на QR-код"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法打开扫描器。请尝试用相机直接对准二维码"
           }
         }
       }
@@ -1610,10 +2755,22 @@
             "value": "Не ўдалося захаваць. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't save. Check your internet connection and try again"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось сохранить. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存失败。请检查网络连接后重试"
           }
         }
       }
@@ -1627,10 +2784,22 @@
             "value": "Не атрымалася адправіць. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't send. Check your internet connection and try again"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось отправить. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送失败。请检查网络连接后重试"
           }
         }
       }
@@ -1644,10 +2813,22 @@
             "value": "Не ўдалося ўвайсці. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't sign in. Check your internet connection and try again"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось войти. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录失败。请检查网络连接后重试"
           }
         }
       }
@@ -1661,10 +2842,22 @@
             "value": "Не ўдалося загрузіць файл. Праверце падключэнне да інтэрнэту і паспрабуйце яшчэ раз"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't upload the file. Check your internet connection and try again"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не удалось загрузить файл. Проверьте подключение к интернету и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件上传失败。请检查网络连接后重试"
           }
         }
       }
@@ -1678,10 +2871,22 @@
             "value": "Абранае"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorites"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Избранное"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏"
           }
         }
       }
@@ -1695,10 +2900,22 @@
             "value": "Абранае і звароты захоўваюцца ў акаўнце"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Favorites and requests are saved to your account"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Избранное и обращения сохраняются в аккаунте"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏和申请保存在账户中"
           }
         }
       }
@@ -1712,10 +2929,22 @@
             "value": "Зваротная сувязь"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Feedback"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Обратная связь"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "反馈"
           }
         }
       }
@@ -1729,10 +2958,22 @@
             "value": "Для рэдактараў мемарыяла: ветэраны, месцы пахавання, экскурсіі і заяўкі наведвальнікаў"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "For memorial editors: veterans, burial places, tours and visitor submissions"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Для редакторов мемориала: ветераны, места захоронения, экскурсии и заявки посетителей"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "供纪念馆编辑使用：老兵、安葬地点、导览和访客申请"
           }
         }
       }
@@ -1746,10 +2987,22 @@
             "value": "З сямейнага архіва"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "From the family archive"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Из семейного архива"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "来自家庭档案"
           }
         }
       }
@@ -1763,10 +3016,22 @@
             "value": "ПІБ"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Full name"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "ФИО"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "姓名"
           }
         }
       }
@@ -1780,10 +3045,22 @@
             "value": "Галерэя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gallery"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Галерея"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "图库"
           }
         }
       }
@@ -1797,10 +3074,22 @@
             "value": "Герой Савецкага Саюза"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hero of the Soviet Union"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Герой Советского Союза"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苏联英雄"
           }
         }
       }
@@ -1814,10 +3103,22 @@
             "value": "Пракласці маршрут"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get directions"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Проложить маршрут"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "规划路线"
           }
         }
       }
@@ -1831,10 +3132,22 @@
             "value": "Магіла"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grave"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Могила"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "墓"
           }
         }
       }
@@ -1848,10 +3161,22 @@
             "value": "Героі Савецкага Саюза"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heroes of the Soviet Union"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Герои Советского Союза"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苏联英雄"
           }
         }
       }
@@ -1865,10 +3190,22 @@
             "value": "Біяграфіі герояў"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Heroes’ biographies"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Биографии героев"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "英雄生平"
           }
         }
       }
@@ -1882,10 +3219,22 @@
             "value": "Лёсы, узнагароды, фотаздымкі і дакументы тых, хто спачывае на могілках"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lives, awards, photos and documents of those who rest in the cemetery"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Судьбы, награды, фотографии и документы тех, кто покоится на кладбище"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "安息于此的人们的生平、荣誉、照片和文件"
           }
         }
       }
@@ -1899,10 +3248,22 @@
             "value": "Гістарычная даведка"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Historical background"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Историческая справка"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史简介"
           }
         }
       }
@@ -1916,10 +3277,22 @@
             "value": "Як дадаць месца пахавання?"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to add a burial place?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как добавить место захоронения?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如何添加安葬地点？"
           }
         }
       }
@@ -1933,10 +3306,22 @@
             "value": "Як дадаць ветэрана?"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to add a veteran?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как добавить ветерана?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如何添加老兵？"
           }
         }
       }
@@ -1950,10 +3335,22 @@
             "value": "Як дадаваць ветэранаў, месцы і экскурсіі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to add veterans, places and tours"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как добавлять ветеранов, места и экскурсии"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如何添加老兵、地点和导览"
           }
         }
       }
@@ -1967,10 +3364,22 @@
             "value": "Як сабраць экскурсію?"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "How to build a tour?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Как собрать экскурсию?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如何创建导览？"
           }
         }
       }
@@ -1984,10 +3393,22 @@
             "value": "Пазнавайце біяграфіі, слухайце аудиоэкскурсии, вывучайце творчасць вялікіх людзей!"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Discover biographies, listen to audio tours and explore the work of great people!"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Узнавайте биографии, слушайте аудиоэкскурсии, изучайте творчество великих людей!"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "了解生平，收听语音导览，探索伟人的作品！"
           }
         }
       }
@@ -2001,10 +3422,22 @@
             "value": "Калі нешта не так"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If something goes wrong"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Если что-то не так"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "遇到问题时"
           }
         }
       }
@@ -2018,10 +3451,22 @@
             "value": "Раніцай 9 мая нагадаем ушанаваць памяць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On the morning of May 9 we'll remind you to honor the memory"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Утром 9 мая напомним почтить память"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5月9日早上提醒您缅怀英烈"
           }
         }
       }
@@ -2035,10 +3480,22 @@
             "value": "\tМінскія вайсковыя могілкі, размешчаныя на вуліцы Казлова, з'яўляецца адным з найстарэйшых і найбольш значных мемарыяльных месцаў у сталіцы Беларусі. Яно было заснавана ў канцы XIX стагоддзя, арыентыровачна ў 1870-1880-х гадах, і першапачаткова прызначалася для пахавання вайскоўцаў, якія загінулі пры выкананні службовых абавязкаў, а таксама ветэранаў розных войнаў.\n\n На гэтых могілках знайшлі спакой удзельнікі руска-турэцкай вайны 1877-1878 гадоў, першай сусветнай вайны, грамадзянскай вайны і Вялікай Айчыннай вайны. Тут жа пахаваныя партызаны, афіцэры, Героі Савецкага Саюза, а таксама вядомыя дзеячы савецкай эпохі. Мінскія вайсковыя могілкі сталі своеасаблівым летапісам ваеннай гісторыі Беларусі, якая адлюстроўвае лёсы і подзвігі людзей, якія абаранялі Радзіму ў розныя гістарычныя перыяд\n \\ n Асаблівую ўвагу прыцягвае брацкая магіла савецкіх салдат, якія загінулі ў гады Вялікай Айчыннай вайны. Мемарыяльныя помнікі, абеліскі і акуратныя надмагіллі з ваеннай сімволікай надаюць могілак строгасць і ўрачыстасць. Месца часта становіцца цэнтрам правядзення памятных мерапрыемстваў, асабліва ў Дзень Перамогі і ў іншыя дні вайсковай славы.\n\n Архітэктурна могілках ўяўляе сабой дагледжаную тэрыторыю з алеямі, іглічнымі дрэвамі і старадаўнімі надмагіллямі, многія з якіх датуюцца яшчэ дарэвалюцыйным час. Некаторыя пліты захавалі надпісы ў дарэформеннай рускай арфаграфіі, што надае гэтаму месцу асаблівую гістарычную атмасферу.\n\n Нягледзячы на блізкасць да цэнтра горада і ажыўленым вуліцах, тут пануе цішыня і паважлівае спакой. Мінскае ваеннае могілкі на Казлова - гэта не проста месца пахавання, а важны культурна-гістарычны помнік, які нагадвае пра цану міру і мужнасці тых, хто яго абараняў."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\tThe Minsk Military Cemetery on Kozlova Street is one of the oldest and most significant memorial sites in the capital of Belarus. It was founded at the end of the 19th century, roughly in the 1870s–1880s, and was originally intended for servicemen who died on duty and for veterans of various wars.\n\n Participants of the Russo-Turkish War of 1877–1878, the First World War, the Civil War and the Great Patriotic War rest here. Partisans, officers, Heroes of the Soviet Union and well-known figures of the Soviet era are also buried here. The Minsk Military Cemetery has become a kind of chronicle of the military history of Belarus, reflecting the fates and deeds of people who defended their homeland in different historical periods.\n\n The mass grave of Soviet soldiers who fell during the Great Patriotic War draws particular attention. Memorials, obelisks and neat headstones with military symbols give the cemetery a solemn and austere feel. It often becomes the center of commemorative events, especially on Victory Day and other days of military glory.\n\n Architecturally, the cemetery is a well-kept area with alleys, conifers and old headstones, many of which date back to before the revolution. Some slabs still bear inscriptions in pre-reform Russian spelling, which gives the place a special historical atmosphere.\n\n Despite being close to the city center and busy streets, it is quiet and respectfully calm here. The Minsk Military Cemetery on Kozlova is not just a burial ground but an important cultural and historical monument, a reminder of the price of peace and the courage of those who defended it."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "\tМинское военное кладбище, расположенное на улице Козлова, является одним из старейших и наиболее значимых мемориальных мест в столице Беларуси. Оно было основано в конце XIX века, ориентировочно в 1870–1880-х годах, и изначально предназначалось для захоронения военнослужащих, погибших при исполнении служебных обязанностей, а также ветеранов различных войн.\n\n На этом кладбище нашли покой участники Русско-турецкой войны 1877–1878 годов, Первой мировой войны, Гражданской войны и Великой Отечественной войны. Здесь же захоронены партизаны, офицеры, Герои Советского Союза, а также известные деятели советской эпохи. Минское военное кладбище стало своеобразной летописью военной истории Беларуси, отражающей судьбы и подвиги людей, защищавших Родину в разные исторические период\n\n Особое внимание привлекает братская могила советских солдат, павших в годы Великой Отечественной войны. Мемориальные памятники, обелиски и аккуратные надгробия с военной символикой придают кладбищу строгость и торжественность. Место часто становится центром проведения памятных мероприятий, особенно в День Победы и в другие дни воинской славы.\n\n Архитектурно кладбище представляет собой ухоженную территорию с аллеями, хвойными деревьями и старинными надгробиями, многие из которых датируются еще дореволюционным временем. Некоторые плиты сохранили надписи в дореформенной русской орфографии, что придает этому месту особую историческую атмосферу.\n\n Несмотря на близость к центру города и оживлённым улицам, здесь царит тишина и уважительное спокойствие. Минское военное кладбище на Козлова — это не просто место захоронения, а важный культурно-исторический памятник, напоминающий о цене мира и мужестве тех, кто его защищал."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "\t明斯克军人公墓位于科兹洛夫街，是白俄罗斯首都最古老、最重要的纪念地之一。 公墓建于19世纪末，大约在1870至1880年代，最初用于安葬因公殉职的军人以及历次战争的老兵。\n\n 这里安息着1877—1878年俄土战争、第一次世界大战、国内战争和伟大卫国战争的参加者。 这里还安葬着游击队员、军官、苏联英雄以及苏联时代的知名人士。 明斯克军人公墓已成为白俄罗斯军事历史的一部编年史，记录了不同历史时期保卫祖国的人们的命运与功绩。\n\n 伟大卫国战争中牺牲的苏军战士合葬墓尤其引人注目。 纪念碑、方尖碑和带有军事标志的整齐墓碑赋予公墓庄严肃穆的气氛。 这里经常举行纪念活动，特别是在胜利日和其他军人荣誉日。\n\n 从建筑上看，公墓是一片整洁的园区，有林荫道、针叶树和古老的墓碑，其中许多可追溯到革命前。 一些墓碑上仍保留着旧式俄语正字法的铭文，使这里具有独特的历史氛围。\n\n 尽管靠近市中心和繁华的街道，这里却一片寂静，令人肃然起敬。 科兹洛夫街上的明斯克军人公墓不仅是一处墓地，更是一座重要的历史文化古迹， 提醒人们和平的代价以及守护和平者的英勇。"
           }
         }
       }
@@ -2052,10 +3509,22 @@
             "value": "Захавайце сваю памяць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keep your memory safe"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Сохраните свою память"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存您的记忆"
           }
         }
       }
@@ -2069,10 +3538,22 @@
             "value": "Мова"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Language"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Язык"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "语言"
           }
         }
       }
@@ -2086,10 +3567,22 @@
             "value": "Буйны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Large"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Крупный"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大"
           }
         }
       }
@@ -2103,10 +3596,22 @@
             "value": "Шырата"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latitude"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Широта"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纬度"
           }
         }
       }
@@ -2120,10 +3625,22 @@
             "value": "Ордэн Леніна"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of Lenin"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Ленина"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "列宁勋章"
           }
         }
       }
@@ -2137,10 +3654,22 @@
             "value": "Светлая"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Светлая"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "浅色"
           }
         }
       }
@@ -2154,10 +3683,22 @@
             "value": "Запаліць свечку памяці"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Light a memorial candle"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Зажечь свечу памяти"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点亮纪念蜡烛"
           }
         }
       }
@@ -2171,10 +3712,22 @@
             "value": "Паслухаць біяграфію"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Listen to the biography"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Послушать биографию"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收听生平"
           }
         }
       }
@@ -2188,10 +3741,22 @@
             "value": "Размяшчэнне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Location"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Расположение"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "位置"
           }
         }
       }
@@ -2205,10 +3770,22 @@
             "value": "Даўгата"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Longitude"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Долгота"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "经度"
           }
         }
       }
@@ -2222,10 +3799,22 @@
             "value": "Асноўны тэкст"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Main text"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Основной текст"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正文"
           }
         }
       }
@@ -2239,10 +3828,22 @@
             "value": "Карта"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Карта"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地图"
           }
         }
       }
@@ -2256,10 +3857,22 @@
             "value": "Адзначыць разгледжаным"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mark as reviewed"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отметить рассмотренным"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标记为已处理"
           }
         }
       }
@@ -2273,10 +3886,22 @@
             "value": "Брацкая магіла"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mass grave"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Братская могила"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "合葬墓"
           }
         }
       }
@@ -2290,10 +3915,22 @@
             "value": "Матэрыялы для карткі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Materials for the card"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Материалы для карточки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卡片材料"
           }
         }
       }
@@ -2307,10 +3944,22 @@
             "value": "Памятныя даты абраных"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memorable dates of favorites"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Памятные даты избранных"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收藏老兵的纪念日"
           }
         }
       }
@@ -2324,10 +3973,22 @@
             "value": "Успаміны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memories"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Воспоминания"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回忆"
           }
         }
       }
@@ -2341,10 +4002,22 @@
             "value": "Паведамленне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Message"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Сообщение"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "消息"
           }
         }
       }
@@ -2358,10 +4031,22 @@
             "value": "Маё"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mine"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Моё"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我的"
           }
         }
       }
@@ -2375,10 +4060,22 @@
             "value": "Мадэрацыя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moderation"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Модерация"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "审核"
           }
         }
       }
@@ -2392,10 +4089,22 @@
             "value": "Помнік"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Monument"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Памятник"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纪念碑"
           }
         }
       }
@@ -2409,10 +4118,22 @@
             "value": "Яшчэ"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "More"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ещё"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更多"
           }
         }
       }
@@ -2426,10 +4147,22 @@
             "value": "Перамясціць ніжэй"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move down"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Переместить ниже"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "下移"
           }
         }
       }
@@ -2443,10 +4176,22 @@
             "value": "Перамясціць вышэй"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Move up"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Переместить выше"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "上移"
           }
         }
       }
@@ -2460,10 +4205,22 @@
             "value": "Маё месцазнаходжанне"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My location"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Моё местоположение"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我的位置"
           }
         }
       }
@@ -2477,10 +4234,22 @@
             "value": "Мае звароты"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "My requests"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Мои обращения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "我的申请"
           }
         }
       }
@@ -2494,10 +4263,22 @@
             "value": "Народны артыст СССР"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "People's Artist of the USSR"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Народный артист СССР"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "苏联人民艺术家"
           }
         }
       }
@@ -2511,10 +4292,22 @@
             "value": "Ніхто не забыты, нішто не забыта"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No one is forgotten, nothing is forgotten"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Никто не забыт, ничто не забыто"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有人被遗忘，没有事被遗忘"
           }
         }
       }
@@ -2528,10 +4321,22 @@
             "value": "Новае месца"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New place"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новое место"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新地点"
           }
         }
       }
@@ -2545,10 +4350,22 @@
             "value": "Новыя звароты"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New messages"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новые обращения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新消息"
           }
         }
       }
@@ -2562,10 +4379,22 @@
             "value": "Новая экскурсія"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New tour"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новая экскурсия"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新导览"
           }
         }
       }
@@ -2579,10 +4408,22 @@
             "value": "Новы ветэран"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "New veteran"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новый ветеран"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新老兵"
           }
         }
       }
@@ -2596,10 +4437,22 @@
             "value": "Навінавая зводка"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "News"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Новостная сводка"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "新闻"
           }
         }
       }
@@ -2613,10 +4466,22 @@
             "value": "У гэтага акаўнта няма правоў адміністратара"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This account has no administrator rights"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "У этого аккаунта нет прав администратора"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "此账户没有管理员权限"
           }
         }
       }
@@ -2630,10 +4495,22 @@
             "value": "Аўдыя няма"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No audio"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Аудио нет"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无音频"
           }
         }
       }
@@ -2647,10 +4524,22 @@
             "value": "Націсніце на сэрца на картцы ветэрана, каб дадаць яго сюды"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the heart on a veteran's card to add it here"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Нажмите на сердечко на карточке ветерана, чтобы добавить его сюда"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击老兵卡片上的爱心即可添加到这里"
           }
         }
       }
@@ -2664,10 +4553,22 @@
             "value": "Няма правоў на змяненне заяўкі. Праверце, што ваш UID ёсць у OurMemory/Admins і правілы базы апублікаваныя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No permission to change the request. Make sure your UID is in OurMemory/Admins and the database rules are published"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Нет прав на изменение заявки. Проверьте, что ваш UID есть в OurMemory/Admins и правила базы опубликованы"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有修改申请的权限。请确认您的 UID 在 OurMemory/Admins 中，且数据库规则已发布"
           }
         }
       }
@@ -2681,10 +4582,22 @@
             "value": "Няма правоў на загрузку файлаў. Дадайце ваш UID у функцыю isAdmin() правілаў Storage і апублікуйце іх"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No permission to upload files. Add your UID to the isAdmin() function of the Storage rules and publish them"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Нет прав на загрузку файлов. Добавьте ваш UID в функцию isAdmin() правил Storage и опубликуйте их"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "没有上传文件的权限。请将您的 UID 添加到 Storage 规则的 isAdmin() 函数中并发布"
           }
         }
       }
@@ -2698,10 +4611,22 @@
             "value": "Тут з'явяцца вашы паведамленні і матэрыялы, калі вы іх адправіце"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your messages and materials will appear here once you send them"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Здесь появятся ваши сообщения и материалы, когда вы их отправите"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您发送的消息和材料会显示在这里"
           }
         }
       }
@@ -2715,10 +4640,22 @@
             "value": "Звычайны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Normal"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Обычный"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标准"
           }
         }
       }
@@ -2732,10 +4669,22 @@
             "value": "Гэта не QR-код нашых могілак"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This is not a QR code of our cemetery"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Это не QR-код нашего кладбища"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这不是本公墓的二维码"
           }
         }
       }
@@ -2749,10 +4698,51 @@
             "value": "Не пазначана"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Not specified"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Не указано"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未指定"
+          }
+        }
+      }
+    },
+    "nothing_found_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Па запыце «%1$@» нікога не знайшлі. Праверце напісанне прозвішча"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No one found for “%1$@”. Check the spelling of the surname"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "По запросу «%1$@» никого не нашли. Проверьте написание фамилии"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到“%1$@”。请检查姓氏的拼写"
           }
         }
       }
@@ -2766,10 +4756,22 @@
             "value": "Тут пакуль нічога няма"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nothing here yet"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Здесь пока ничего нет"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "这里还没有内容"
           }
         }
       }
@@ -2783,10 +4785,22 @@
             "value": "У дні нараджэння і памяці ветэранаў з абранага"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On birthdays and memorial days of your favorite veterans"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "В дни рождения и памяти ветеранов из избранного"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在收藏老兵的生日和纪念日提醒"
           }
         }
       }
@@ -2800,10 +4814,22 @@
             "value": "У гэты дзень"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "On this day"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "В этот день"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "历史上的今天"
           }
         }
       }
@@ -2817,10 +4843,22 @@
             "value": "Гадзіны працы"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opening hours"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Часы работы"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开放时间"
           }
         }
       }
@@ -2834,10 +4872,22 @@
             "value": "Ордэн «Знак Пашаны»"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of the Badge of Honour"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден «Знак Почёта»"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "荣誉徽章勋章"
           }
         }
       }
@@ -2851,10 +4901,22 @@
             "value": "Ордэн Айчыннай вайны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of the Patriotic War"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Отечественной войны"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卫国战争勋章"
           }
         }
       }
@@ -2868,10 +4930,22 @@
             "value": "Іншае"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Other"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Другое"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "其他"
           }
         }
       }
@@ -2885,10 +4959,22 @@
             "value": "Абзац"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Paragraph"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Абзац"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "段落"
           }
         }
       }
@@ -2902,10 +4988,22 @@
             "value": "Медаль «Партызану Айчыннай вайны» II ступені"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medal “To a Partisan of the Patriotic War”, 2nd class"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Медаль «Партизану Отечественной войны» II степени"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "二级“卫国战争游击队员”奖章"
           }
         }
       }
@@ -2919,10 +5017,22 @@
             "value": "Пароль"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Password"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Пароль"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "密码"
           }
         }
       }
@@ -2936,10 +5046,22 @@
             "value": "Паўза"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pause"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Пауза"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "暂停"
           }
         }
       }
@@ -2953,10 +5075,22 @@
             "value": "Заяўкі на мадэрацыі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Submissions awaiting moderation"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Заявки на модерации"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "待审核的申请"
           }
         }
       }
@@ -2970,10 +5104,22 @@
             "value": "Тэлефон"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phone"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Телефон"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电话"
           }
         }
       }
@@ -2987,10 +5133,22 @@
             "value": "Фота не прайшло аўтаматычную праверку і не будзе адпраўлена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The photo didn't pass the automatic check and will not be sent"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Фото не прошло автоматическую проверку и не будет отправлено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片未通过自动检查，不会被发送"
           }
         }
       }
@@ -3028,6 +5186,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photo"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld photos"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -3057,6 +5233,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 张照片"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -3069,10 +5257,22 @@
             "value": "Фота %1$lld з %2$lld"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Photo %1$lld of %2$lld"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Фото %1$lld из %2$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片 %1$lld / %2$lld"
           }
         }
       }
@@ -3086,10 +5286,22 @@
             "value": "Месца"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plot"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Место"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "号"
           }
         }
       }
@@ -3103,10 +5315,22 @@
             "value": "Прайграць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Воспроизвести"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "播放"
           }
         }
       }
@@ -3120,10 +5344,22 @@
             "value": "Ордэн Чырвонай Зоркі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of the Red Star"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Красной Звезды"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "红星勋章"
           }
         }
       }
@@ -3137,10 +5373,22 @@
             "value": "Ордэн Чырвонага Сцяга"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of the Red Banner"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Красного Знамени"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "红旗勋章"
           }
         }
       }
@@ -3154,10 +5402,22 @@
             "value": "Адхіліць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reject"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отклонить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "拒绝"
           }
         }
       }
@@ -3171,10 +5431,22 @@
             "value": "Адхілена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rejected"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отклонено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已拒绝"
           }
         }
       }
@@ -3188,10 +5460,51 @@
             "value": "Успомніце герояў — запаліце свечку памяці ў праграме «Наша памяць»"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remember the heroes — light a memorial candle in Our Memory"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Вспомните героев — зажгите свечу памяти в приложении «Наша память»"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "缅怀英雄——在“我们的记忆”中点亮纪念蜡烛"
+          }
+        }
+      }
+    },
+    "remember_veteran_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — памятаем. Картка ветэрана: %2$@"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — we remember. Veteran's card: %2$@"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ — помним. Карточка ветерана: %2$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@——我们铭记。老兵卡片：%2$@"
           }
         }
       }
@@ -3205,10 +5518,22 @@
             "value": "Напаміны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reminders"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Напоминания"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "提醒"
           }
         }
       }
@@ -3222,10 +5547,22 @@
             "value": "Зняць правы адміністратара?"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Revoke administrator rights?"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Снять права администратора?"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "撤销管理员权限？"
           }
         }
       }
@@ -3239,10 +5576,22 @@
             "value": "Прыбраць з абранага"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove from favorites"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Убрать из избранного"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "从收藏中移除"
           }
         }
       }
@@ -3256,10 +5605,22 @@
             "value": "Прыбярыце непрыстойныя і абразлівыя выразы — такое паведамленне не будзе адпраўлена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove obscene and offensive language — such a message will not be sent"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Уберите нецензурные и оскорбительные выражения — такое сообщение не будет отправлено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请删除粗俗和冒犯性的言语——此类消息不会被发送"
           }
         }
       }
@@ -3273,10 +5634,51 @@
             "value": "Выдаліць фота"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Remove photo"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Удалить фото"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "删除照片"
+          }
+        }
+      }
+    },
+    "removed_from_favorites": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выдалена з абранага"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Removed from favorites"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Удалено из избранного"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已从收藏中移除"
           }
         }
       }
@@ -3290,10 +5692,22 @@
             "value": "Адказ"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reply"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ответ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回复"
           }
         }
       }
@@ -3307,10 +5721,22 @@
             "value": "Адказ: %1$@"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reply: %1$@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ответ: %1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "回复：%1$@"
           }
         }
       }
@@ -3324,10 +5750,22 @@
             "value": "Ваш адказ аўтар убачыць у раздзеле «Яшчэ → Мае звароты»."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The author will see your reply under More → My requests."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ваш ответ автор увидит в разделе «Ещё → Мои обращения»."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "作者将在“更多 → 我的申请”中看到您的回复。"
           }
         }
       }
@@ -3341,10 +5779,22 @@
             "value": "Паведаміць пра памылку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Report an error"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Сообщить об ошибке"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "报告错误"
           }
         }
       }
@@ -3358,10 +5808,22 @@
             "value": "Заяўкі і звароты"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Submissions and messages"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Заявки и обращения"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "申请和消息"
           }
         }
       }
@@ -3375,10 +5837,22 @@
             "value": "«Мадэрацыя» — матэрыялы сваякоў. Папраўце тэкст, прыбярыце лішнія фота і націсніце «Ухваліць»: усё адразу трапіць у картку з подпісам «З сямейнага архіва».\n«Зваротная сувязь» — паведамленні і справаздачы пра памылкі ад наведвальнікаў. Адзначце зварот прагледжаным і пры жаданні напішыце адказ.\nНецэнзурныя тэксты і непрыстойныя фота праграма адсякае сама яшчэ да адпраўкі, але гэтую праверку можна абысці, таму праглядайце ўсё перад ухваленнем."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Moderation” holds materials from relatives. Fix the text, remove extra photos and tap “Approve”: everything goes to the card at once, captioned “From the family archive”.\n“Feedback” holds visitors' messages and error reports. Mark a message as reviewed and write a reply if you like.\nThe app filters obscene texts and indecent photos before sending, but this check can be bypassed, so review everything before approving."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "«Модерация» — материалы родственников. Поправьте текст, уберите лишние фото и нажмите «Одобрить»: всё сразу попадёт в карточку с подписью «Из семейного архива».\n«Обратная связь» — сообщения и отчёты об ошибках посетителей. Отметьте обращение просмотренным и при желании напишите ответ.\nНецензурные тексты и непристойные фото приложение отсекает само ещё до отправки, но эту проверку можно обойти, поэтому просматривайте всё перед одобрением."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“审核”中是亲属提交的材料。修改文字、删除多余照片后点击“通过”：所有内容会立即添加到卡片，并标注“来自家庭档案”。\n“反馈”中是访客的消息和错误报告。将其标记为已处理，如有需要可撰写回复。\n应用会在发送前拦截粗俗文字和不雅照片，但此检查可被绕过，因此通过前请逐一查看。"
           }
         }
       }
@@ -3392,10 +5866,22 @@
             "value": "Патрабуе ўвагі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Needs attention"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Требует внимания"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "需要处理"
           }
         }
       }
@@ -3409,10 +5895,22 @@
             "value": "Разгледжана"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reviewed"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Рассмотрено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已处理"
           }
         }
       }
@@ -3426,10 +5924,22 @@
             "value": "Згарнуць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Collapse"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Свернуть"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收起"
           }
         }
       }
@@ -3467,6 +5977,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld route"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld routes"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -3496,6 +6024,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 条路线"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -3508,10 +6048,22 @@
             "value": "Рад"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Row"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ряд"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "排"
           }
         }
       }
@@ -3531,19 +6083,14 @@
     "russian": {
       "extractionState": "manual",
       "localizations": {
-        "be": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Русский"
-          }
-        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Русский"
           }
         }
-      }
+      },
+      "shouldTranslate": false
     },
     "satellite": {
       "extractionState": "manual",
@@ -3554,10 +6101,22 @@
             "value": "Спадарожнік"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Satellite"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Спутник"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "卫星"
           }
         }
       }
@@ -3571,10 +6130,22 @@
             "value": "Захаваць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Save"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Сохранить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "保存"
           }
         }
       }
@@ -3588,10 +6159,22 @@
             "value": "Калі кнопка «Захаваць» неактыўная, значыць ПІБ пустое або дата ўведзена няправільна: такое поле падсвечана чырвоным."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If the Save button is disabled, the full name is empty or a date is invalid: such a field is highlighted in red."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Если кнопка «Сохранить» неактивна, значит ФИО пустое или дата введена неверно: такое поле подсвечено красным."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果“保存”按钮不可用，说明姓名为空或日期无效：此类字段会以红色标出。"
           }
         }
       }
@@ -3605,10 +6188,22 @@
             "value": "Сканаваць QR-код"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scan QR code"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Сканировать QR-код"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "扫描二维码"
           }
         }
       }
@@ -3622,10 +6217,22 @@
             "value": "Схема"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Map"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Схема"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地图"
           }
         }
       }
@@ -3639,10 +6246,22 @@
             "value": "Пошук"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Поиск"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "搜索"
           }
         }
       }
@@ -3656,10 +6275,22 @@
             "value": "Пошук па імені"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Search by name"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Поиск по имени"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "按姓名搜索"
           }
         }
       }
@@ -3673,10 +6304,22 @@
             "value": "Участак"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Section"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Участок"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "区"
           }
         }
       }
@@ -3690,10 +6333,22 @@
             "value": "Участак %1$@ · рад %2$@ · месца %3$@"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Section %1$@ · row %2$@ · plot %3$@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Участок %1$@ · ряд %2$@ · место %3$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$@ 区 · %2$@ 排 · %3$@ 号"
           }
         }
       }
@@ -3707,10 +6362,22 @@
             "value": "Адправіць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отправить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送"
           }
         }
       }
@@ -3724,10 +6391,51 @@
             "value": "Адправіць адказ"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Send reply"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Отправить ответ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "发送回复"
+          }
+        }
+      }
+    },
+    "share": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Падзяліцца"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Share"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Поделиться"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "分享"
           }
         }
       }
@@ -3741,10 +6449,22 @@
             "value": "Калі ў вас ёсць фотаздымкі, дакументы або ўспаміны пра гэтага чалавека, дашліце іх. Пасля праверкі мы дададзім матэрыялы ў картку ветэрана."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "If you have photos, documents or memories of this person, please send them. After review we will add them to the veteran's card."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Если у вас есть фотографии, документы или воспоминания об этом человеке, пришлите их. После проверки мы добавим материалы в карточку ветерана."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "如果您有关于此人的照片、文件或回忆，请发送给我们。审核后我们会将其添加到老兵的卡片中。"
           }
         }
       }
@@ -3758,10 +6478,22 @@
             "value": "Кароткая інфармацыя"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Short description"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Краткая информация"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "简介"
           }
         }
       }
@@ -3775,10 +6507,22 @@
             "value": "Паказаць на карце"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Show on map"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Показать на карте"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在地图上显示"
           }
         }
       }
@@ -3792,10 +6536,22 @@
             "value": "Увайсці"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Войти"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "登录"
           }
         }
       }
@@ -3809,10 +6565,22 @@
             "value": "Уваход для адміністратара"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Administrator sign-in"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Вход для администратора"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理员登录"
           }
         }
       }
@@ -3826,10 +6594,22 @@
             "value": "Увайдзіце праз Google, і абранае са зваротамі захаваюцца нават пасля пераўсталёўкі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Google to keep your favorites and requests even after reinstalling"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Войдите через Google, и избранное с обращениями сохранятся даже после переустановки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Google 登录，重新安装后收藏和申请也不会丢失"
           }
         }
       }
@@ -3843,10 +6623,22 @@
             "value": "Увайсці праз Google"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign in with Google"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Войти через Google"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用 Google 登录"
           }
         }
       }
@@ -3860,10 +6652,22 @@
             "value": "Выйсці"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sign out"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Выйти"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "退出登录"
           }
         }
       }
@@ -3877,10 +6681,22 @@
             "value": "Вы ўвайшлі як\n%1$@"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Signed in as\n%1$@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Вы вошли как\n%1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当前登录账户\n%1$@"
           }
         }
       }
@@ -3894,10 +6710,22 @@
             "value": "У памяць аб тых, хто падарыў нам мірнае неба і праславіў беларускую творчасць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "In memory of those who gave us a peaceful sky and glorified Belarusian art"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "В память о тех, кто подарил нам мирное небо и прославил белорусское творчество"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "纪念那些为我们赢得和平天空、为白俄罗斯艺术增光的人"
           }
         }
       }
@@ -3911,10 +6739,22 @@
             "value": "Пачаць"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Get started"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Начать"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
           }
         }
       }
@@ -3928,10 +6768,22 @@
             "value": "Пачаць нанова"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start over"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Начать заново"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新开始"
           }
         }
       }
@@ -3945,10 +6797,22 @@
             "value": "Нумары на карце і лінія маршруту бяруцца з парадку прыпынкаў, прэв’ю відаць проста ў рэдактары."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The numbers on the map and the route line follow the order of the stops; the preview is shown right in the editor."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Номера на карте и линия маршрута берутся из порядка остановок, превью видно прямо в редакторе."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "地图上的编号和路线按站点顺序生成，编辑器中可直接预览。"
           }
         }
       }
@@ -3962,10 +6826,22 @@
             "value": "Тэкст прыпынку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop text"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Текст остановки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "站点文字"
           }
         }
       }
@@ -3979,10 +6855,22 @@
             "value": "Прыпынкі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stops"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Остановки"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "站点"
           }
         }
       }
@@ -4020,6 +6908,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld stop"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld stops"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -4049,6 +6955,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 个站点"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -4061,10 +6979,22 @@
             "value": "Прапанова"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggestion"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Предложение"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建议"
           }
         }
       }
@@ -4078,10 +7008,22 @@
             "value": "Супер-адміністратар"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Super administrator"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Супер-администратор"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "超级管理员"
           }
         }
       }
@@ -4095,10 +7037,22 @@
             "value": "Ордэн Суворава I ступені"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of Suvorov, 1st class"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Суворова I степени"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "一级苏沃洛夫勋章"
           }
         }
       }
@@ -4112,10 +7066,22 @@
             "value": "Ордэн Суворава II ступені"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Order of Suvorov, 2nd class"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Орден Суворова II степени"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "二级苏沃洛夫勋章"
           }
         }
       }
@@ -4129,10 +7095,22 @@
             "value": "Націсніце на карту, каб перастаўляць метку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tap the map to move the marker"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Нажмите на карту, чтобы переставить метку"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "点击地图以移动标记"
           }
         }
       }
@@ -4146,10 +7124,22 @@
             "value": "Памер тэксту"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Text size"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Размер текста"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文字大小"
           }
         }
       }
@@ -4163,10 +7153,22 @@
             "value": "Дзякуй, што захоўваеце памяць разам з намі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you for keeping the memory with us"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Спасибо, что храните память вместе с нами"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "感谢您与我们一起守护记忆"
           }
         }
       }
@@ -4180,10 +7182,22 @@
             "value": "Дзякуй! Матэрыял адпраўлены на праверку"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you! The material has been sent for review"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Спасибо! Материал отправлен на проверку"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "谢谢！材料已提交审核"
           }
         }
       }
@@ -4197,10 +7211,22 @@
             "value": "Дзякуй! Паведамленне адпраўлена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thank you! Your message has been sent"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Спасибо! Сообщение отправлено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "谢谢！消息已发送"
           }
         }
       }
@@ -4214,10 +7240,22 @@
             "value": "Тэма"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Theme"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Тема"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主题"
           }
         }
       }
@@ -4231,7 +7269,19 @@
             "value": "×%1$lld"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "×%1$lld"
+          }
+        },
         "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "×%1$lld"
+          }
+        },
+        "zh-Hans": {
           "stringUnit": {
             "state": "translated",
             "value": "×%1$lld"
@@ -4248,10 +7298,22 @@
             "value": "Назва"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Title"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Название"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "标题"
           }
         }
       }
@@ -4265,10 +7327,22 @@
             "value": "Экскурсія"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tour"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Экскурсия"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导览"
           }
         }
       }
@@ -4282,10 +7356,22 @@
             "value": "Адмін → Экскурсіі → «Дадаць экскурсію».\nДайце назву і кароткае апісанне, напрыклад «Героі Савецкага Саюза, 40 хвілін».\nНацісніце «Дадаць прыпынак» і знайдзіце месца па прозвішчы, нумары ўчастка або тыпе.\nДля кожнага прыпынку напішыце тэкст, які наведвальнік чытае каля магілы, і прымацуйце аўдыягід.\nВыстаўце парадак прыпынкаў стрэлкамі."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin → Tours → “Add tour”.\nGive it a title and a short description, for example “Heroes of the Soviet Union, 40 minutes”.\nTap “Add stop” and find the place by surname, section number or type.\nFor each stop write the text the visitor reads at the grave and attach an audio guide.\nSet the order of the stops with the arrows."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Админ → Экскурсии → «Добавить экскурсию».\nДайте название и короткое описание, например «Герои Советского Союза, 40 минут».\nНажмите «Добавить остановку» и найдите место по фамилии, номеру участка или типу.\nДля каждой остановки напишите текст, который посетитель читает у могилы, и прикрепите аудиогид.\nВыставьте порядок остановок стрелками."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理 → 导览 → “添加导览”。\n填写标题和简短描述，例如“苏联英雄，40分钟”。\n点击“添加站点”，按姓氏、区号或类型查找地点。\n为每个站点撰写访客在墓前阅读的文字，并附上语音导览。\n用箭头设置站点顺序。"
           }
         }
       }
@@ -4299,10 +7385,51 @@
             "value": "Экскурсіі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tours"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Экскурсии"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "导览"
+          }
+        }
+      }
+    },
+    "translation_is_optional_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пераклад неабавязковы: пустыя палі паказваюцца па-руску"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Translation is optional: empty fields show the Russian text"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перевод необязателен: пустые поля показываются на русском"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "翻译为可选项：空字段显示俄语原文"
           }
         }
       }
@@ -4316,10 +7443,51 @@
             "value": "Фота або аўдыя не загружаецца — праверце інтэрнэт і памер файла. Калі памылка паўтараецца, папрасіце распрацоўшчыка дадаць ваш UID у правілы Storage.\n«Няма правоў адміністратара» пры ўваходзе — у базе няма запісу з вашым UID у OurMemory/Admins. Прайдзіце крокі раздзела «Адміністратары».\nНаведвальнік не бачыць змены — праграма загружае даныя адзін раз за запуск, новае з’явіцца пасля перазапуску.\nУваход адміністратара на тэлефоне наведвальніка скідвае яго ўваход праз Google. Працуйце са свайго тэлефона."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A photo or audio doesn't upload — check the internet and the file size. If the error repeats, ask the developer to add your UID to the Storage rules.\n“No administrator rights” on sign-in — the database has no record with your UID in OurMemory/Admins. Follow the steps in the Administrators section.\nA visitor doesn't see the changes — the app loads data once per launch, new content appears after a restart.\nAn administrator sign-in on a visitor's phone resets their Google sign-in. Work from your own phone."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Фото или аудио не загружается — проверьте интернет и размер файла. Если ошибка повторяется, попросите разработчика добавить ваш UID в правила Storage.\n«Нет прав администратора» при входе — в базе нет записи с вашим UID в OurMemory/Admins. Пройдите шаги раздела «Администраторы».\nПосетитель не видит изменения — приложение загружает данные один раз за запуск, новое появится после перезапуска.\nВход администратора на телефоне посетителя сбрасывает его вход через Google. Работайте со своего телефона."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "照片或音频无法上传——请检查网络和文件大小。如果错误重复出现，请让开发者将您的 UID 添加到 Storage 规则中。\n登录时提示“没有管理员权限”——数据库中 OurMemory/Admins 下没有您的 UID。请按“管理员”部分的步骤操作。\n访客看不到更改——应用每次启动只加载一次数据，重启后才会显示新内容。\n在访客手机上登录管理员会使其 Google 登录失效。请使用自己的手机操作。"
+          }
+        }
+      }
+    },
+    "undo": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Адмяніць"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Undo"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Отменить"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "撤销"
           }
         }
       }
@@ -4333,10 +7501,22 @@
             "value": "Загружаем файл…"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uploading file…"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Загружаем файл…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在上传文件…"
           }
         }
       }
@@ -4350,10 +7530,22 @@
             "value": "Ветэран"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veteran"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ветеран"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "老兵"
           }
         }
       }
@@ -4391,6 +7583,24 @@
             }
           }
         },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld card"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld cards"
+                }
+              }
+            }
+          }
+        },
         "ru": {
           "variations": {
             "plural": {
@@ -4420,6 +7630,18 @@
               }
             }
           }
+        },
+        "zh-Hans": {
+          "variations": {
+            "plural": {
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld 张卡片"
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -4429,13 +7651,25 @@
         "be": {
           "stringUnit": {
             "state": "translated",
-            "value": "Адмін → Ветэраны → «Дадаць ветэрана». Нумар карткі праграма прысвоіць сама.\nПІБ цалкам і гады жыцця як на таблічцы, напрыклад «1905–1966».\nКатэгорыя вызначае фільтр у спісе і на карце: «Героі Савецкага Саюза» або «Дзеячы мастацтваў».\nДаты нараджэння і смерці выберыце ў календары: па іх працуюць блок «У гэты дзень» і напаміны абранага.\nВыберыце месца пахавання са спіса месцаў, створаных загадзя.\nДадайце партрэт: твар па цэнтры, праграма сама сцісне фота.\nУзнагароды ставяцца плюсам і мінусам: два ордэны Чырвонай Зоркі — «2» насупраць ордэна.\nБіяграфію збярыце з абзацаў і фота з подпісамі. Стрэлкі мяняюць парадак, крыжык выдаляе блок."
+            "value": "Адмін → Ветэраны → «Дадаць ветэрана». Нумар карткі праграма прысвоіць сама.\nПІБ цалкам і гады жыцця як на таблічцы, напрыклад «1905–1966».\nКатэгорыя вызначае фільтр у спісе і на карце: «Героі Савецкага Саюза» або «Дзеячы мастацтваў».\nДаты нараджэння і смерці выберыце ў календары: па іх працуюць блок «У гэты дзень» і напаміны абранага.\nВыберыце месца пахавання са спіса месцаў, створаных загадзя.\nДадайце партрэт: твар па цэнтры, праграма сама сцісне фота.\nУзнагароды ставяцца плюсам і мінусам: два ордэны Чырвонай Зоркі — «2» насупраць ордэна.\nБіяграфію збярыце з абзацаў і фота з подпісамі. Стрэлкі мяняюць парадак, крыжык выдаляе блок.\nВыкарыстоўвайце пераключальнік мовы ўверсе формы, каб запоўніць пераклады: пустыя палі паказваюцца па-руску."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Admin → Veterans → “Add veteran”. The app assigns the card number itself.\nFull name and years of life as on the plate, for example “1905–1966”.\nThe category sets the filter in the list and on the map: “Heroes of the Soviet Union” or “Artists”.\nPick the dates of birth and death in the calendar: the “On this day” section and favorite reminders rely on them.\nChoose the burial place from the list of places created in advance.\nAdd a portrait: the face in the center, the app compresses the photo itself.\nAwards are set with plus and minus: two Orders of the Red Star means “2” next to the order.\nBuild the biography from paragraphs and captioned photos. Arrows change the order, the cross removes a block.\nUse the language switch at the top of the form to fill in translations: empty fields show the Russian text."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Админ → Ветераны → «Добавить ветерана». Номер карточки приложение присвоит само.\nФИО полностью и годы жизни как на табличке, например «1905–1966».\nКатегория определяет фильтр в списке и на карте: «Герои Советского Союза» или «Деятели искусств».\nДаты рождения и смерти выберите в календаре: по ним работают блок «В этот день» и напоминания избранного.\nВыберите место захоронения из списка мест, созданных заранее.\nДобавьте портрет: лицо по центру, приложение само сожмёт фото.\nНаграды ставятся плюсом и минусом: два ордена Красной Звезды — «2» напротив ордена.\nБиографию соберите из абзацев и фото с подписями. Стрелки меняют порядок, крестик удаляет блок."
+            "value": "Админ → Ветераны → «Добавить ветерана». Номер карточки приложение присвоит само.\nФИО полностью и годы жизни как на табличке, например «1905–1966».\nКатегория определяет фильтр в списке и на карте: «Герои Советского Союза» или «Деятели искусств».\nДаты рождения и смерти выберите в календаре: по ним работают блок «В этот день» и напоминания избранного.\nВыберите место захоронения из списка мест, созданных заранее.\nДобавьте портрет: лицо по центру, приложение само сожмёт фото.\nНаграды ставятся плюсом и минусом: два ордена Красной Звезды — «2» напротив ордена.\nБиографию соберите из абзацев и фото с подписями. Стрелки меняют порядок, крестик удаляет блок.\nИспользуйте переключатель языка вверху формы, чтобы заполнить переводы: пустые поля показываются на русском."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "管理 → 老兵 → “添加老兵”。卡片编号由应用自动分配。\n按标牌填写完整姓名和生卒年，例如“1905–1966”。\n类别决定列表和地图中的筛选：“苏联英雄”或“艺术家”。\n在日历中选择出生和逝世日期：“历史上的今天”和收藏提醒依赖这些日期。\n从预先创建的地点列表中选择安葬地点。\n添加肖像：脸部居中，应用会自动压缩照片。\n荣誉用加号和减号设置：两枚红星勋章即在该勋章旁填“2”。\n用段落和带说明的照片组成生平。箭头调整顺序，叉号删除内容块。\n用表单顶部的语言切换填写翻译：空字段显示俄语原文。"
           }
         }
       }
@@ -4449,10 +7683,22 @@
             "value": "Ветэраны"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veterans"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ветераны"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "老兵"
           }
         }
       }
@@ -4466,10 +7712,22 @@
             "value": "Дзень Перамогі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Victory Day"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "День Победы"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "胜利日"
           }
         }
       }
@@ -4483,10 +7741,22 @@
             "value": "Пройдзена"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visited"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Пройдено"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已参观"
           }
         }
       }
@@ -4500,10 +7770,22 @@
             "value": "Пройдзена %1$lld з %2$lld"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Visited %1$lld of %2$lld"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Пройдено %1$lld из %2$lld"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已参观 %1$lld / %2$lld"
           }
         }
       }
@@ -4517,10 +7799,22 @@
             "value": "Агучка"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voice-over"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Озвучка"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "配音"
           }
         }
       }
@@ -4534,10 +7828,22 @@
             "value": "Біяграфія доўжыцца 1–3 хвіліны, прыпынак экскурсіі — 30–90 секунд.\nФармат mp3 або m4a, памер файла да 50 МБ.\nДля сінтэзу маўлення падыдуць ElevenLabs або Yandex SpeechKit. Жывы голас на дыктафон у ціхім пакоі часта гучыць лепш.\nПерашліце файл сабе на тэлефон і загрузіце кнопкай «Дадаць аўдыя» ў картцы ветэрана або ў прыпынку."
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A biography lasts 1–3 minutes, a tour stop 30–90 seconds.\nmp3 or m4a format, file size up to 50 MB.\nElevenLabs or Yandex SpeechKit work for speech synthesis. A live voice recorded in a quiet room often sounds better.\nSend the file to your phone and upload it with “Add audio” in the veteran's card or in the stop."
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Биография длится 1–3 минуты, остановка экскурсии — 30–90 секунд.\nФормат mp3 или m4a, размер файла до 50 МБ.\nДля синтеза речи подойдут ElevenLabs или Yandex SpeechKit. Живой голос на диктофон в тихой комнате часто звучит лучше.\nПерешлите файл себе на телефон и загрузите кнопкой «Добавить аудио» в карточке ветерана или в остановке."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生平时长1–3分钟，导览站点30–90秒。\n格式为 mp3 或 m4a，文件不超过 50 MB。\n可使用 ElevenLabs 或 Yandex SpeechKit 进行语音合成。在安静的房间用录音机录制的真人声音往往效果更好。\n将文件发送到手机，然后在老兵卡片或站点中通过“添加音频”上传。"
           }
         }
       }
@@ -4551,10 +7857,22 @@
             "value": "Вайсковыя могілкі"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Military Cemetery"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Военное кладбище"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "军人公墓"
           }
         }
       }
@@ -4568,10 +7886,22 @@
             "value": "Напісаць нам"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Contact us"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Написать нам"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "联系我们"
           }
         }
       }
@@ -4585,10 +7915,22 @@
             "value": "Няправільны e-mail або пароль"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wrong e-mail or password"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Неверный e-mail или пароль"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "电子邮件或密码错误"
           }
         }
       }
@@ -4602,10 +7944,22 @@
             "value": "Гады жыцця"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Years of life"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Годы жизни"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "生卒年"
           }
         }
       }
@@ -4619,10 +7973,22 @@
             "value": "Ваша імя і тэлефон або e-mail"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your name and phone or e-mail"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ваше имя и телефон или e-mail"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您的姓名和电话或电子邮件"
           }
         }
       }
@@ -4636,10 +8002,22 @@
             "value": "Ваш адказ: %1$@"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your reply: %1$@"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Ваш ответ: %1$@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您的回复：%1$@"
           }
         }
       }
@@ -4653,10 +8031,22 @@
             "value": "Медаль «За адвагу»"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medal “For Courage”"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Медаль «За отвагу»"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“英勇”奖章"
           }
         }
       }
@@ -4670,10 +8060,22 @@
             "value": "Медаль «За перамогу над Германіяй у Вялікай Айчыннай вайне 1941–1945 гг.»"
           }
         },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Medal “For the Victory over Germany in the Great Patriotic War 1941–1945”"
+          }
+        },
         "ru": {
           "stringUnit": {
             "state": "translated",
             "value": "Медаль «За победу над Германией в Великой Отечественной войне 1941–1945 гг.»"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“1941—1945年伟大卫国战争战胜德国”奖章"
           }
         }
       }

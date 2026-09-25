@@ -37,7 +37,7 @@ final class SettingsRepositoryImpl: SettingsRepository {
             return AppSettings(
                 themeMode: defaults.string(forKey: Self.themeModeKey).flatMap(ThemeMode.init(rawValue:)) ?? .system,
                 textScale: defaults.string(forKey: Self.textScaleKey).flatMap(TextScale.init(rawValue:)) ?? .normal,
-                language: defaults.string(forKey: Self.languageKey).flatMap(AppLanguage.init(rawValue:)) ?? .russian,
+                language: defaults.string(forKey: Self.languageKey).flatMap(AppLanguage.init(rawValue:)) ?? AppLanguage.preferredBySystem,
                 victoryDayReminder: defaults.object(forKey: Self.victoryDayReminderKey) as? Bool ?? true,
                 favoriteReminders: defaults.object(forKey: Self.favoriteRemindersKey) as? Bool ?? true
             )
