@@ -20,6 +20,7 @@ struct MainNavigationView: View {
             .modifier(VeteranNavigationDestinations(container: container, router: router))
             .modifier(MapNavigationDestinations(container: container, router: router))
             .modifier(MoreNavigationDestinations(container: container, router: router))
+            .modifier(AdminNavigationDestinations(container: container, router: router))
         }
         .onChange(of: deepLinks.pendingVeteranId, initial: true) { _, veteranId in
             guard let veteranId else {

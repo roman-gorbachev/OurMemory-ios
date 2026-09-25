@@ -16,9 +16,11 @@ struct MoreNavigationDestinations: ViewModifier {
                     onVeteranOpen: { router.push(VeteranDestination.details(veteranId: $0)) }
                 )
             case .adminLogin:
-                TopBarContainer(title: L10n.string("sign_in_as_admin"), onBack: router.pop) {
-                    ErrorView()
-                }
+                AdminLoginRoute(
+                    viewModel: container.buildAdminLoginViewModel(),
+                    onBack: router.pop,
+                    onSignedIn: { router.switchTab(.admin) }
+                )
             }
         }
     }

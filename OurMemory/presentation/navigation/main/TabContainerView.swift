@@ -67,7 +67,11 @@ struct TabContainerView: View {
                 }
             )
         case .admin:
-            ErrorView()
+            AdminHomeRoute(
+                viewModel: container.buildAdminHomeViewModel(),
+                onOpen: { router.push($0) },
+                onSignedOut: { router.switchTab(.more) }
+            )
         }
     }
 }
