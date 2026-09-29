@@ -13,7 +13,7 @@ struct RootView: View {
     var body: some View {
         let settings = viewModel.settings
         return ZStack {
-            if !viewModel.isIntroSeen && deepLinks.pendingVeteranId == nil {
+            if !viewModel.isIntroSeen && !deepLinks.hasReceivedLink {
                 IntroScreen(onStart: viewModel.markIntroSeen)
                     .transition(.opacity)
             } else {

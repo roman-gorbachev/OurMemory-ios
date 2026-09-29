@@ -98,11 +98,16 @@ final class MapViewModel {
     }
 
     private func refreshSelection() async {
-        selectedDetails = await selectedBurialId.flatMap { id in
+        let requestedBurialId = selectedBurialId
+        let loadedDetails = await requestedBurialId.flatMap { id in
             return burials.first { return $0.id == id }
         }.asyncMap { burial in
             return await details(for: burial)
         }
+        guard selectedBurialId == requestedBurialId else {
+            return
+        }
+        selectedDetails = loadedDetails
         rebuild()
     }
 
