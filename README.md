@@ -67,6 +67,10 @@ xcodebuild -workspace OurMemory.xcworkspace -scheme OurMemory \
 - `tools/nsfw/convert_coreml.py` rebuilds the `NsfwClassifier.mlpackage` model.
 - `tools/icon/app_icon.svg` is the source of the app icon, shared by iOS and Android.
 
+## License
+
+All rights reserved. The code is published for viewing only; see [LICENSE](LICENSE).
+
 ## Author
 
 Roman Gorbachev
