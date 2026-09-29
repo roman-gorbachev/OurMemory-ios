@@ -7,10 +7,40 @@ enum MapImages {
     private static let userDotOuterRadius: CGFloat = 11
     private static let userDotInnerRadius: CGFloat = 7.5
     private static let brandRed = UIColor(red: 0x7F / 255.0, green: 0x04 / 255.0, blue: 0x10 / 255.0, alpha: 1)
+    private static let markerWidth: CGFloat = 32
+    private static let markerHeight: CGFloat = 42
+    private static let markerStroke: CGFloat = 2
+    private static let markerHoleRatio: CGFloat = 0.36
+    private static let markerArcStart: CGFloat = .pi * 0.8
+    private static let markerArcEnd: CGFloat = .pi * 0.2
     private static var numberCache: [Int: UIImage] = [:]
+    private static var markerCache: UIImage?
+
+    static let markerAnchor = CGPoint(x: 0.5, y: 1)
 
     static var marker: UIImage {
-        return UIImage(named: "icMarker") ?? UIImage()
+        if let markerCache {
+            return markerCache
+        }
+        let size = CGSize(width: markerWidth, height: markerHeight)
+        let image = UIGraphicsImageRenderer(size: size).image { _ in
+            let center = CGPoint(x: markerWidth / 2, y: markerWidth / 2)
+            let radius = markerWidth / 2 - markerStroke
+            let pin = UIBezierPath()
+            pin.addArc(withCenter: center, radius: radius, startAngle: markerArcStart, endAngle: markerArcEnd, clockwise: true)
+            pin.addLine(to: CGPoint(x: markerWidth / 2, y: markerHeight - markerStroke))
+            pin.close()
+            pin.lineJoin = .round
+            brandRed.setFill()
+            pin.fill()
+            UIColor.white.setStroke()
+            pin.lineWidth = markerStroke
+            pin.stroke()
+            UIColor.white.setFill()
+            UIBezierPath(arcCenter: center, radius: radius * markerHoleRatio, startAngle: 0, endAngle: .pi * 2, clockwise: true).fill()
+        }
+        markerCache = image
+        return image
     }
 
     static var accentColor: UIColor {

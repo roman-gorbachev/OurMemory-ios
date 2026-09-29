@@ -100,11 +100,13 @@ final class YandexMapCoordinator: NSObject, YMKClusterListener, YMKClusterTapLis
     private func applyMarkers(_ content: MapContent) {
         markersCollection?.clear()
         plainCollection?.clear()
+        let markerStyle = YMKIconStyle()
+        markerStyle.anchor = NSValue(cgPoint: MapImages.markerAnchor)
         for marker in content.markers {
             let point = YMKPoint(latitude: marker.latitude, longitude: marker.longitude)
             let placemark = content.clustersMarkers ? markersCollection?.addPlacemark() : plainCollection?.addPlacemark()
             placemark?.geometry = point
-            placemark?.setIconWith(MapImages.marker)
+            placemark?.setIconWith(MapImages.marker, style: markerStyle)
             placemark?.userData = marker.id
             placemark?.addTapListener(with: self)
         }
