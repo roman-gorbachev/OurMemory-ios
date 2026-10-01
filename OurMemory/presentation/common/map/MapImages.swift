@@ -30,7 +30,7 @@ enum MapImages {
             pin.addArc(withCenter: center, radius: radius, startAngle: markerArcStart, endAngle: markerArcEnd, clockwise: true)
             pin.addLine(to: CGPoint(x: markerWidth / 2, y: markerHeight - markerStroke))
             pin.close()
-            pin.lineJoin = .round
+            pin.lineJoinStyle = .round
             brandRed.setFill()
             pin.fill()
             UIColor.white.setStroke()
