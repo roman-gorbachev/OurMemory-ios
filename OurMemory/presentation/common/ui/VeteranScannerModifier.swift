@@ -1,8 +1,9 @@
 import SwiftUI
 import VisionKit
 
-struct QrScannerModifier: ViewModifier {
+struct VeteranScannerModifier: ViewModifier {
     @Binding var isPresented: Bool
+    let makeViewModel: () -> VeteranScanViewModel
     let onVeteranScanned: (String) -> Void
     @State private var alertMessage: LocalizedStringKey?
 
@@ -16,16 +17,22 @@ struct QrScannerModifier: ViewModifier {
             }
             .fullScreenCover(isPresented: $isPresented) {
                 NavigationStack {
-                    QrScannerView { payload in
-                        isPresented = false
-                        if let veteranId = VeteranLink.parseVeteranId(payload) {
+                    VeteranScanRoute(
+                        viewModel: makeViewModel(),
+                        onQrScanned: { payload in
+                            isPresented = false
+                            if let veteranId = VeteranLink.parseVeteranId(payload) {
+                                onVeteranScanned(veteranId)
+                            } else {
+                                alertMessage = "not_our_qr_code_msg"
+                            }
+                        },
+                        onVeteranOpen: { veteranId in
+                            isPresented = false
                             onVeteranScanned(veteranId)
-                        } else {
-                            alertMessage = "not_our_qr_code_msg"
                         }
-                    }
-                    .ignoresSafeArea()
-                    .navigationTitle("scan_qr_code")
+                    )
+                    .navigationTitle("scan_qr_code_or_name")
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbarBackground(.visible, for: .navigationBar)
                     .toolbar {
@@ -45,7 +52,15 @@ struct QrScannerModifier: ViewModifier {
 }
 
 extension View {
-    func qrScanner(isPresented: Binding<Bool>, onVeteranScanned: @escaping (String) -> Void) -> some View {
-        return modifier(QrScannerModifier(isPresented: isPresented, onVeteranScanned: onVeteranScanned))
+    func veteranScanner(
+        isPresented: Binding<Bool>,
+        makeViewModel: @escaping () -> VeteranScanViewModel,
+        onVeteranScanned: @escaping (String) -> Void
+    ) -> some View {
+        return modifier(VeteranScannerModifier(
+            isPresented: isPresented,
+            makeViewModel: makeViewModel,
+            onVeteranScanned: onVeteranScanned
+        ))
     }
 }

@@ -49,7 +49,7 @@ LLM подключается через **Firebase AI Logic** с провайд�
 - Задать лимит на пользователя, квоты и бюджет-оповещение.
 - Проверить запрос с устройства из Беларуси (без VPN).
 - **OCR на реальных плитах:** 20–30 фото надгробий прогнать через Apple Vision (`ru-RU`). Если узнаётся меньше половины имён — камеру делать только как дополнение к QR или не делать.
-- **OCR на Android:** ML Kit on-device не поддерживает кириллицу. Варианты: отправка кадра в Gemini через AI Logic (центы, но нужен интернет) или Tesseract с `rus`. Решить по итогам теста.
+- **OCR на Android:** ML Kit on-device не поддерживает кириллицу, поэтому надпись распознаёт Gemini по фото (решено; ~$0,001 за фото, нужен интернет).
 
 ## Этап 1. Камера на надгробие (без ИИ-сервиса)
 
@@ -61,7 +61,7 @@ LLM подключается через **Firebase AI Logic** с провайд�
 - Кнопка в тулбаре вкладки «Ветераны» (`presentation/home/ui/HomeRoute.swift`, SF Symbol `text.viewfinder`) плюс существующий пункт в «Ещё».
 - `presentation/scan/viewmodels/ScanCandidatesViewModel.swift` берёт ветеранов из существующего репозитория; фабрика в `di/AppDIContainer.swift`.
 - Строки `scan_grave`, `scan_grave_hint`, `no_matching_veterans_msg` — сначала в Android, затем `sync_android_strings.py`.
-- Android: тот же сценарий в CameraX + выбранный OCR.
+- Android: системный сканер Google (`GmsBarcodeScanning`) заменяется своим экраном на CameraX: живое распознавание QR через ML Kit `barcode-scanning` и кнопка «Сфотографировать плиту» — кадр уходит в Gemini через AI Logic, ответ (имя и годы) проходит тот же алгоритм сопоставления, перенесённый в Kotlin.
 
 ## Этап 2. Клиентская основа для AI Logic
 

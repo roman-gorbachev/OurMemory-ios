@@ -30,7 +30,7 @@ struct MoreScreen: View {
                     }
                 }
                 DisclosureRow(title: "favorites", systemImage: "heart.fill", color: .pink, action: onFavorites)
-                DisclosureRow(title: "scan_qr_code", systemImage: "qrcode.viewfinder", color: .gray, action: onScanQr)
+                DisclosureRow(title: "scan_qr_code_or_name", systemImage: "text.viewfinder", color: .gray, action: onScanQr)
                 DisclosureRow(title: "write_to_us", systemImage: "square.and.pencil", color: .green, action: onWriteToUs)
             }
             Section("appearance") {

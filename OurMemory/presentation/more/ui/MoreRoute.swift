@@ -8,9 +8,11 @@ struct MoreRoute: View {
     let onFavorites: () -> Void
     let onVeteranOpen: (String) -> Void
     let onAdmin: () -> Void
+    let makeScanViewModel: () -> VeteranScanViewModel
 
     init(
         viewModel: MoreViewModel,
+        makeScanViewModel: @escaping () -> VeteranScanViewModel,
         onWriteToUs: @escaping () -> Void,
         onMyRequests: @escaping () -> Void,
         onFavorites: @escaping () -> Void,
@@ -18,6 +20,7 @@ struct MoreRoute: View {
         onAdmin: @escaping () -> Void
     ) {
         _viewModel = State(initialValue: viewModel)
+        self.makeScanViewModel = makeScanViewModel
         self.onWriteToUs = onWriteToUs
         self.onMyRequests = onMyRequests
         self.onFavorites = onFavorites
@@ -40,6 +43,6 @@ struct MoreRoute: View {
             onAdmin: onAdmin
         )
         .navigationTitle("more")
-        .qrScanner(isPresented: $isScannerPresented, onVeteranScanned: onVeteranOpen)
+        .veteranScanner(isPresented: $isScannerPresented, makeViewModel: makeScanViewModel, onVeteranScanned: onVeteranOpen)
     }
 }

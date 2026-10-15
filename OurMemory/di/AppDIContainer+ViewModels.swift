@@ -9,6 +9,10 @@ extension AppDIContainer {
         return HomeViewModel(repository: veteransRepository, calendar: .current, now: Date.init)
     }
 
+    func buildVeteranScanViewModel() -> VeteranScanViewModel {
+        return VeteranScanViewModel(repository: veteransRepository)
+    }
+
     func buildDetailsViewModel(veteranId: String) -> DetailsViewModel {
         return DetailsViewModel(
             veteranId: veteranId,

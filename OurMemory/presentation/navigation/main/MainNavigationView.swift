@@ -43,7 +43,11 @@ struct MainNavigationView: View {
     private func tabRoot(_ tab: TopLevelTab) -> some View {
         switch tab {
         case .veterans:
-            HomeRoute(viewModel: container.buildHomeViewModel(), onVeteranOpen: router.openVeteran)
+            HomeRoute(
+                viewModel: container.buildHomeViewModel(),
+                makeScanViewModel: container.buildVeteranScanViewModel,
+                onVeteranOpen: router.openVeteran
+            )
         case .map:
             MapRoute(
                 viewModel: container.buildMapViewModel(focusedBurialId: nil),
@@ -58,6 +62,7 @@ struct MainNavigationView: View {
         case .more:
             MoreRoute(
                 viewModel: container.buildMoreViewModel(),
+                makeScanViewModel: container.buildVeteranScanViewModel,
                 onWriteToUs: { router.push(VeteranDestination.feedback(veteranId: "")) },
                 onMyRequests: { router.push(MoreDestination.myRequests) },
                 onFavorites: { router.push(MoreDestination.favorites) },
