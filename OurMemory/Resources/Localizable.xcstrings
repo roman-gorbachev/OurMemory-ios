@@ -698,6 +698,35 @@
         }
       }
     },
+    "allow_camera_access": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дазволіць доступ да камеры"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow camera access"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разрешить доступ к камере"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "允许使用相机"
+          }
+        }
+      }
+    },
     "allow_location_access_msg": {
       "extractionState": "manual",
       "localizations": {
@@ -1393,6 +1422,35 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "camera_permission_needed_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Дазвольце доступ да камеры, каб сканаваць QR-коды і надпісы на плітах"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow camera access to scan QR codes and headstone inscriptions"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разрешите доступ к камере, чтобы сканировать QR-коды и надписи на плитах"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请允许使用相机，以扫描二维码和墓碑上的铭文"
           }
         }
       }
