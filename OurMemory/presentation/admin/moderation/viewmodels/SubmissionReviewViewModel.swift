@@ -7,6 +7,7 @@ final class SubmissionReviewViewModel {
     @ObservationIgnored private let submissionId: String
     @ObservationIgnored private let moderationRepository: ModerationRepository
     @ObservationIgnored private let veteransRepository: VeteransRepository
+    @ObservationIgnored private let analysisRepository: SubmissionAnalysisRepository
     @ObservationIgnored private var submission: Submission?
     @ObservationIgnored private var veteranName = ""
     @ObservationIgnored private var photoUrls: [String] = []
@@ -16,11 +17,20 @@ final class SubmissionReviewViewModel {
     @ObservationIgnored private var isProcessing = false
     @ObservationIgnored private var failure: ReviewFailure?
     @ObservationIgnored private var isFinished = false
+    @ObservationIgnored private var analysis: SubmissionAnalysis?
+    @ObservationIgnored private var isAnalyzing = false
+    @ObservationIgnored private var analysisFailed = false
 
-    init(submissionId: String, moderationRepository: ModerationRepository, veteransRepository: VeteransRepository) {
+    init(
+        submissionId: String,
+        moderationRepository: ModerationRepository,
+        veteransRepository: VeteransRepository,
+        analysisRepository: SubmissionAnalysisRepository
+    ) {
         self.submissionId = submissionId
         self.moderationRepository = moderationRepository
         self.veteransRepository = veteransRepository
+        self.analysisRepository = analysisRepository
     }
 
     func load() async {
@@ -61,6 +71,13 @@ final class SubmissionReviewViewModel {
         case .reject:
             reject()
             return
+        case .analyze:
+            analyze()
+            return
+        case .applySuggestedText:
+            editedText = analysis?.suggestedText ?? editedText
+        case .applySuggestedReply:
+            reply = analysis?.suggestedReply ?? reply
         }
         rebuild()
     }
@@ -86,6 +103,40 @@ final class SubmissionReviewViewModel {
         runDecision { [moderationRepository, submissionId] in
             try await moderationRepository.reject(submissionId: submissionId, reply: text)
         }
+    }
+
+    private func analyze() {
+        guard let submission, !isAnalyzing else {
+            return
+        }
+        isAnalyzing = true
+        analysisFailed = false
+        rebuild()
+        let text = editedText ?? submission.text
+        Task {
+            do {
+                let veteran = try await veteransRepository.originalVeterans().first { return $0.id == submission.veteranId }
+                analysis = try await analysisRepository.analyze(analysisInput(veteran: veteran ?? Veteran(), text: text))
+            } catch {
+                analysisFailed = true
+            }
+            isAnalyzing = false
+            rebuild()
+        }
+    }
+
+    private func analysisInput(veteran: Veteran, text: String) -> SubmissionAnalysisInput {
+        return SubmissionAnalysisInput(
+            veteranName: veteran.name.isBlank ? veteranName : veteran.name,
+            years: veteran.years,
+            birthDate: veteran.birthDate,
+            deathDate: veteran.deathDate,
+            biography: veteran.allInfo.isBlank ? veteran.baseInfo : veteran.allInfo,
+            rewards: RewardsParser.parse(veteran.rewards).map { return L10n.string($0.reward.nameResource) },
+            cardMaterials: veteran.veteransInfo.filter { return !$0.contains(VeteranInfoFormat.linkMarker) },
+            submissionText: text,
+            photoUrls: photoUrls.filter { return !deselectedUrls.contains($0) }
+        )
     }
 
     private func runDecision(_ decision: @escaping () async throws -> Void) {
@@ -123,7 +174,10 @@ final class SubmissionReviewViewModel {
             status: submission.status,
             isProcessing: isProcessing,
             failure: failure,
-            isFinished: isFinished
+            isFinished: isFinished,
+            analysis: analysis,
+            isAnalyzing: isAnalyzing,
+            analysisFailed: analysisFailed
         ))
     }
 }

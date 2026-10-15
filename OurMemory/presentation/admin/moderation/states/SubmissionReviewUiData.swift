@@ -11,6 +11,9 @@ struct SubmissionReviewUiData: Hashable {
     let isProcessing: Bool
     let failure: ReviewFailure?
     let isFinished: Bool
+    let analysis: SubmissionAnalysis?
+    let isAnalyzing: Bool
+    let analysisFailed: Bool
 
     var isEditable: Bool {
         return status == .pending && !isProcessing

@@ -35,6 +35,7 @@ struct SubmissionReviewScreen: View {
                     .listRowInsets(EdgeInsets(top: Spacing.l, leading: 0, bottom: Spacing.l, trailing: 0))
                 }
             }
+            aiSections
             Section {
                 TextField("comment_for_author", text: Binding(get: { return data.reply }, set: { onAction(.replyChanged($0)) }), axis: .vertical)
             } footer: {
@@ -61,6 +62,99 @@ struct SubmissionReviewScreen: View {
         .overlay {
             if data.isProcessing {
                 ProgressView()
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var aiSections: some View {
+        if let analysis = data.analysis {
+            Section {
+                Text(verbatim: analysis.summary)
+                if !analysis.duplicateOf.isBlank {
+                    Label {
+                        VStack(alignment: .leading, spacing: Spacing.xs) {
+                            Text("possible_duplicate_msg")
+                            Text(verbatim: analysis.duplicateOf)
+                                .appStyle(.footnote)
+                                .foregroundStyle(Palette.onSurfaceVariant)
+                        }
+                    } icon: {
+                        Image(systemName: "doc.on.doc")
+                    }
+                }
+            } header: {
+                Text("ai_analysis")
+            } footer: {
+                Text("ai_can_make_mistakes_msg")
+            }
+            if !analysis.conflicts.isEmpty {
+                Section("possible_conflicts") {
+                    ForEach(analysis.conflicts, id: \.self) { conflict in
+                        Label {
+                            Text(verbatim: conflict)
+                        } icon: {
+                            Image(systemName: "exclamationmark.triangle.fill").foregroundStyle(Palette.warning)
+                        }
+                    }
+                }
+            }
+            if !analysis.documentTranscripts.isEmpty {
+                Section("document_transcripts") {
+                    ForEach(analysis.documentTranscripts, id: \.self) { transcript in
+                        Text(verbatim: transcript).textSelection(.enabled)
+                    }
+                }
+            }
+            suggestionSection(
+                title: "suggested_text",
+                text: analysis.suggestedText,
+                buttonTitle: "use_suggested_text",
+                action: .applySuggestedText
+            )
+            suggestionSection(
+                title: "suggested_reply",
+                text: analysis.suggestedReply,
+                buttonTitle: "use_suggested_reply",
+                action: .applySuggestedReply
+            )
+        } else {
+            Section {
+                if data.isAnalyzing {
+                    HStack(spacing: Spacing.l) {
+                        ProgressView()
+                        Text("analyzing").foregroundStyle(Palette.onSurfaceVariant)
+                    }
+                } else {
+                    Button {
+                        onAction(.analyze)
+                    } label: {
+                        Label("analyze_with_ai", systemImage: "sparkles")
+                    }
+                }
+            } header: {
+                Text("ai_analysis")
+            } footer: {
+                if data.analysisFailed {
+                    Text("failed_to_analyze_msg").foregroundStyle(Palette.error)
+                } else {
+                    Text("ai_analysis_hint_msg")
+                }
+            }
+        }
+    }
+
+    @ViewBuilder
+    private func suggestionSection(
+        title: LocalizedStringKey,
+        text: String,
+        buttonTitle: LocalizedStringKey,
+        action: SubmissionReviewUserAction
+    ) -> some View {
+        if !text.isBlank {
+            Section(title) {
+                Text(verbatim: text).textSelection(.enabled)
+                Button(buttonTitle) { onAction(action) }
             }
         }
     }

@@ -76,6 +76,10 @@ final class AppDIContainer {
     @ObservationIgnored lazy var submissionsRepository: SubmissionsRepository = SubmissionsRepositoryImpl(
         dataSource: SubmissionsDataSourceImpl(anonymousSession: anonymousSession, storage: storage, root: root)
     )
+    @ObservationIgnored lazy var submissionAnalysisRepository: SubmissionAnalysisRepository = SubmissionAnalysisRepositoryImpl(
+        aiDataSource: aiDataSource,
+        photoDownloader: PhotoDownloader(session: .shared)
+    )
     @ObservationIgnored lazy var moderationRepository: ModerationRepository = ModerationRepositoryImpl(
         dataSource: ModerationDataSourceImpl(auth: auth, storage: storage, root: root),
         veteransRepository: veteransRepository

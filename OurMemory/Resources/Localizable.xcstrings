@@ -698,6 +698,93 @@
         }
       }
     },
+    "ai_analysis": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аналіз ШІ"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI analysis"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Анализ ИИ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人工智能分析"
+          }
+        }
+      }
+    },
+    "ai_analysis_hint_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ШІ параўнае заяўку з карткай, расшыфруе дакументы на фота і прапануе тэкст і адказ. Рашэнне застаецца за вамі"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI compares the request with the card, transcribes documents in the photos and suggests a text and a reply. The decision is yours"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ИИ сравнит заявку с карточкой, расшифрует документы на фото и предложит текст и ответ. Решение остаётся за вами"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人工智能会将申请与资料卡对比，识别照片中的文件，并建议文本和回复。最终由您决定"
+          }
+        }
+      }
+    },
+    "ai_can_make_mistakes_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ШІ можа памыляцца: праверце факты перад адабрэннем"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI can make mistakes: check the facts before approving"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ИИ может ошибаться: проверьте факты перед одобрением"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "人工智能可能出错：批准前请核实事实"
+          }
+        }
+      }
+    },
     "allow_camera_access": {
       "extractionState": "manual",
       "localizations": {
@@ -781,6 +868,64 @@
           "stringUnit": {
             "state": "translated",
             "value": "此账户已是管理员"
+          }
+        }
+      }
+    },
+    "analyze_with_ai": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Праверыць з дапамогай ШІ"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Check with AI"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Проверить с помощью ИИ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "用人工智能检查"
+          }
+        }
+      }
+    },
+    "analyzing": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Аналізуем…"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Analyzing…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Анализируем…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在分析…"
           }
         }
       }
@@ -2560,6 +2705,35 @@
         }
       }
     },
+    "document_transcripts": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшыфроўка дакументаў"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Document transcripts"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Расшифровка документов"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "文件识别结果"
+          }
+        }
+      }
+    },
     "done": {
       "extractionState": "manual",
       "localizations": {
@@ -2742,6 +2916,35 @@
           "stringUnit": {
             "state": "translated",
             "value": "特大"
+          }
+        }
+      }
+    },
+    "failed_to_analyze_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не ўдалося прааналізаваць заяўку. Праверце інтэрнэт і паспрабуйце яшчэ раз"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Couldn't analyze the request. Check your internet connection and try again"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Не удалось проанализировать заявку. Проверьте интернет и попробуйте ещё раз"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "无法分析该申请。请检查网络连接后重试"
           }
         }
       }
@@ -5538,6 +5741,64 @@
         }
       }
     },
+    "possible_conflicts": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Магчымыя разыходжанні з карткай"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Possible conflicts with the card"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Возможные расхождения с карточкой"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "可能与资料卡不一致之处"
+          }
+        }
+      }
+    },
+    "possible_duplicate_msg": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Падобна, гэта ўжо ёсць у картцы"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "This seems to be in the card already"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Похоже, это уже есть в карточке"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "资料卡中似乎已有此内容"
+          }
+        }
+      }
+    },
     "recognizing_name": {
       "extractionState": "manual",
       "localizations": {
@@ -7231,6 +7492,64 @@
         }
       }
     },
+    "suggested_reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прапанаваны адказ аўтару"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggested reply to the author"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Предложенный ответ автору"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建议给作者的回复"
+          }
+        }
+      }
+    },
+    "suggested_text": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прапанаваны тэкст"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Suggested text"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Предложенный текст"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建议文本"
+          }
+        }
+      }
+    },
     "suggestion": {
       "extractionState": "manual",
       "localizations": {
@@ -7778,6 +8097,64 @@
           "stringUnit": {
             "state": "translated",
             "value": "正在上传文件…"
+          }
+        }
+      }
+    },
+    "use_suggested_reply": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Падставіць адказ"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use this reply"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подставить ответ"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用此回复"
+          }
+        }
+      }
+    },
+    "use_suggested_text": {
+      "extractionState": "manual",
+      "localizations": {
+        "be": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Падставіць тэкст"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Use this text"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Подставить текст"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "使用此文本"
           }
         }
       }

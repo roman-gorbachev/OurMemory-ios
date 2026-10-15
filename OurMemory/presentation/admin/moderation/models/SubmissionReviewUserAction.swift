@@ -6,4 +6,7 @@ enum SubmissionReviewUserAction {
     case photoToggled(String)
     case approve
     case reject
+    case analyze
+    case applySuggestedText
+    case applySuggestedReply
 }

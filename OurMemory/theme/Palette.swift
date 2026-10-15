@@ -24,6 +24,7 @@ enum Palette {
     static let outline = Color(uiColor: .separator)
     static let outlineVariant = Color(uiColor: .separator)
     static let error = Color(uiColor: .systemRed)
+    static let warning = Color(uiColor: .systemOrange)
     static let success = Color(uiColor: .systemGreen)
     static let brandRed = Color(red: 0x7F / 255.0, green: 0x04 / 255.0, blue: 0x10 / 255.0)
     static let brandBrightRed = Color(red: 0xBB / 255.0, green: 0x10 / 255.0, blue: 0x20 / 255.0)

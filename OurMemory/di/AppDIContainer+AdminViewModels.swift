@@ -32,7 +32,8 @@ extension AppDIContainer {
         return SubmissionReviewViewModel(
             submissionId: submissionId,
             moderationRepository: moderationRepository,
-            veteransRepository: veteransRepository
+            veteransRepository: veteransRepository,
+            analysisRepository: submissionAnalysisRepository
         )
     }
 
