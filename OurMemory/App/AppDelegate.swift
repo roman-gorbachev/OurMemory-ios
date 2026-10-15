@@ -17,6 +17,7 @@ final class AppDelegate: NSObject, UIApplicationDelegate, UNUserNotificationCent
         guard FirebaseEnvironment.hasConfiguration else {
             return true
         }
+        AppCheckSetup.install()
         FirebaseApp.configure()
         Database.database().isPersistenceEnabled = true
         let container = AppDIContainer()

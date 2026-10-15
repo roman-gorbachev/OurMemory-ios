@@ -1,3 +1,4 @@
+import FirebaseAILogic
 import FirebaseAuth
 import FirebaseDatabase
 import FirebaseStorage
@@ -13,6 +14,9 @@ final class AppDIContainer {
     @ObservationIgnored private lazy var calendar = Calendar.current
     @ObservationIgnored private lazy var anonymousSession = AnonymousSession(auth: auth)
     @ObservationIgnored private lazy var notificationCenter = UNUserNotificationCenter.current()
+    @ObservationIgnored private lazy var aiDataSource: AiDataSource = AiDataSourceImpl(
+        ai: FirebaseAI.firebaseAI(backend: .agentPlatform(), useLimitedUseAppCheckTokens: true)
+    )
     @ObservationIgnored private lazy var contentLanguage: () -> String? = { [unowned self] in
         return settingsRepository.currentLanguage().contentKey
     }
