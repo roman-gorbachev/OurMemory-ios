@@ -95,25 +95,25 @@
         "be": {
           "stringUnit": {
             "state": "translated",
-            "value": "Новы адміністратар адзін раз уваходзіць у праграму: праз Google у «Яшчэ» або праз «Уваход для адміністратара» са сваім e-mail.\nСупер-адміністратар адкрывае Адмін → «Адміністратары» і дадае яго па e-mail.\nStorage → Rules: дапішыце UID новага адміністратара (яго можна скапіраваць на экране «Адміністратары») у спіс функцыі isAdmin() і націсніце «Publish». Без гэтага ён не зможа загружаць фота і аўдыя.\nПасля перазапуску праграмы ў новага адміністратара з’яўляецца ўкладка «Адмін».\nКаб зняць правы, выдаліце адміністратара на экране «Адміністратары» і прыбярыце яго UID з правілаў Storage.\nСупер-адміністратары прызначаюцца толькі ў Firebase Console: вузел OurMemory/SuperAdmins, ключ UID са значэннем true (і той жа UID у OurMemory/Admins)."
+            "value": "Новы адміністратар адзін раз уваходзіць у праграму: праз Google у «Яшчэ» або праз «Уваход для адміністратара» са сваім e-mail.\nСупер-адміністратар адкрывае Адмін → «Адміністратары» і дадае яго па e-mail.\nStorage → Rules: дапішыце UID новага адміністратара (яго можна скапіраваць на экране «Адміністратары») у спіс функцыі isOurMemoryAdmin() і націсніце «Publish». Без гэтага ён не зможа загружаць фота і аўдыя.\nПасля перазапуску праграмы ў новага адміністратара з’яўляецца ўкладка «Адмін».\nКаб зняць правы, выдаліце адміністратара на экране «Адміністратары» і прыбярыце яго UID з правілаў Storage.\nСупер-адміністратары прызначаюцца толькі ў Firebase Console: вузел OurMemory/SuperAdmins, ключ UID са значэннем true (і той жа UID у OurMemory/Admins)."
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The new administrator signs in to the app once: with Google in More or via “Administrator sign-in” with their e-mail.\nA super administrator opens Admin → “Administrators” and adds them by e-mail.\nStorage → Rules: add the new administrator's UID (it can be copied on the Administrators screen) to the isAdmin() function list and tap “Publish”. Without this they cannot upload photos and audio.\nAfter restarting the app, the new administrator gets the Admin tab.\nTo revoke rights, remove the administrator on the Administrators screen and delete their UID from the Storage rules.\nSuper administrators are assigned only in the Firebase Console: the OurMemory/SuperAdmins node, the UID key with the value true (and the same UID in OurMemory/Admins)."
+            "value": "The new administrator signs in to the app once: with Google in More or via “Administrator sign-in” with their e-mail.\nA super administrator opens Admin → “Administrators” and adds them by e-mail.\nStorage → Rules: add the new administrator's UID (it can be copied on the Administrators screen) to the isOurMemoryAdmin() function list and tap “Publish”. Without this they cannot upload photos and audio.\nAfter restarting the app, the new administrator gets the Admin tab.\nTo revoke rights, remove the administrator on the Administrators screen and delete their UID from the Storage rules.\nSuper administrators are assigned only in the Firebase Console: the OurMemory/SuperAdmins node, the UID key with the value true (and the same UID in OurMemory/Admins)."
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Новый администратор один раз входит в приложение: через Google в «Ещё» или через «Вход для администратора» со своим e-mail.\nСупер-администратор открывает Админ → «Администраторы» и добавляет его по e-mail.\nStorage → Rules: допишите UID нового администратора (его можно скопировать на экране «Администраторы») в список функции isAdmin() и нажмите «Publish». Без этого он не сможет загружать фото и аудио.\nПосле перезапуска приложения у нового администратора появляется вкладка «Админ».\nЧтобы снять права, удалите администратора на экране «Администраторы» и уберите его UID из правил Storage.\nСупер-администраторы назначаются только в Firebase Console: узел OurMemory/SuperAdmins, ключ UID со значением true (и тот же UID в OurMemory/Admins)."
+            "value": "Новый администратор один раз входит в приложение: через Google в «Ещё» или через «Вход для администратора» со своим e-mail.\nСупер-администратор открывает Админ → «Администраторы» и добавляет его по e-mail.\nStorage → Rules: допишите UID нового администратора (его можно скопировать на экране «Администраторы») в список функции isOurMemoryAdmin() и нажмите «Publish». Без этого он не сможет загружать фото и аудио.\nПосле перезапуска приложения у нового администратора появляется вкладка «Админ».\nЧтобы снять права, удалите администратора на экране «Администраторы» и уберите его UID из правил Storage.\nСупер-администраторы назначаются только в Firebase Console: узел OurMemory/SuperAdmins, ключ UID со значением true (и тот же UID в OurMemory/Admins)."
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "新管理员先登录一次应用：在“更多”中使用 Google，或通过“管理员登录”使用自己的电子邮件。\n超级管理员打开 管理 → “管理员”，按电子邮件添加。\nStorage → Rules：将新管理员的 UID（可在“管理员”页面复制）添加到 isAdmin() 函数列表中，然后点击“Publish”。否则对方无法上传照片和音频。\n重启应用后，新管理员会看到“管理”标签页。\n要撤销权限，请在“管理员”页面移除该管理员，并从 Storage 规则中删除其 UID。\n超级管理员只能在 Firebase Console 中指定：在 OurMemory/SuperAdmins 节点下添加 UID 键，值为 true（并在 OurMemory/Admins 中添加同一 UID）。"
+            "value": "新管理员先登录一次应用：在“更多”中使用 Google，或通过“管理员登录”使用自己的电子邮件。\n超级管理员打开 管理 → “管理员”，按电子邮件添加。\nStorage → Rules：将新管理员的 UID（可在“管理员”页面复制）添加到 isOurMemoryAdmin() 函数列表中，然后点击“Publish”。否则对方无法上传照片和音频。\n重启应用后，新管理员会看到“管理”标签页。\n要撤销权限，请在“管理员”页面移除该管理员，并从 Storage 规则中删除其 UID。\n超级管理员只能在 Firebase Console 中指定：在 OurMemory/SuperAdmins 节点下添加 UID 键，值为 true（并在 OurMemory/Admins 中添加同一 UID）。"
           }
         }
       }
@@ -472,25 +472,25 @@
         "be": {
           "stringUnit": {
             "state": "translated",
-            "value": "Каб адміністратар мог загружаць фота і аўдыя, дадайце яго UID у функцыю isAdmin() правілаў Storage"
+            "value": "Каб адміністратар мог загружаць фота і аўдыя, дадайце яго UID у функцыю isOurMemoryAdmin() правілаў Storage"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "To let the administrator upload photos and audio, add their UID to the isAdmin() function of the Storage rules"
+            "value": "To let the administrator upload photos and audio, add their UID to the isOurMemoryAdmin() function of the Storage rules"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Чтобы администратор мог загружать фото и аудио, добавьте его UID в функцию isAdmin() правил Storage"
+            "value": "Чтобы администратор мог загружать фото и аудио, добавьте его UID в функцию isOurMemoryAdmin() правил Storage"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "要让管理员能上传照片和音频，请将其 UID 添加到 Storage 规则的 isAdmin() 函数中"
+            "value": "要让管理员能上传照片和音频，请将其 UID 添加到 Storage 规则的 isOurMemoryAdmin() 函数中"
           }
         }
       }
@@ -4927,25 +4927,25 @@
         "be": {
           "stringUnit": {
             "state": "translated",
-            "value": "Няма правоў на загрузку файлаў. Дадайце ваш UID у функцыю isAdmin() правілаў Storage і апублікуйце іх"
+            "value": "Няма правоў на загрузку файлаў. Дадайце ваш UID у функцыю isOurMemoryAdmin() правілаў Storage і апублікуйце іх"
           }
         },
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No permission to upload files. Add your UID to the isAdmin() function of the Storage rules and publish them"
+            "value": "No permission to upload files. Add your UID to the isOurMemoryAdmin() function of the Storage rules and publish them"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Нет прав на загрузку файлов. Добавьте ваш UID в функцию isAdmin() правил Storage и опубликуйте их"
+            "value": "Нет прав на загрузку файлов. Добавьте ваш UID в функцию isOurMemoryAdmin() правил Storage и опубликуйте их"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "没有上传文件的权限。请将您的 UID 添加到 Storage 规则的 isAdmin() 函数中并发布"
+            "value": "没有上传文件的权限。请将您的 UID 添加到 Storage 规则的 isOurMemoryAdmin() 函数中并发布"
           }
         }
       }
